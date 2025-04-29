@@ -1,0 +1,14 @@
+*.dds
+*.bin
+*.cast
+*.gltf
+*.ma
+*.ascii
+*.obj
+*.semodel
+*.XMODEL_BIN
+*.XMODEL_EXPORT
+*.mel
+*.mtl
+*.txt
+*.blend1
