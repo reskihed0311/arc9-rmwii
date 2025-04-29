@@ -15,6 +15,10 @@ local Blueprints = {
         PrintName = "M4 - Skull Breaker",
         Preset = "[M4 - Skull Breaker]XQAAAQDoAAAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq87tvxhGhyF4BAwEU0dBAV3q/MkFoMy/6FbCUKhDOsoo9+1QRNvJJiEqD+5VhTq8hHKQMZZnIwdeIUb+T8gvbdrlxO4dwrOtH7KM0a78ccEWDddNDjb1opeK9ppBCY98Zi9Nx5ftsbUIOWQA="
     },
+    ["arc9_rmwii_m4_bp_carminecarbine"] = {
+        PrintName = "M4 - Carmine Carbine",
+        Preset = "[Carmine Carbine]XQAAAQDsAAAAAAAAAAA9iIIiM7tuo1AtUDA7pgliS/4w0qI1lvQGl7I3iNfd1Du0vp9Bj+9/rkj5zTTzR32cDNi5pdHhZaVZQVVJzE9QCRJSeFa5le40NPRIldLnDhF4qi4rngdTeD7dJF4HrbK4FiDykf9yG5YuLhghY3pDh4LaslBkF2y7KLnA6Cg1YwA=",
+    },
     
     -- Add more blueprints here in the same format:
     -- ["class_name"] = { PrintName = "Display Name", Preset = "[Preset Name]Base64EncodedData" },

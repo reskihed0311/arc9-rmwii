@@ -323,11 +323,33 @@ SWEP.AttachmentElements = {
             {5, 1},
         },
     },
+    ["stocks_none"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+    },
     ["trench"] = {
         Bodygroups = {
             {3, 1},
             {5, 3},
         },
+    },
+    ["carbineshroud"] = {
+        Bodygroups = {
+            {3, 1},
+            {5, 4},
+            {2, 4},
+        },
+        AttPosMods = {
+            [3] = { -- slot index
+            Pos = Vector(0,-1.30,17),
+            Ang = Angle(90,-90,0),
+            },
+            [4] = { -- slot index
+            Pos = Vector(0,0.1,9),
+        Ang = Angle(90,-90,0),
+            },
+        }
     },
     ["xmag"] = {
         Bodygroups = {
@@ -365,7 +387,7 @@ SWEP.AttachmentElements = {
 
 
 SWEP.Attachments = {
-     {
+    {
         PrintName = "Optic",
         DefaultName = "Ironsights",
         Category = {"wz2_sh_optics"},
@@ -400,6 +422,7 @@ SWEP.Attachments = {
     {
         PrintName = "Laser",
         DefaultName = "None",
+        ExcludeElements = {"carbineshroud"},
         Category = {"wz2_sh_ar_tac"},
         Bone = "weapon",
         Pos = Vector(-1.1,-1.28,14.55),
@@ -418,11 +441,18 @@ SWEP.Attachments = {
         DefaultName = "DEMO Pistol Grip",
         Category = {"wz2_m4_pgrip"},
         Bone = "weapon",
-        Pos = Vector(0,0,0),
+        Pos = Vector(0,2.5,-2.6),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
+        PrintName = "Stocks",
+        DefaultName = "DEMO Factory Stock",
+        Category = {"wz2_m4_stocks"},
+        Bone = "weapon",
+        Pos = Vector(0,-1.5,-5),
         Ang = Angle(90,-90,0),
     } ,
 }
-
 --------------------------- ANIM RELATED
 
 local Translate_XMag = {

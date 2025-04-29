@@ -16,6 +16,7 @@ $bodygroup "fs"
    blank
    studio "fs_barmidhvy.dmx"
    studio "fs_barlight.dmx"
+      studio "fs_barhvy.dmx"
 }
 
 
@@ -40,6 +41,7 @@ $bodygroup "muzzle"
 	blank
 	studio "muzzle_barmidhvy.dmx"
 	studio "muzzle_barlight_skullbreaker.dmx"
+	studio "muzzle_barhvy.dmx"
 }
 
 $bodygroup "stock"

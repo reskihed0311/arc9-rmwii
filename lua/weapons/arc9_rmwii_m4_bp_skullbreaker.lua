@@ -323,6 +323,39 @@ SWEP.AttachmentElements = {
             {5, 1},
         },
     },
+    ["cp90"] = {
+        Bodygroups = {
+            {7, 2},
+        },
+    },
+    ["stocks_none"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+    },
+    ["trench"] = {
+        Bodygroups = {
+            {3, 1},
+            {5, 3},
+        },
+    },
+    ["carbineshroud"] = {
+        Bodygroups = {
+            {3, 1},
+            {5, 4},
+            {2, 4},
+        },
+        AttPosMods = {
+            [3] = { -- slot index
+            Pos = Vector(0,-1.30,17),
+            Ang = Angle(90,-90,0),
+            },
+            [4] = { -- slot index
+            Pos = Vector(0,0.1,9),
+        Ang = Angle(90,-90,0),
+            },
+        }
+    },
     ["xmag"] = {
         Bodygroups = {
             {4, 1},
@@ -331,17 +364,6 @@ SWEP.AttachmentElements = {
     ["xmaglarge"] = {
         Bodygroups = {
             {4, 2},
-        },
-    },
-    ["cp90"] = {
-        Bodygroups = {
-            {7, 2},
-        },
-    },
-    ["trench"] = {
-        Bodygroups = {
-            {3, 1},
-            {5, 3},
         },
     },
     ["tth4"] = {
@@ -368,9 +390,8 @@ SWEP.AttachmentElements = {
 }
 
 
-
 SWEP.Attachments = {
-     {
+    {
         PrintName = "Optic",
         DefaultName = "Ironsights",
         Category = {"wz2_sh_optics"},
@@ -381,7 +402,7 @@ SWEP.Attachments = {
    {
         PrintName = "Handguard",
         DefaultName = "DEMO Handguard",
-        Category = {"wz2_m4_hgs_sb", "wz2_m4_hgs"},
+        Category = {"wz2_m4_hgs"},
         Bone = "weapon",
         Pos = Vector(0,-1.2,8),
         Ang = Angle(90,-90,0),
@@ -405,6 +426,7 @@ SWEP.Attachments = {
     {
         PrintName = "Laser",
         DefaultName = "None",
+        ExcludeElements = {"carbineshroud"},
         Category = {"wz2_sh_ar_tac"},
         Bone = "weapon",
         Pos = Vector(-1.1,-1.28,14.55),
@@ -422,9 +444,17 @@ SWEP.Attachments = {
     {
         PrintName = "Pistol Grip",
         DefaultName = "DEMO Pistol Grip",
-        Category = {"wz2_m4_pgrip", "wz2_m4_pgrip_sb"},
+        Category = {"wz2_m4_pgrip","wz2_m4_pgrip_sb"},
         Bone = "weapon",
         Pos = Vector(0,2.5,-2.6),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
+        PrintName = "Stocks",
+        DefaultName = "DEMO Factory Stock",
+        Category = {"wz2_m4_stocks"},
+        Bone = "weapon",
+        Pos = Vector(0,-1.5,-5),
         Ang = Angle(90,-90,0),
     } ,
 }
