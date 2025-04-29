@@ -481,6 +481,14 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 
+SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
+     [1] = "bullet_chamber",
+     [2] = "bullet_1",
+     [3] = "bullet_2",
+     [4] = "bullet_3",
+}
+
+
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeHolstered = "passive"

@@ -492,6 +492,15 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
 
+
+SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
+     [1] = "bullet_chamber",
+     [2] = "bullet_1",
+     [3] = "bullet_2",
+     [4] = "bullet_3",
+}
+
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
