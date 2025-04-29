@@ -17,6 +17,7 @@ $bodygroup "fs"
    studio "fs_barmidhvy.dmx"
    studio "fs_barlight.dmx"
    studio "fs_barhvy.dmx"
+      studio "fs_barlong.dmx"
 }
 
 
@@ -42,6 +43,7 @@ $bodygroup "muzzle"
 	studio "muzzle_barmidhvy.dmx"
 	studio "muzzle_barlight.dmx"
 		studio "muzzle_barhvy.dmx"
+		studio "muzzle_barlong.dmx"
 }
 
 $bodygroup "stock"
@@ -54,14 +56,26 @@ $bodygroup "pgrip"
 {
     studio "gripdef.dmx"
 	blank
-    studio "gripsn.dmx"
+}
+
+
+$bodygroup "ammo"
+{
+   studio "ammo.dmx"
+   blank
+}
+
+$bodygroup "ammo"
+{
+   studio "ammo.dmx"
+   blank
 }
 
 
 
 $cdmaterials "models\r_mwii\m4"
 $cdmaterials "models\r_mwii\m4_bp_carminecarbine"
-
+$cdmaterials "models\r_mwii\ammo_shared"
 
 
 $attachment "1" "muzzle" 0.00 0.00 0.00 rotate -90 0 0

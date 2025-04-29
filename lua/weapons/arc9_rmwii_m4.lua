@@ -314,6 +314,32 @@ end
 
 
 SWEP.AttachmentElements = {
+    ["pgrip_none"] = {
+        Bodygroups = {
+            {7, 1},
+        },
+    },
+    ["419exf"] = {
+        Bodygroups = {
+            {5, 5},
+            {3, 1},
+            {2, 5},
+        },
+        AttPosMods = {
+            [3] = { -- slot index
+            Pos = Vector(0,-1.30,19.9),
+            Ang = Angle(90,-90,0),
+            },
+            [4] = { -- slot index
+            Pos = Vector(0,-0.32,11.5),
+        Ang = Angle(90,-90,0),
+            },
+            [5] = { -- slot index
+            Pos = Vector(-1.1,-1.28,18.4),
+            Ang = Angle(90,0,0),
+            },
+        }
+    },
     ["nomuzzle"] = {
         Bodygroups = {
             {5, 1},
@@ -342,7 +368,7 @@ SWEP.AttachmentElements = {
             Ang = Angle(90,-90,0),
             },
             [4] = { -- slot index
-            Pos = Vector(0,0.1,9),
+           Pos = Vector(0,0.05,8),
         Ang = Angle(90,-90,0),
             },
         }
@@ -488,6 +514,15 @@ SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
+
+
+
+SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
+     [1] = "bullet_chamber",
+     [2] = "bullet_1",
+     [3] = "bullet_2",
+     [4] = "bullet_3",
+}
 
 SWEP.Animations = {
     ["idle"] = {

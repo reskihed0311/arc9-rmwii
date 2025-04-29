@@ -17,6 +17,8 @@ $bodygroup "fs"
    studio "fs_barmidhvy.dmx"
    studio "fs_barlight.dmx"
       studio "fs_barhvy.dmx"
+	     studio "fs_barlong.dmx"
+		 studio "fs_short.dmx"
 }
 
 
@@ -42,6 +44,8 @@ $bodygroup "muzzle"
 	studio "muzzle_barmidhvy.dmx"
 	studio "muzzle_barlight_skullbreaker.dmx"
 	studio "muzzle_barhvy.dmx"
+	studio "muzzle_barlong.dmx"
+	studio "muzzle_short.dmx"
 }
 
 $bodygroup "stock"
@@ -54,13 +58,20 @@ $bodygroup "pgrip"
 {
     studio "gripdef.dmx"
 	blank
-	studio "gripsn_skullbreaker.dmx"
 }
+
+$bodygroup "ammo"
+{
+   studio "ammo.dmx"
+   blank
+}
+
 
 
 
 $cdmaterials "models\r_mwii\m4"
 $cdmaterials "models\r_mwii\m4_bp_skullbreaker\"
+$cdmaterials "models\r_mwii\ammo_shared"
 
 
 

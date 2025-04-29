@@ -106,7 +106,7 @@ ATT.Free = true
 ATT.PrintName = "FSS Convert V (Union Guard)"
 ATT.CompactName = "FSS COV. V (UG)"
 ATT.Description = [[Union Guard Blueprint for the M4.]]
-
+ATT.Folder = "Blueprints"
 
 ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_muz_unionguard_fsscovertv.mdl"
 ATT.Scale = 1
@@ -138,7 +138,7 @@ ATT.Free = true
 ATT.PrintName = "SZ 1MW PEQ (Union Guard)"
 ATT.CompactName = "SZ 1MW PEQ (UG)"
 ATT.Description = [[Union Guard Blueprint for the M4.]]
-
+ATT.Folder = "Laser Blueprints"
 
 ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_tac_sz1mwpeqbox_unionguard.mdl"
 ATT.Scale = 1

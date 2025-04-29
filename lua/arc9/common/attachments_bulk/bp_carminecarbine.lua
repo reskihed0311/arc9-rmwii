@@ -88,9 +88,6 @@ ATT.Model = "models/weapons/r_mwii/ar/sto/bp/att_r_mwii_bp_sto_carmine_ravage8.m
 ATT.ModelOffset = Vector(-5, -2.22, 2.5)
 
 
-ATT.LHIK = true
-ATT.LHIK_Priority = 0
-
 ARC9.LoadAttachment(ATT, "wz2_bp_ravage8_cc")
 
 
@@ -131,7 +128,7 @@ ATT.Free = true
 ATT.PrintName = "SILENTFIRE XG6 (Carmine Carbine)"
 ATT.CompactName = "XG6 (C.C)"
 ATT.Description = [[Carmine Carbine Blueprint for the M4.]]
-
+ATT.Folder = "Blueprints"
 
 ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_muz_carminecarbine_silentfirexg6.mdl"
 ATT.Scale = 1

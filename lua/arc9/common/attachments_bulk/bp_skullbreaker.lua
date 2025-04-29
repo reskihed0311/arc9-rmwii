@@ -61,12 +61,13 @@ ATT.Description =  [[Skull Breaker Blueprint for the M4.]]
 
 
 
+ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_grip_skullbreaker_ct90.mdl"
+ATT.ModelOffset = Vector(-7.52, -2.22, 6.5)
 
-
-ATT.Category = {"wz2_m4_pgrip_sb"}
+ATT.Category = {"wz2_m4_pgrip"}
 ATT.MenuCategory = "ARC9 - Warzone 2.0 Blueprints"
 
-ATT.ActivateElements = {"cp90"}
+ATT.ActivateElements = {"pgrip_none"}
 
 
 

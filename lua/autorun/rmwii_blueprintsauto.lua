@@ -19,6 +19,10 @@ local Blueprints = {
         PrintName = "M4 - Carmine Carbine",
         Preset = "[Carmine Carbine]XQAAAQDsAAAAAAAAAAA9iIIiM7tuo1AtUDA7pgliS/4w0qI1lvQGl7I3iNfd1Du0vp9Bj+9/rkj5zTTzR32cDNi5pdHhZaVZQVVJzE9QCRJSeFa5le40NPRIldLnDhF4qi4rngdTeD7dJF4HrbK4FiDykf9yG5YuLhghY3pDh4LaslBkF2y7KLnA6Cg1YwA=",
     },
+    ["arc9_rmwii_m4_bp_shortfuse"] = {
+        PrintName = "M4 - Short Fuse",
+        Preset = "[Short Fuse]XQAAAQAWAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq8o8ELwtsmXwlWTZcOLNrzafP/c3TzOMUhN9l6B9tN+Ry8YbmfZeTQh2trX4xP0o/NhNCr/EZwcx3oWTUPpO3pZSBfBWf56bVkvjQ6r+8NpQPtDrzMDG9XHQQbjrkFutaldOtH4Ozbw6ILMVlSBTz",
+    }
     
     -- Add more blueprints here in the same format:
     -- ["class_name"] = { PrintName = "Display Name", Preset = "[Preset Name]Base64EncodedData" },
