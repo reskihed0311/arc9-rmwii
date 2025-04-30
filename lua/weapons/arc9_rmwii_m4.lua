@@ -410,13 +410,21 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = { -- slot index
-            Pos = Vector(0,-1.30,17),
+            Pos = Vector(0,-1.30,11),
             Ang = Angle(90,-90,0),
             },
             [4] = { -- slot index
            Pos = Vector(0,-0.2,8),
         Ang = Angle(90,-90,0),
             },
+            [5] = { -- slot index
+            Pos = Vector(-1.1,-1.28,9.5),
+            Ang = Angle(90,0,0),
+             },
+             [5] = { -- slot index
+             Pos = Vector(-1.1,-1.28,9.5),
+             Ang = Angle(90,0,0),
+              },
         }
     },
     ["xmag"] = {
@@ -460,8 +468,8 @@ SWEP.AttachmentElements = {
             Ang = Angle(90,-90,0),
             },
             [5] = { -- slot index
-            Pos = Vector(-1.1,-1.28,11.5),
-            Ang = Angle(90,0,0),
+              Pos = Vector(-1.1,-1.28,14.55),
+        Ang = Angle(90,0,0),
             }
         }
     },

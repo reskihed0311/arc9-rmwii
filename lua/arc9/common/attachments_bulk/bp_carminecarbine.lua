@@ -150,7 +150,7 @@ ATT.CompactName = "XG6 (C.C)"
 ATT.Description = [[Carmine Carbine Blueprint for the M4.]]
 ATT.Folder = "Blueprints"
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_muz_carminecarbine_silentfirexg6.mdl"
+ATT.Model = "models/weapons/r_mwii/att/muz/att_r_mwii_bp_muz_carminecarbine_silentfirexg6.mdl"
 ATT.Scale = 1
 
 ATT.Category = {"wz2_sh_ar_muzzle"}

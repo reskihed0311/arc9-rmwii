@@ -13,6 +13,15 @@ ATT.CompactName = "3RFL"
 ATT.Description = [[An infrared 3-8x rifle optic of Russian origins.]]
 
 ATT.Folder = "Thermals"
+ATT.SpeedMultSights = 0.8
+ATT.SprintToFireTimeAdd = 0.5
+ATT.SpeedMult = 0.90
+
+ATT.CustomPros = {
+    ["Magnification"] = "3-8x",
+    ["Thermal Capabilities"] = ""
+}
+ATT.CustomCons = {""}
 
 
 ATT.Model = "models/weapons/r_mwii/att/opt/att_r_mwii_opt_3rfl.mdl"
@@ -30,7 +39,7 @@ ATT.Sights = {
 ATT.RTScopeAdjustable = true -- adjustable scope settings
 ATT.RTScopeAdjustmentLevels = 3
 ATT.RTScopeFOVMin = 3
-ATT.RTScopeFOVMax = 6
+ATT.RTScopeFOVMax = 8
 
 
 ATT.RTScope = true

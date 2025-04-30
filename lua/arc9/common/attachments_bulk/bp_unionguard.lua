@@ -94,6 +94,17 @@ ATT.Model = "models/weapons/r_mwii/att/fg/bp/att_r_mwii_bp_fg_precision40_uniong
 ATT.ModelOffset = Vector(0, 0, 0)
 
 
+ATT.RecoilAdd = -0.15
+ATT.SpeedMult = 0.9
+ATT.SpeedMultSights = 0.8
+ATT.SpeedMultShooting = 0.8
+ATT.SpeedMultCrouch = 0.8
+
+ATT.SpreadMultMove = 0.01 -- Applied when speed is equal to walking speed.
+ATT.SpreadMultMidAir = 0.02 -- Applied when not touching the ground.
+ATT.SpreadMultHipFire = 0.1 -- Applied when not sighted.
+ATT.SpreadMultSighted = 0 -- Applied when sighted. Can be negative.
+
 ATT.LHIK = true
 ATT.LHIK_Priority = 1
 
@@ -149,7 +160,7 @@ ATT.CompactName = "FSS COV. V (UG)"
 ATT.Description = [[Union Guard Blueprint for the M4.]]
 ATT.Folder = "Blueprints"
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_muz_unionguard_fsscovertv.mdl"
+ATT.Model = "models/weapons/r_mwii/att/muz/att_r_mwii_bp_muz_unionguard_fsscovertv.mdl"
 ATT.Scale = 1
 
 ATT.Category = {"wz2_sh_ar_muzzle"}

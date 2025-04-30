@@ -129,7 +129,7 @@ ATT.CompactName = "GS-X (Short Fuse)"
 ATT.Description = [[Short Fuse Blueprint for the M4.]]
 
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_muz_shortfuse_echolinegsx.mdl"
+ATT.Model = "models/weapons/r_mwii/att/muz/att_r_mwii_bp_muz_shortfuse_echolinegsx.mdl"
 ATT.Scale = 1
 
 ATT.Category = {"wz2_sh_ar_muzzle"}
