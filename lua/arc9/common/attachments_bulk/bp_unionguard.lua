@@ -72,7 +72,7 @@ ATT.MenuCategory = "ARC9 - Warzone 2.0 Blueprints"
 ATT.Category = "wz2_sh_fgs"
 ATT.Folder = "Blueprints"
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_fg_precision40_unionguard.mdl"
+ATT.Model = "models/weapons/r_mwii/att/fg/bp/att_r_mwii_bp_fg_precision40_unionguard.mdl"
 
 ATT.ModelOffset = Vector(0, 0, 0)
 
@@ -95,7 +95,7 @@ ATT.Description = [[Union Guard Blueprint for the M4.]]
 ATT.Folder = "Red Dot Blueprints"
 
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_opt_aimopv4_unionguard.mdl"
+ATT.Model = "models/weapons/r_mwii/att/opt/bp/att_r_mwii_bp_opt_aimopv4_unionguard.mdl"
 
 ATT.Sights = {
     {

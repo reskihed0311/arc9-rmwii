@@ -75,6 +75,15 @@ SWEP.Ammo = "pistol"
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 8 -- Self-explanatory.
 
+SWEP.SpeedMult = 0.9
+SWEP.SpeedMultSights = 1
+SWEP.SpeedMultShooting = 1
+SWEP.SpeedMultCrouch = 0.5
+SWEP.SpeedMultBlindFire = 1
+
+SWEP.Penetration = 4.000 -- Units of wood that can be penetrated by this gun.
+SWEP.PenetrationDelta = 0.5 -- The damage multiplier after all penetration distance is spent.
+
 
 
 
@@ -165,7 +174,7 @@ SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 0 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 1000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMax = 800 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
 
 
@@ -183,7 +192,7 @@ SWEP.BodyDamageMults = {
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.01
+SWEP.Spread = 0.00280
 
 SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
 SWEP.DispersionSpread = 0.2 -- SWEP.Spread will be clump spread, and this will be dispersion of clump

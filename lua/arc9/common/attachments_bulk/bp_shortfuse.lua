@@ -60,7 +60,7 @@ ATT.Description =  [[Short Fuse Blueprint for the M4.]]
 
 
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_grip_shortfuse_sakinzx.mdl"
+ATT.Model = "models/weapons/r_mwii/ar/pgrip/bp/att_r_mwii_bp_grip_shortfuse_sakinzx.mdl"
 ATT.ModelOffset = Vector(-7.52, -2.22, 6.5)
 
 ATT.Category = {"wz2_m4_pgrip"}
@@ -144,7 +144,7 @@ ATT.Description = [[Short Fuse Blueprint for the M4.]]
 ATT.Folder = "Holosight Blueprints"
 
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_opt_szlonewolf_shortfuse.mdl"
+ATT.Model = "models/weapons/r_mwii/att/opt/bp/att_r_mwii_bp_opt_szlonewolf_shortfuse.mdl"
 
 ATT.Sights = {
     {

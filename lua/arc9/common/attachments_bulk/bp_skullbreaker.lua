@@ -80,7 +80,7 @@ ATT.Description =  [[Skull Breaker Blueprint for the M4.]]
 
 
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_grip_skullbreaker_ct90.mdl"
+ATT.Model = "models/weapons/r_mwii/ar/pgrip/bp/att_r_mwii_bp_grip_skullbreaker_ct90.mdl"
 ATT.ModelOffset = Vector(-7.52, -2.22, 6.5)
 
 ATT.Category = {"wz2_m4_pgrip"}
@@ -108,7 +108,7 @@ ATT.Description = [[Skull Breaker Blueprint for the M4.]]
 ATT.Folder = "Red Dot Blueprints"
 
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_opt_rechargedx_skullbreaker.mdl"
+ATT.Model = "models/weapons/r_mwii/att/opt/bp/att_r_mwii_bp_opt_rechargedx_skullbreaker.mdl"
 
 ATT.Sights = {
     {
@@ -151,7 +151,7 @@ ATT.MenuCategory = "ARC9 - Warzone 2.0 Blueprints"
 ATT.Category = "wz2_sh_fgs"
 ATT.Folder = "Blueprints"
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_fg_exf_backdraft_skullbreaker.mdl"
+ATT.Model = "models/weapons/r_mwii/att/fg/bp/att_r_mwii_bp_fg_exf_backdraft_skullbreaker.mdl"
 
 ATT.ModelOffset = Vector(0, 0, 0)
 

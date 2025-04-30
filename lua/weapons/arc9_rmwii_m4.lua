@@ -85,8 +85,8 @@ SWEP.SpeedMultShooting = 1
 SWEP.SpeedMultCrouch = 0.5
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.Penetration = 5.512 -- Units of wood that can be penetrated by this gun.
-SWEP.PenetrationDelta = 0.1 -- The damage multiplier after all penetration distance is spent.
+SWEP.Penetration = 100000000000000.512 -- Units of wood that can be penetrated by this gun.
+SWEP.PenetrationDelta = 0.8 -- The damage multiplier after all penetration distance is spent.
 
 
 -------------------------- RECOIL
@@ -396,6 +396,23 @@ SWEP.AttachmentElements = {
             },
             [4] = { -- slot index
            Pos = Vector(0,0.05,8),
+        Ang = Angle(90,-90,0),
+            },
+        }
+    },
+    ["tempusfirebrand"] = {
+        Bodygroups = {
+            {3, 1},
+            {5, 6},
+            {2, 6},
+        },
+        AttPosMods = {
+            [3] = { -- slot index
+            Pos = Vector(0,-1.30,17),
+            Ang = Angle(90,-90,0),
+            },
+            [4] = { -- slot index
+           Pos = Vector(0,-0.2,8),
         Ang = Angle(90,-90,0),
             },
         }
