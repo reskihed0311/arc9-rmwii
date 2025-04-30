@@ -81,7 +81,7 @@ SWEP.ClipSize = 8 -- Self-explanatory.
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1
+SWEP.Recoil = 2
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
@@ -106,7 +106,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true -- Visual recoil actually affects your aim point.
 
-SWEP.VisualRecoilUp = 0.01 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 0.02 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.05 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 0.23 -- Roll tilt for visual recoil.
 
@@ -312,14 +312,6 @@ SWEP.AttachmentElements = {
 
 
 SWEP.Attachments = {
-    {
-        PrintName = "Optic",
-        DefaultName = "Ironsights",
-        Category = {"wz2_sh_optics_lp"},
-        Bone = "weapon",
-        Pos = Vector(0,-2.4,1),
-        Ang = Angle(90,-90,0),
-    } ,
 }
 
 --------------------------- ANIM RELATED
