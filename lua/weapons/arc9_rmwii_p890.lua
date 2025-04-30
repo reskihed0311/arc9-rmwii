@@ -5,7 +5,7 @@ AddCSLuaFile()
 
 SWEP.StandardPresets = {
     "[Jack Of All]XQAAAQA6AQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQngVIxcYvpPh64gLSRIE1AJKShhI99QJsp+tCmZuRbKCOCD2ahEmw1JQUSrhI+hxyNjGIIi/6xoz6Dhvzn1XcYuYSwG5K9DHZaxXdg14e6iEDR/56gi1CjPrjrsntSjekHJbIYEbQg4VH37xFV9LGxNiq2uSrG",
-    
+
 }
 
 
@@ -521,8 +521,8 @@ SWEP.Animations = {
             {s = "arc9_rmwii/p890/p890_inspect_decockdown.wav", t= 0.4},
             {s = "arc9_rmwii/p890/p890_inspect_decockup.wav", t= 0.65},
             {s = "arc9_rmwii/p890/p890_inspect_magout.wav", t=  1.80},
-            {s = "arc9_rmwii/p890/p890_inspect_maghit.wav", t=  3},
-            {s = "arc9_rmwii/p890/p890_inspect_magin.wav", t=  3.25},
+            {s = "arc9_rmwii/p890/p890_inspect_maghit.wav", t=  3.1},
+            {s = "arc9_rmwii/p890/p890_inspect_magin.wav", t=  3.40},
             {s = "arc9_rmwii/p890/p890_inspect_slidepull.wav", t = 3.95},
             {s = "arc9_rmwii/p890/p890_inspect_sliderel.wav", t = 4.45},
             {s = "arc9_rmwii/p890/p890_inspect_hammerpull.wav", t = 4.95},
