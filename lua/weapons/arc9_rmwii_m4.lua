@@ -67,7 +67,7 @@ SWEP.ViewModelFOVBase = 75 -- Set to override viewmodel FOV
 
 ////////////////////////////////////////// BALANCE
 
-SWEP.AimDownSightsTime = 0.32 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.4 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.18 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.Sway = 1 -- How much the gun sways.
@@ -79,17 +79,24 @@ SWEP.Ammo = "smg1"
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 30 -- Self-explanatory.
 
+SWEP.SpeedMult = 0.9
+SWEP.SpeedMultSights = 1
+SWEP.SpeedMultShooting = 1
+SWEP.SpeedMultCrouch = 0.5
+SWEP.SpeedMultBlindFire = 1
 
+SWEP.Penetration = 5.512 -- Units of wood that can be penetrated by this gun.
+SWEP.PenetrationDelta = 0.1 -- The damage multiplier after all penetration distance is spent.
 
 
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1
+SWEP.Recoil = 1.2
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 3 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -97,11 +104,11 @@ SWEP.RecoilRandomUp = 0
 SWEP.RecoilRandomSide = 0
 
 SWEP.RecoilDissipationRate = 5 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
-SWEP.RecoilFullResetTime = 0.12 -- How long recoil must stay after last shoot
+SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern starts to reset.
+SWEP.RecoilFullResetTime = 0.3 -- How long recoil must stay after last shoot
 
-SWEP.RecoilPerShot = 0.5
-SWEP.RecoilMax = nil
+SWEP.RecoilPerShot = 5
+SWEP.RecoilMax = 15
 
 SWEP.PushBackForce = 0 -- Push the player back when shooting.
 
@@ -124,7 +131,7 @@ SWEP.VisualRecoilPunchMultSights = 0.1
 -- SWEP.VisualRecoilPunchADSMult = 0.1
 
 SWEP.VisualRecoil = 1
-SWEP.VisualRecoilMultSights = 0.1
+SWEP.VisualRecoilMultSights = 1.5
 SWEP.VisualRecoilPositionBump = 1.5
 SWEP.VisualRecoilPositionBumpUp = 0.08 -- its a mult
 
@@ -149,9 +156,9 @@ SWEP.VisualRecoilDoingFunc = nil -- wawa, override Up, Side, Roll here
 --     return up, side, roll, punch
 -- end
 
-SWEP.RecoilKick = 1 -- Camera recoil
+SWEP.RecoilKick = 0.1 -- Camera recoil
 SWEP.RecoilKickDamping = 70.151 -- Camera recoil damping
-SWEP.RecoilKickAffectPitch = nil -- thing for eft, set to true if you want camera go up (only visually) as recoil increases, SWEP.Recoil * SWEP.RecoilKick = effect of this
+SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camera go up (only visually) as recoil increases, SWEP.Recoil * SWEP.RecoilKick = effect of this
 
 -- Additional subtle visual recoil, in case your gun doesn't have animated fire. Acts like a second spring added on top with limited duration
 -- SWEP.SubtleVisualRecoil = 1 -- multiplier, set to something to enable this thing
@@ -161,10 +168,10 @@ SWEP.RecoilKickAffectPitch = nil -- thing for eft, set to true if you want camer
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 39 -- Damage done at point blank range
-SWEP.DamageMin = 28 -- Damage done at maximum range
+SWEP.DamageMax = 30 -- Damage done at point blank range
+SWEP.DamageMin = 20 -- Damage done at maximum range
 
-SWEP.ImpactForce = 8 -- Force that bullets apply on hit
+SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -176,28 +183,28 @@ SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.85,
-    [HITGROUP_CHEST] = 1.35,
-    [HITGROUP_STOMACH] = 1.1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 0.6,
+    [HITGROUP_RIGHTARM] = 0.6,
+    [HITGROUP_LEFTLEG] = 0.5,
+    [HITGROUP_RIGHTLEG] = 0.5,
 }
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.01
+SWEP.Spread = 0.00185
 
 SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
 SWEP.DispersionSpread = 0.2 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
 
-SWEP.SpreadAddMove = nil -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = nil -- Applied when not touching the ground.
+SWEP.SpreadAddMove = 0.01 -- Applied when speed is equal to walking speed.
+SWEP.SpreadAddMidAir = 0.03 -- Applied when not touching the ground.
 SWEP.SpreadAddHipFire = 0.1 -- Applied when not sighted.
-SWEP.SpreadAddSighted = -0.001 -- Applied when sighted. Can be negative.
+SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
 SWEP.SpreadAddBlindFire = nil -- Applied when blind firing.
-SWEP.SpreadAddCrouch = nil -- Applied when crouching.
+SWEP.SpreadAddCrouch = -0.5 -- Applied when crouching.
 
 SWEP.SpreadAddRecoil = nil -- Applied per unit of recoil.
 
