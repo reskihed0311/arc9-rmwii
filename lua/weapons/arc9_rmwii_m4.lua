@@ -68,7 +68,7 @@ SWEP.ViewModelFOVBase = 75 -- Set to override viewmodel FOV
 ////////////////////////////////////////// BALANCE
 
 SWEP.AimDownSightsTime = 0.4 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.18 -- How long it takes to go from sprinting to being able to fire.
+SWEP.SprintToFireTime = 0.2 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.Sway = 1 -- How much the gun sways.
 
@@ -83,10 +83,12 @@ SWEP.SpeedMult = 0.9
 SWEP.SpeedMultSights = 1
 SWEP.SpeedMultShooting = 1
 SWEP.SpeedMultCrouch = 0.5
-SWEP.SpeedMultBlindFire = 1
 
-SWEP.Penetration = 100000000000000.512 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 12 -- Units of wood that can be penetrated by this gun.
 SWEP.PenetrationDelta = 0.8 -- The damage multiplier after all penetration distance is spent.
+
+SWEP.RicochetAngleMax = 45 -- Maximum angle at which a ricochet can occur. Between 1 and 90. Angle of 0 is impossible but would theoretically always ricochet.
+SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a ricochet can occur?
 
 
 -------------------------- RECOIL
@@ -200,7 +202,7 @@ SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to
 SWEP.DispersionSpread = 0.2 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
 
 SWEP.SpreadAddMove = 0.01 -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = 0.03 -- Applied when not touching the ground.
+SWEP.SpreadAddMidAir = 0.02 -- Applied when not touching the ground.
 SWEP.SpreadAddHipFire = 0.1 -- Applied when not sighted.
 SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
 SWEP.SpreadAddBlindFire = nil -- Applied when blind firing.
@@ -427,6 +429,21 @@ SWEP.AttachmentElements = {
             {4, 2},
         },
     },
+    ["mag_shortfuse"] = {
+        Bodygroups = {
+            {4, 3},
+        },
+    },
+    ["mag_unionguard"] = {
+        Bodygroups = {
+            {4, 4},
+        },
+    },
+    ["xmag_skullbreaker"] = {
+        Bodygroups = {
+            {4, 5},
+        },
+    },
     ["tth4"] = {
         Bodygroups = {
             {3, 1},
@@ -545,19 +562,19 @@ local Translate_XMagLarge = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     -- Check for XMag (45-round mag) and apply reload animations
-    local xmag = wep:HasElement("xmag")
+    local xmag = wep:HasElement("xmag") or wep:HasElement("xmag_skullbreaker")
     if xmag then
         if Translate_XMag[anim] then
             return Translate_XMag[anim]  -- Return the reload animation for 45-round mag
         end
     end
-    local xmag = wep:HasElement("xmaglarge")
-    if xmag then
+    
+    local xmaglarge = wep:HasElement("xmaglarge")
+    if xmaglarge then
         if Translate_XMagLarge[anim] then
             return Translate_XMagLarge[anim]  -- Return the reload animation for 45-round mag
         end
     end
-
 end
 
 

@@ -63,8 +63,8 @@ SWEP.ViewModelFOVBase = 75 -- Set to override viewmodel FOV
 
 ////////////////////////////////////////// BALANCE
 
-SWEP.AimDownSightsTime = 0.32 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.18 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.30 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.1 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.Sway = 1 -- How much the gun sways.
 
@@ -75,15 +75,16 @@ SWEP.Ammo = "pistol"
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 8 -- Self-explanatory.
 
-SWEP.SpeedMult = 0.9
+SWEP.SpeedMult = 0.975
 SWEP.SpeedMultSights = 1
 SWEP.SpeedMultShooting = 1
 SWEP.SpeedMultCrouch = 0.5
-SWEP.SpeedMultBlindFire = 1
 
-SWEP.Penetration = 4.000 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 9.000 -- Units of wood that can be penetrated by this gun.
 SWEP.PenetrationDelta = 0.5 -- The damage multiplier after all penetration distance is spent.
 
+SWEP.RicochetAngleMax = 45 -- Maximum angle at which a ricochet can occur. Between 1 and 90. Angle of 0 is impossible but would theoretically always ricochet.
+SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a ricochet can occur?
 
 
 

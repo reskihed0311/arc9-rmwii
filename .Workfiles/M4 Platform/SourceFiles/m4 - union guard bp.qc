@@ -34,6 +34,7 @@ $bodygroup "mag"
     studio "bp_unionguard_mag.dmx"
 		studio "xmag.dmx"
 		studio "xmaglarge.dmx"
+	studio "xmag_skullbreaker.dmx"
 }
 
 

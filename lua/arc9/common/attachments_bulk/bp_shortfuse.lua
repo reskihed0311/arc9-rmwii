@@ -19,6 +19,26 @@ ATT.ActivateElements = {"shortfuse"}
 
 ARC9.LoadAttachment(ATT, "wz2_m4_recsf")
 
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.PrintName = "Short Fuse Magazine"
+ATT.CompactName = "S.F Magazine"
+ATT.Description = [[Short Fuse Blueprint for the M4.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+ATT.Folder = "Blueprints"
+ATT.Category = "wz2_m4_mags"
+ATT.ActivateElements = {"mag_shortfuse"}
+
+ARC9.LoadAttachment(ATT, "wz2_m4_magsf")
+
 ATT = {}
 
 ATT.Free = true

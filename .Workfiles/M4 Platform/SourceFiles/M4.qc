@@ -42,6 +42,9 @@ $bodygroup "mag"
     studio "magdef.dmx"
 	studio "xmag.dmx"
 	studio "xmaglarge.dmx"
+    studio "mag_shortfuse.dmx"
+    studio "bp_unionguard_mag.dmx"
+	studio "xmag_skullbreaker.dmx"
 }
 
 

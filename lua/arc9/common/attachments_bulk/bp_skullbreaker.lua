@@ -32,11 +32,12 @@ ATT.Cons = {"Slower Reload Animation"}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - Warzone 2.0"
 
+ATT.Folder = "Blueprints"
 
 ATT.ClipSizeOverride = 45
 
-ATT.Category = "wz2_m4_mags_skullbreaker"
-ATT.ActivateElements = {"xmag"}
+ATT.Category = "wz2_m4_mags"
+ATT.ActivateElements = {"xmag_skullbreaker"}
 
 ARC9.LoadAttachment(ATT, "wz2_m4_xmagsb")
 
