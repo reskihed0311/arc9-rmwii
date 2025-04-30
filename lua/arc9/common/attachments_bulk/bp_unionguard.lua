@@ -100,10 +100,10 @@ ATT.SpeedMultSights = 0.8
 ATT.SpeedMultShooting = 0.8
 ATT.SpeedMultCrouch = 0.8
 
-ATT.SpreadMultMove = 0.01 -- Applied when speed is equal to walking speed.
-ATT.SpreadMultMidAir = 0.02 -- Applied when not touching the ground.
-ATT.SpreadMultHipFire = 0.1 -- Applied when not sighted.
-ATT.SpreadMultSighted = 0 -- Applied when sighted. Can be negative.
+ATT.SpreadAddMove = 0.001 -- Applied when speed is equal to walking speed.
+ATT.SpreadAddMidAir = 0.0005 -- Applied when not touching the ground.
+ATT.SpreadAddHipFire =  -0.0004 -- Applied when not sighted.
+ATT.SpreadAddSighted = 0.0005 -- Applied when sighted. Can be negative.
 
 ATT.LHIK = true
 ATT.LHIK_Priority = 1
@@ -192,7 +192,7 @@ ATT.CompactName = "SZ 1MW PEQ (UG)"
 ATT.Description = [[Union Guard Blueprint for the M4.]]
 ATT.Folder = "Laser Blueprints"
 
-ATT.Model = "models/weapons/r_mwii/ar/blueprints/mike4/atts/att_r_mwii_bp_tac_sz1mwpeqbox_unionguard.mdl"
+ATT.Model = "models/weapons/r_mwii/att/tac/att_r_mwii_bp_tac_sz1mwpeqbox_unionguard.mdl"
 ATT.Scale = 1
 ATT.CantPeek = false
 
