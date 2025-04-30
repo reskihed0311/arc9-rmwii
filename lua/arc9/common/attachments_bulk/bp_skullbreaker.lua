@@ -5,6 +5,26 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.PrintName = "Assault-60 (SB)"
+ATT.CompactName = "AS-60 (SB)"
+ATT.Description = [[Skull Breaker Blueprint for the M4.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+ATT.Folder = "Blueprints"
+ATT.Category = "wz2_m4_stocks"
+ATT.ActivateElements = {"assault60sb"}
+
+ARC9.LoadAttachment(ATT, "wz2_m4_assault60sb")
+
+
+ATT = {}
+
+ATT.Free = true
+
 ATT.PrintName = "SkullBreaker Receiver"
 ATT.CompactName = "SB Receiver"
 ATT.Description = [[Extra Boulets.]]

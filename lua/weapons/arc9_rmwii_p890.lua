@@ -295,8 +295,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 
 
-SWEP.RestPos = Vector(3, 0, 0)
-SWEP.RestAng = Angle(35, -10, -20)
+SWEP.RestPos = Vector(0, 2, -10)
+SWEP.RestAng = Angle(0, 70, 0)
 
 
 SWEP.CrouchPos = Vector(0, 0, 0)
@@ -317,11 +317,51 @@ end
 
 
 SWEP.AttachmentElements = {
+    ["xmag"] = {
+        Bodygroups = {
+            {3, 1},
+        },
+    },
+    ["tacops"] = {
+        Bodygroups = {
+            {2, 3},
+            {1, 2},
+        },
+    },
+    ["tacops_hammer"] = {
+        Bodygroups = {
+            {4, 1},
+        },
+    },
 }
 
 
 
 SWEP.Attachments = {
+    {
+        PrintName = "Magazine",
+        DefaultName = "8 Round Magazine",
+        Category = {"wz2_p890_mags"},
+        Bone = "mag",
+        Pos = Vector(0,0,0),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
+        PrintName = "Barrel",
+        DefaultName = "Bruen Factory Slide",
+        Category = {"wz2_p890_bar"},
+        Bone = "slide",
+        Pos = Vector(0,0.5,1.8),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
+        PrintName = "Hammer",
+        DefaultName = "Bruen Factory Hammer",
+        Category = {"wz2_p890_hammer"},
+        Bone = "slide",
+        Pos = Vector(0,1,-2),
+        Ang = Angle(90,-90,0),
+    } ,
 }
 
 --------------------------- ANIM RELATED
@@ -329,7 +369,6 @@ SWEP.Attachments = {
 local Translate_XMag = {
     ["reload"] = "reload_10",
     ["reload_empty"] = "reload_empty_10",
-    ["inspect"] = "inspect_10",
 }
 
 local Translate_XMagLarge = {
@@ -493,6 +532,72 @@ SWEP.Animations = {
             {s = "arc9_rmwii/p890/p890_chargeback.wav", t = 1.88},
             {s = "arc9_rmwii/p890/p890_chargefwd.wav", t = 2.18},
         },
+        MagSwapTime = 2.1,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
+        IKTimeLine = { -- t is in fraction of animation
+        {
+            t = 0.0,
+            lhik = 1,
+            rhik = 0
+        },
+        {
+           t = 0.1,
+           lhik = 0,
+           rhik = 0
+       },
+        {
+            t = 0.85,
+            lhik = 0,
+            rhik = 0,
+        },
+        {
+           t = 1,
+           lhik = 1,
+           rhik = 0,
+       },
+    },
+    },
+    ["reload_10"] = {
+        Source = "reload_10",
+        IKTimeLine = { -- t is in fraction of animation
+             {
+                 t = 0.0,
+                 lhik = 1,
+                 rhik = 0
+             },
+             {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+             {
+                 t = 0.85,
+                 lhik = 0,
+                 rhik = 0,
+             },
+             {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+         },
+        EventTable = {
+            {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
+            {s = "arc9_rmwii/p890/p890_xmagout.wav", t = 0.72},
+            {s = "arc9_rmwii/p890/p890_xmaghit.wav", t = 1.16},
+            {s = "arc9_rmwii/p890/p890_xmagin.wav", t = 1.41},
+        }
+    },
+    ["reload_empty_10"] = {
+        Source = "reload_empty_10",
+        EventTable = {
+            {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
+            {s = "arc9_rmwii/p890/p890_xmagout_empty.wav", t = 0.80},
+            {s = "arc9_rmwii/p890/p890_xmaghit_empty.wav", t = 1.5},
+            {s = "arc9_rmwii/p890/p890_xmagin_empty.wav", t = 1.58},
+            {s = "arc9_rmwii/p890/p890_chargeback.wav", t = 2.20},
+            {s = "arc9_rmwii/p890/p890_chargefwd.wav", t = 2.42},
+        },
+        MagSwapTime = 2.30,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
         IKTimeLine = { -- t is in fraction of animation
         {
             t = 0.0,

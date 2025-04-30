@@ -2,6 +2,12 @@
 AddCSLuaFile() 
   
 
+SWEP.StandardPresets = {
+    "[Short Fuse]XQAAAQBDAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq8o8ELwtsmXwlWTZcOLNrzafP/c3TzOMUhN9l6B9tN+Ry8YbmfZeTQh2trX4xP0o/NhNCr/EZwcx3oWTUPpO3pZSBfBWf5t3Ufsb/iV44N5feFB2FKvp2wydTJa+AJ0gcmGD4FxiFhqXGUT3r+9oa3Ar8FvC0HadwUOXvOzKCCDKIJA==",
+    "[Carmine Carbine]XQAAAQALAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliS/4w0qI1lvQGl7I3iNfd1Du0vp9Bj+9/rkj5zTTzR32cDNi5pdHhZaVZQVVJzE9QCRJSeFa5le40NPRIldLnDhF4qi4rngdTeD7dJF4HrbK4FiDykf9yG5YuLhghY3pDh4K9eCjJHR+lCBLR/6q9Cmj3yfXawAFBWLY=",
+    "[Union Guard]XQAAAQBGAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTATgD+bdzr30LuTqFaHmcpirBM5FIxFiTbEsU8R0Zmabp2L95iT3GjpK+y1UQgWfOLmf+BC185kaxWpIzuKF9yvh0o5+0S2ghNZTC8Zr1C7sXmDAFQv+R/2i9m0FAK7kwZWG+iruIXcL0ZAirPDoNM/ttxqGk6bSFK/52k4A",
+    "[Skull Breaker]XQAAAQAnAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq87tvxhGhyF4BAwEU0dBAV3q/MkFoMy/6FbCUKhDOsoo9+1QRNvJJiEqD+5VhTq8hHKQMZZnIwde6mnEiuD+FtWLWAZetAsrMiutPkhHnun6edjnFfMEWoks3HKv0ZkesZCppo+q8A3blSPArix8MztzIv+AQC127ZMxJVnsbSQA=",
+}
 
 
 
@@ -379,6 +385,11 @@ SWEP.AttachmentElements = {
             {6, 1},
         },
     },
+    ["assault60sb"] = {
+        Bodygroups = {
+            {6, 2},
+        },
+    },
     ["trench"] = {
         Bodygroups = {
             {3, 1},
@@ -468,7 +479,7 @@ SWEP.AttachmentElements = {
             Ang = Angle(90,-90,0),
             },
             [5] = { -- slot index
-              Pos = Vector(-1.1,-1.28,14.55),
+              Pos = Vector(-1.1,-1.28,11.5),
         Ang = Angle(90,0,0),
             }
         }
