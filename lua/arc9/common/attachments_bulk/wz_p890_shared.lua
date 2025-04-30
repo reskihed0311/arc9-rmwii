@@ -61,6 +61,6 @@ ATT.MenuCategory = "ARC9 - Warzone 2.0"
 ATT.Category = "wz2_p890_hammer"
 ATT.ActivateElements = {"tacops_hammer"}
 
-ARC9.LoadAttachment(ATT, "wz2_p890_hammer")
+ARC9.LoadAttachment(ATT, "wz2_p890_xrktacopshammer")
 
 

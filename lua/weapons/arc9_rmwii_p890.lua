@@ -3,7 +3,10 @@ AddCSLuaFile()
   
 
 
-
+SWEP.StandardPresets = {
+    "[Jack Of All]XQAAAQA6AQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQngVIxcYvpPh64gLSRIE1AJKShhI99QJsp+tCmZuRbKCOCD2ahEmw1JQUSrhI+hxyNjGIIi/6xoz6Dhvzn1XcYuYSwG5K9DHZaxXdg14e6iEDR/56gi1CjPrjrsntSjekHJbIYEbQg4VH37xFV9LGxNiq2uSrG",
+    
+}
 
 
 SWEP.Base = "arc9_base"
@@ -311,15 +314,30 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local mdl = data.model
     if eles["wz2_sh_optics_lp"] then
         mdl:SetBodygroup(2, 1)
-        mdl:SetBodygroup(1, 1)
     end
 end
 
 
 SWEP.AttachmentElements = {
+    ["jackofall_frame"] = {
+        Bodygroups = {
+            {0, 1},
+            {6, 1},
+        },
+    },
+    ["jackofall_rsh80"] = {
+        Bodygroups = {
+            {5, 1},
+        },
+    },
     ["xmag"] = {
         Bodygroups = {
             {3, 1},
+        },
+    },
+    ["xmag_jack"] = {
+        Bodygroups = {
+            {3, 2},
         },
     },
     ["tacops"] = {
@@ -328,9 +346,20 @@ SWEP.AttachmentElements = {
             {1, 2},
         },
     },
+    ["cottonmouth_jackofall"] = {
+        Bodygroups = {
+            {2, 4},
+            {1, 3},
+        },
+    },
     ["tacops_hammer"] = {
         Bodygroups = {
             {4, 1},
+        },
+    },
+    ["jackofall_hammer"] = {
+        Bodygroups = {
+            {4, 2},
         },
     },
 }
@@ -338,6 +367,22 @@ SWEP.AttachmentElements = {
 
 
 SWEP.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "Ironsights",
+        Category = {"wz2_sh_optics_lp"},
+        Bone = "slide",
+        Pos = Vector(0,0.5,0.15),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
+        PrintName = "Laser",
+        DefaultName = "None",
+        Category = {"wz2_sh_pi_tac"},
+        Bone = "weapon",
+        Pos = Vector(0,-0.8,2.8),
+        Ang = Angle(90,-90,0),
+    } ,
     {
         PrintName = "Magazine",
         DefaultName = "8 Round Magazine",
@@ -355,6 +400,14 @@ SWEP.Attachments = {
         Ang = Angle(90,-90,0),
     } ,
     {
+        PrintName = "Grip",
+        DefaultName = "Bruen Factory Grip",
+        Category = {"wz2_p890_grip"},
+        Bone = "weapon",
+        Pos = Vector(0,0.5,-2.1),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
         PrintName = "Hammer",
         DefaultName = "Bruen Factory Hammer",
         Category = {"wz2_p890_hammer"},
@@ -362,8 +415,15 @@ SWEP.Attachments = {
         Pos = Vector(0,1,-2),
         Ang = Angle(90,-90,0),
     } ,
+    {
+        PrintName = "Frames (Blueprint)",
+        DefaultName = "Bruen Factory",
+        Category = {"wz2_p890_frames"},
+        Bone = "weapon",
+        Pos = Vector(0,-1,0),
+        Ang = Angle(90,-90,0),
+    } ,
 }
-
 --------------------------- ANIM RELATED
 
 local Translate_XMag = {
@@ -380,7 +440,7 @@ local Translate_XMagLarge = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     -- Check for XMag (45-round mag) and apply reload animations
-    local xmag = wep:HasElement("xmag")
+    local xmag = wep:HasElement("xmag") or wep:HasElement("xmag_jack")
     if xmag then
         if Translate_XMag[anim] then
             return Translate_XMag[anim]  -- Return the reload animation for 45-round mag
