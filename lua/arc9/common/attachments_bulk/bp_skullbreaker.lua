@@ -5,6 +5,25 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.PrintName = "SkullBreaker Receiver"
+ATT.CompactName = "SB Receiver"
+ATT.Description = [[Extra Boulets.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+
+ATT.Category = "wz2_m4_receivers"
+ATT.ActivateElements = {"skullbreaker"}
+
+ARC9.LoadAttachment(ATT, "wz2_m4_recsb")
+
+ATT = {}
+
+ATT.Free = true
+
 ATT.PrintName = "45 Round Mag (SkullBreaker)"
 ATT.CompactName = "45 Mag (SB)"
 ATT.Description = [[Extra Boulets.]]

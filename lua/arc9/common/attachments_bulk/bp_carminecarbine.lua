@@ -1,5 +1,25 @@
 local ATT = {}
 
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.PrintName = "Carmine Carbine Receiver"
+ATT.CompactName = "C.C Receiver"
+ATT.Description = [[Carmine Carbine Blueprint for the M4.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+
+ATT.Category = "wz2_m4_receivers"
+ATT.ActivateElements = {"carminecarbine"}
+
+ARC9.LoadAttachment(ATT, "wz2_m4_reccc")
+
 ATT = {}
 
 

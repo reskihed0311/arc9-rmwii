@@ -68,7 +68,7 @@ SWEP.SprintToFireTime = 0.18 -- How long it takes to go from sprinting to being 
 
 SWEP.Sway = 1 -- How much the gun sways.
 
-SWEP.RPM = 250
+SWEP.RPM = 300
 
 SWEP.Ammo = "pistol"
 
@@ -81,10 +81,10 @@ SWEP.ClipSize = 8 -- Self-explanatory.
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 2
+SWEP.Recoil = 2.5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 2 -- Multiplier for vertical recoil
 SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
@@ -92,9 +92,9 @@ SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 SWEP.RecoilRandomUp = 0
 SWEP.RecoilRandomSide = 0
 
-SWEP.RecoilDissipationRate = 5 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
-SWEP.RecoilFullResetTime = 0.12 -- How long recoil must stay after last shoot
+SWEP.RecoilDissipationRate = 15 -- How much recoil dissipates per second.
+SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
+SWEP.RecoilFullResetTime = 0.1 -- How long recoil must stay after last shoot
 
 SWEP.RecoilPerShot = 0.5
 SWEP.RecoilMax = nil
@@ -106,20 +106,20 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true -- Visual recoil actually affects your aim point.
 
-SWEP.VisualRecoilUp = 0.02 -- Vertical tilt for visual recoil.F
-SWEP.VisualRecoilSide = 0.05 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 0.23 -- Roll tilt for visual recoil.
+SWEP.VisualRecoilUp = 0.2 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilSide = 0.15 -- Horizontal tilt for visual recoil.
+SWEP.VisualRecoilRoll = 0.4 -- Roll tilt for visual recoil.
 
 SWEP.VisualRecoilCenter = Vector(2, 4, 2) -- The "axis" of visual recoil. Where your hand is.
 
 SWEP.VisualRecoilPunch = 1.5 -- How far back visual recoil moves the gun.
-SWEP.VisualRecoilPunchMultSights = 0.1
+SWEP.VisualRecoilPunchMultSights = 0.2
 
 -- SWEP.VisualRecoilMult = 1
 -- SWEP.VisualRecoilADSMult = 0.1
 -- SWEP.VisualRecoilPunchADSMult = 0.1
 
-SWEP.VisualRecoil = 1
+SWEP.VisualRecoil = 1.2
 SWEP.VisualRecoilMultSights = 0.1
 SWEP.VisualRecoilPositionBump = 1.5
 SWEP.VisualRecoilPositionBumpUp = 0.08 -- its a mult
@@ -157,10 +157,10 @@ SWEP.RecoilKickAffectPitch = nil -- thing for eft, set to true if you want camer
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 72 -- Damage done at point blank range
-SWEP.DamageMin = 12 -- Damage done at maximum range
+SWEP.DamageMax = 60 -- Damage done at point blank range
+SWEP.DamageMin = 10 -- Damage done at maximum range
 
-SWEP.ImpactForce = 25 -- Force that bullets apply on hit
+SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -172,7 +172,7 @@ SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.85,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1.35,
     [HITGROUP_STOMACH] = 1.1,
     [HITGROUP_LEFTARM] = 0.9,

@@ -1,5 +1,29 @@
 local ATT = {}
 
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.PrintName = "Union Guard Receiver"
+ATT.CompactName = "UG Receiver"
+ATT.Description = [[Union Guard Blueprint for the M4.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+
+ATT.Category = "wz2_m4_receivers"
+ATT.ActivateElements = {"unionguard"}
+
+ARC9.LoadAttachment(ATT, "wz2_m4_unionguardrec")
+
+
+
+ATT = {}
+
 ATT.Free = true
 
 ATT.PrintName = "TT-H4 (Union Guard)"

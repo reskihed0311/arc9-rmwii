@@ -321,6 +321,26 @@ end
 
 
 SWEP.AttachmentElements = {
+    ["skullbreaker"] = {
+        Bodygroups = {
+            {0, 2},
+        },
+    },
+    ["shortfuse"] = {
+        Bodygroups = {
+            {0, 4},
+        },
+    },
+    ["carminecarbine"] = {
+        Bodygroups = {
+            {0, 3},
+        },
+    },
+    ["unionguard"] = {
+        Bodygroups = {
+            {0, 1},
+        },
+    },
     ["pgrip_none"] = {
         Bodygroups = {
             {7, 1},
@@ -479,6 +499,14 @@ SWEP.Attachments = {
         Category = {"wz2_m4_stocks"},
         Bone = "weapon",
         Pos = Vector(0,-1.5,-5),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
+        PrintName = "Receiver (BLUEPRINT)",
+        DefaultName = "Tempus Default Receiver",
+        Category = {"wz2_m4_receivers"},
+        Bone = "weapon",
+        Pos = Vector(0,0,0),
         Ang = Angle(90,-90,0),
     } ,
 }
