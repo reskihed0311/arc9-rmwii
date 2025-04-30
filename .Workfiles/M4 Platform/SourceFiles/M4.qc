@@ -2,8 +2,16 @@ $modelname "arc9_r_mwii_m4.mdl"
 
 $maxverts 655553
 
-$model "receiver" "receiver_default.dmx"
-
+$bodygroup "receiver"
+{
+    studio "receiver_default.dmx"
+	studio "bp_unionguard_receiver.dmx"
+	studio "rec_skullbreaker.dmx"
+	studio "rec_carminecarbine.dmx"
+    studio "rec_shortfuse.dmx"
+}
+	
+	
 $bodygroup "rs"
 {
    studio "rs.dmx"
@@ -52,6 +60,7 @@ $bodygroup "stock"
 {
     studio "stock_assault60.dmx"
 	blank
+	studio "stock_assault60_skullbreaker.dmx"
 }
 
 $bodygroup "pgrip"
@@ -68,6 +77,10 @@ $bodygroup "ammo"
 
 
 
+$cdmaterials "models\r_mwii\m4_bp_carminecarbine"
+$cdmaterials "models\r_mwii\m4_bp_skullbreaker\"
+$cdmaterials "models\r_mwii\m4_bp_shortfuse\"
+$cdmaterials "models\r_mwii\m4_bp_unionguard\"
 $cdmaterials "models\r_mwii\m4"
 $cdmaterials "models\r_mwii\ammo_shared"
 
