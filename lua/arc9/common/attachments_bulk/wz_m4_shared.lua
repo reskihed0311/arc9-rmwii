@@ -155,12 +155,12 @@ ATT.Description = [[]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - Warzone 2.0 Blueprints"
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
 
 ATT.Category = "wz2_m4_hgs"
 ATT.ActivateElements = {"carbineshroud"}
 
-ATT.Model = "models/weapons/r_mwii/ar/hgs/bps/att_r_mwii_bp_hg_carmine_14shroud.mdl"
+ATT.Model = "models/weapons/r_mwii/ar/hgs/att_r_mwii_hg_14shroud.mdl"
 
 ATT.ModelOffset = Vector(-18.15, -2.22, 2.82)
 
@@ -168,4 +168,124 @@ ATT.ModelOffset = Vector(-18.15, -2.22, 2.82)
 ATT.LHIK = true
 ATT.LHIK_Priority = 0
 
-ARC9.LoadAttachment(ATT, "wz2_bp_shroud_cc")
+ARC9.LoadAttachment(ATT, "wz2_m4_shroud14")
+
+
+
+ATT = {}
+
+-- SHARED STATS FOR THE FIREBRAND 7.5
+
+ATT.RecoilMult = 1.2
+ATT.SpreadMult = 1.7
+ATT.RecoilSideMult = 1.2
+ATT.MovementSpeedMult = 1.2
+ATT.DamageMin = 15
+ATT.RangeMaxMult = 0.5
+
+ATT.SpreadMultMove = 0.8 -- Applied when speed is equal to walking speed.
+ATT.SpreadMultMidAir = 0.8 -- Applied when not touching the ground.
+ATT.SpeedMultSights = 1.3
+ATT.SpeedMult = 1.05
+
+ATT.Free = true
+
+ATT.PrintName = "7.5' TEMPUS FIREBRAND"
+ATT.CompactName = "7.5'"
+ATT.Icon = Material("")
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+ATT.Category = "wz2_m4_hgs"
+ATT.ActivateElements = {"tempusfirebrand"}
+
+ATT.Model = "models/weapons/r_mwii/ar/hgs/att_r_mwii_hg_firebrand.mdl"
+
+ATT.ModelOffset = Vector(-18.15, -2.22, 2.82)
+
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ARC9.LoadAttachment(ATT, "wz2_m4_tempusfirebrand")
+
+
+
+ATT = {}
+
+--SHARED ACROSS ALL P80
+
+ATT.Free = true
+
+ATT.PrintName = "TEMPUS P80 STRIKE"
+ATT.CompactName = "P80"
+ATT.Icon = Material("")
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+ATT.Category = "wz2_m4_stocks"
+ATT.ActivateElements = {"stocks_none"}
+
+ATT.Model = "models/weapons/r_mwii/ar/sto/att_r_mwii_sto_p80.mdl"
+
+ATT.ModelOffset = Vector(-5, -2.22, 2.5)
+
+
+ARC9.LoadAttachment(ATT, "wz2_m4_p80")
+
+
+
+--SHARED ACROSS ALL M16 STOCKS
+ATT = {}
+
+ATT.Free = true
+
+ATT.PrintName = "DEMO Precision Factory" --m16 basically
+ATT.CompactName = "PREC. FACTORY"
+ATT.Icon = Material("")
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+ATT.Category = "wz2_m4_stocks"
+ATT.ActivateElements = {"stocks_none"}
+
+ATT.Model = "models/weapons/r_mwii/ar/sto/att_r_mwii_sto_demoprecisionfactory.mdl"
+
+ATT.ModelOffset = Vector(-5, -2.22, 2.5)
+
+
+ARC9.LoadAttachment(ATT, "wz2_m4_m16")
+
+-- SHARED ACROSS ALL RAVAGE 8s
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.PrintName = "RAVAGE-8"
+ATT.CompactName = "RAVAGE"
+ATT.Icon = Material("")
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+ATT.Category = "wz2_m4_stocks"
+ATT.ActivateElements = {"stocks_none"}
+
+ATT.Model = "models/weapons/r_mwii/ar/sto/att_r_mwii_stock_ravage8.mdl"
+
+ATT.ModelOffset = Vector(-5, -2.22, 2.5)
+
+
+ARC9.LoadAttachment(ATT, "wz2_m4_ravage8")

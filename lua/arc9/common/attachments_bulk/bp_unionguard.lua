@@ -85,6 +85,7 @@ local ATT = {}
 
 ATT = {}
 
+-- ATTS SHARED FOR ALL LOCKGRIP PRECISION-40 --
 
 ATT.Free = true
 
@@ -105,16 +106,15 @@ ATT.Model = "models/weapons/r_mwii/att/fg/bp/att_r_mwii_bp_fg_precision40_uniong
 ATT.ModelOffset = Vector(0, 0, 0)
 
 
-ATT.RecoilAdd = -0.15
-ATT.SpeedMult = 0.9
-ATT.SpeedMultSights = 0.8
-ATT.SpeedMultShooting = 0.8
-ATT.SpeedMultCrouch = 0.8
+ATT.RecoilMult = 0.85
+ATT.SpeedMult = 0.90
+ATT.SpeedMultSights = 0.80
+ATT.SpeedMultShooting = 0.85
 
-ATT.SpreadAddMove = 0.001 -- Applied when speed is equal to walking speed.
-ATT.SpreadAddMidAir = 0.0005 -- Applied when not touching the ground.
-ATT.SpreadAddHipFire =  -0.0004 -- Applied when not sighted.
-ATT.SpreadAddSighted = 0.0005 -- Applied when sighted. Can be negative.
+ATT.SpreadMultMove = 0.95
+ATT.SpreadMultMidAir = 1.5 
+ATT.SpreadMultHipFire =  0.85  
+
 
 ATT.LHIK = true
 ATT.LHIK_Priority = 1

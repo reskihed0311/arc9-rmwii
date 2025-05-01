@@ -141,6 +141,16 @@ ATT.Model = "models/weapons/r_mwii/att/fg/bp/att_r_mwii_bp_fg_hex40_carmine.mdl"
 
 ATT.ModelOffset = Vector(0, 0, 0)
 
+-- ATTS SHARED FOR ALL HEX-40 --
+
+ATT.RecoilMult = 0.75
+ATT.SpeedMult = 0.80
+ATT.SpeedMultSights = 0.70
+ATT.SpeedMultShooting = 0.80
+
+ATT.SpreadMultMove = 0.80
+ATT.SpreadMultMidAir = 2 
+ATT.SpreadMultHipFire =  0.80 
 
 ATT.LHIK = true
 ATT.LHIK_Priority = 1
