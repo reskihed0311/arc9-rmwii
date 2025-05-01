@@ -41,7 +41,18 @@ ARC9.LoadAttachment(ATT, "wz2_m4_magug")
 
 ATT = {}
 
+-- ATTS SHARED FOR ALL TT-H4 --
+
 ATT.Free = true
+
+ATT.SpeedMultSights = 1.05
+ATT.SprintToFireTimeMult = 0.85
+ATT.SpeedMult = 1.1
+
+ATT.RecoilMult = 1.1
+ATT.RangeMaxMult = 0.9 
+ATT.SpreadMult = 1.05
+
 
 ATT.PrintName = "TT-H4 (Union Guard)"
 ATT.CompactName = "H4 (UG)"

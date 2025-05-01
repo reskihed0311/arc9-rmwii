@@ -14,7 +14,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - Warzone 2.0"
 
 
-
 ATT.Category = "wz2_m4_receivers"
 ATT.ActivateElements = {"carminecarbine"}
 
@@ -59,8 +58,18 @@ ARC9.LoadAttachment(ATT, "wz_bp_cronenminipro_cc")
 
 
 ATT = {}
+--STATS SHARED FOR CARBINE SHROUD
+
 
 ATT.Free = true
+
+ATT.SpeedMultSights = 0.95
+ATT.SprintToFireTimeAdd = 0.2
+ATT.SpeedMult = 0.95
+
+ATT.RecoilMult = 0.95
+ATT.RangeMaxMult = 1.1 
+ATT.SpreadMult = 0.95
 
 ATT.PrintName = "14' Carbine Shroud (Carmine Carbine)"
 ATT.CompactName = "14' SHROUD (C.C)"

@@ -63,6 +63,15 @@ ARC9.LoadAttachment(ATT, "wz2_m4_xmagsb")
 
 ATT = {}
 
+-- ATTS SHARED FOR ALL TEMPUS TRENCH PRO --
+
+ATT.SprintToFireTimeMult = 0.8
+ATT.RangeMaxMult = 1.2
+ATT.SpeedMultSights = 1.15
+
+ATT.RecoilMult = 1.5
+ATT.RecoilSideMult = 1.5
+
 ATT.Free = true
 
 ATT.PrintName = "TEMPUS TRENCH PRO (SKULLBREAKER)"

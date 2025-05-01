@@ -21,7 +21,7 @@ ATT.CustomPros = {
     ["Magnification"] = "3-8x",
     ["Thermal Capabilities"] = ""
 }
-ATT.CustomCons = {""}
+
 
 
 ATT.Model = "models/weapons/r_mwii/att/opt/att_r_mwii_opt_3rfl.mdl"

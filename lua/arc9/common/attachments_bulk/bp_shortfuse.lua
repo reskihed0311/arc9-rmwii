@@ -41,6 +41,20 @@ ARC9.LoadAttachment(ATT, "wz2_m4_magsf")
 
 ATT = {}
 
+-- SHARED STATS FOR THE FIREBRAND 7.5
+
+ATT.RecoilMult = 1.2
+ATT.SpreadMult = 1.7
+ATT.RecoilSideMult = 1.2
+ATT.MovementSpeedMult = 1.2
+ATT.DamageMin = 15
+ATT.RangeMaxMult = 0.5
+
+ATT.SpreadMultMove = 0.8 -- Applied when speed is equal to walking speed.
+ATT.SpreadMultMidAir = 0.8 -- Applied when not touching the ground.
+ATT.SpeedMultSights = 1.3
+ATT.SpeedMult = 1.05
+
 ATT.Free = true
 
 ATT.PrintName = "7.5' TEMPUS FIREBRAND (ShortFuse)"
