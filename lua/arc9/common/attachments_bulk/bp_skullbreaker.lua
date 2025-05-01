@@ -185,6 +185,12 @@ ATT.Model = "models/weapons/r_mwii/att/fg/bp/att_r_mwii_bp_fg_exf_backdraft_skul
 
 ATT.ModelOffset = Vector(0, 0, 0)
 
+ATT.RecoilMult = 0.95
+ATT.SpeedMultSights = 1.15
+ATT.SpeedMultShooting = 0.90
+ATT.SpreadMultHipFire =  0.85 
+ATT.AimDownSightsTimeMult = 1.25
+ATT.SpeedMult = 0.95
 
 ATT.LHIK = true
 ATT.LHIK_Priority = 1
