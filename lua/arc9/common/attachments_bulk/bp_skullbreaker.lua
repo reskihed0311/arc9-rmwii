@@ -105,13 +105,12 @@ ARC9.LoadAttachment(ATT, "wz2_bp_trenchprosb")
 
 ATT = {}
 
-
+ATT.SwayMult = 0.85
 ATT.Free = true
 
 ATT.PrintName = "Support CP90 Grip (Skull Breaker)"
-ATT.CompactName = "CP90 (SB)"
+ATT.CompactName = "CT90 (SB)"
 ATT.Description =  [[Skull Breaker Blueprint for the M4.]]
-
 
 
 ATT.Model = "models/weapons/r_mwii/ar/pgrip/bp/att_r_mwii_bp_grip_skullbreaker_ct90.mdl"
