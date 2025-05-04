@@ -88,6 +88,8 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.RecoilMult = 0.95
+
 ATT.PrintName = "Sakin ZX Grip (Short Fuse)"
 ATT.CompactName = "ZX (SHORTFUSE)"
 ATT.Description =  [[Short Fuse Blueprint for the M4.]]

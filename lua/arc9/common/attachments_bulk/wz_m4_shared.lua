@@ -5,6 +5,9 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.SpeedMult = 0.90
+ATT.AimDownSightsTimeMult = 1.15
+
 ATT.PrintName = "45 Round Mag"
 ATT.CompactName = "45 Mag"
 ATT.Description = [[Extra Boulets.]]
@@ -26,6 +29,10 @@ ARC9.LoadAttachment(ATT, "wz2_m4_xmag")
 ATT = {}
 
 ATT.Free = true
+
+ATT.SpeedMult = 0.80
+ATT.AimDownSightsTimeMult = 1.35
+ATT.SprintToFireTimeMult = 1.15
 
 ATT.PrintName = "60 Round Mag"
 ATT.CompactName = "60 Mag"
@@ -82,6 +89,8 @@ ARC9.LoadAttachment(ATT, "wz2_hg_419exf")
 ATT = {}
 
 ATT.Free = true
+
+ATT.SwayMult = 0.85
 
 ATT.PrintName = "Support CT-90 Grip"
 ATT.CompactName = "CT-90"

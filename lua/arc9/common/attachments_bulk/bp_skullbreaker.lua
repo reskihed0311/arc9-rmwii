@@ -42,6 +42,10 @@ ARC9.LoadAttachment(ATT, "wz2_m4_recsb")
 
 ATT = {}
 
+ATT.SpeedMult = 0.90
+ATT.AimDownSightsTimeMult = 1.15
+
+
 ATT.Free = true
 
 ATT.PrintName = "45 Round Mag (SkullBreaker)"
