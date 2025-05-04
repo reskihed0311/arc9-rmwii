@@ -110,6 +110,14 @@ ARC9.LoadAttachment(ATT, "wz_bp_sakinzxgripshortfuse")
 
 ATT = {}
 
+
+ATT.AimDownSightsTimeMult = 0.85 
+ATT.SprintToFireTimeMult = 0.90 
+ATT.RecoilMult = 1.3
+ATT.SpeedMultSights = 1.15
+ATT.SpeedMultShooting = 1.15
+
+
 ATT.Free = true
 
 ATT.PrintName = "TEMPUS P80 STRIKE (Short Fuse)"

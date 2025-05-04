@@ -494,6 +494,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        Mult = 0.85,
     },
     ["draw_empty"] = {
         Source = "draw_empty",

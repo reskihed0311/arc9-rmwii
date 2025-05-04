@@ -44,8 +44,18 @@ ATT.ActivateElements = {"xmaglarge"}
 ARC9.LoadAttachment(ATT, "wz2_m4_xmaglarge")
 
 ATT = {}
-
+-- Stats Shared For all 419 EXF Barrel-- 
 ATT.Free = true
+
+ATT.RecoilMult = 0.8
+ATT.SpreadMult = 0.75
+ATT.MovementSpeedMult = 0.75
+ATT.RangeMaxMult = 1.5
+
+ATT.SpreadMultMove = 1.4 
+ATT.SpreadMultMidAir = 1.4 
+ATT.SpeedMultSights = 0.7
+ATT.SpeedMult = 0.8
 
 ATT.PrintName = "419 EXF Barrel"
 ATT.CompactName = "419 EXF"
@@ -220,6 +230,12 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.AimDownSightsTimeMult = 0.85 
+ATT.SprintToFireTimeMult = 0.90 
+ATT.RecoilMult = 1.3
+ATT.SpeedMultSights = 1.15
+ATT.SpeedMultShooting = 1.15
+
 ATT.PrintName = "TEMPUS P80 STRIKE"
 ATT.CompactName = "P80"
 ATT.Icon = Material("")
@@ -246,6 +262,12 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.AimDownSightsTimeMult = 1.1 
+ATT.SprintToFireTimeMult = 1.2 
+ATT.RecoilMult = 0.95
+ATT.SpeedMultSights = 1.1
+ATT.SpeedMultShooting = 1.1
+
 ATT.PrintName = "DEMO Precision Factory" --m16 basically
 ATT.CompactName = "PREC. FACTORY"
 ATT.Icon = Material("")
@@ -270,6 +292,12 @@ ARC9.LoadAttachment(ATT, "wz2_m4_m16")
 ATT = {}
 
 ATT.Free = true
+
+ATT.AimDownSightsTimeMult = 0.9 
+ATT.SprintToFireTimeMult = 0.8
+ATT.RecoilMult = 1.15
+ATT.SpeedMultSights = 1.05
+ATT.SpeedMultShooting = 1.05
 
 ATT.PrintName = "RAVAGE-8"
 ATT.CompactName = "RAVAGE"

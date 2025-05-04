@@ -97,6 +97,14 @@ ARC9.LoadAttachment(ATT, "wz2_bp_shroud_cc")
 
 ATT = {}
 
+
+ATT.AimDownSightsTimeMult = 0.9 
+ATT.SprintToFireTimeMult = 0.8
+ATT.RecoilMult = 1.15
+ATT.SpeedMultSights = 1.05
+ATT.SpeedMultShooting = 1.05
+
+
 ATT.Free = true
 
 ATT.PrintName = "RAVAGE-8 (Carmine Carbine)"

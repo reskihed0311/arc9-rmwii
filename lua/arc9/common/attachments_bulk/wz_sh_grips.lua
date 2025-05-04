@@ -33,6 +33,10 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.AimDownSightsTimeMult = 0.85
+ATT.SpreadMultHipFire =  1.15
+
+
 ATT.PrintName = "XTEN TX-12 Handstop"
 ATT.CompactName = "TX12"
 ATT.Icon = Material("")

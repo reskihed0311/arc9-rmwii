@@ -198,6 +198,12 @@ ATT = {}
 
 ATT.Free = true 
 
+ATT.SpreadMultMove = 0.985
+ATT.SpreadMultMidAir = 0.985
+ATT.SpeedMultSights = 1.025
+ATT.SpeedMult = 1.025
+
+
 ATT.PrintName = "SZ 1MW PEQ (Union Guard)"
 ATT.CompactName = "SZ 1MW PEQ (UG)"
 ATT.Description = [[Union Guard Blueprint for the M4.]]
