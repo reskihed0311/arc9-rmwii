@@ -203,6 +203,8 @@ ATT.SpreadMultMidAir = 0.985
 ATT.SpeedMultSights = 1.025
 ATT.SpeedMult = 1.025
 
+ATT.CustomCons =   
+{  ["Reveals your position."] = ""}
 
 ATT.PrintName = "SZ 1MW PEQ (Union Guard)"
 ATT.CompactName = "SZ 1MW PEQ (UG)"
@@ -217,7 +219,7 @@ ATT.Category = {"wz2_sh_ar_tac"}
 ATT.MenuCategory = "ARC9 - Warzone 2.0 Blueprints"
 
 ATT.Laser = true
-ATT.LaserStrength = 1
+ATT.LaserStrength = 5
 ATT.LaserFlareMat = nil
 ATT.LaserTraceMat = nil
 ATT.LaserColor = Color(255, 0, 0)
