@@ -2,13 +2,6 @@
 AddCSLuaFile() 
   
 
---[[SWEP.StandardPresets = {
-    "[Short Fuse]XQAAAQBDAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq8o8ELwtsmXwlWTZcOLNrzafP/c3TzOMUhN9l6B9tN+Ry8YbmfZeTQh2trX4xP0o/NhNCr/EZwcx3oWTUPpO3pZSBfBWf5t3Ufsb/iV44N5feFB2FKvp2wydTJa+AJ0gcmGD4FxiFhqXGUT3r+9oa3Ar8FvC0HadwUOXvOzKCCDKIJA==",
-    "[Carmine Carbine]XQAAAQALAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliS/4w0qI1lvQGl7I3iNfd1Du0vp9Bj+9/rkj5zTTzR32cDNi5pdHhZaVZQVVJzE9QCRJSeFa5le40NPRIldLnDhF4qi4rngdTeD7dJF4HrbK4FiDykf9yG5YuLhghY3pDh4K9eCjJHR+lCBLR/6q9Cmj3yfXawAFBWLY=",
-    "[Union Guard]XQAAAQBGAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTATgD+bdzr30LuTqFaHmcpirBM5FIxFiTbEsU8R0Zmabp2L95iT3GjpK+y1UQgWfOLmf+BC185kaxWpIzuKF9yvh0o5+0S2ghNZTC8Zr1C7sXmDAFQv+R/2i9m0FAK7kwZWG+iruIXcL0ZAirPDoNM/ttxqGk6bSFK/52k4A",
-    "[Skull Breaker]XQAAAQAnAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq87tvxhGhyF4BAwEU0dBAV3q/MkFoMy/6FbCUKhDOsoo9+1QRNvJJiEqD+5VhTq8hHKQMZZnIwde6mnEiuD+FtWLWAZetAsrMiutPkhHnun6edjnFfMEWoks3HKv0ZkesZCppo+q8A3blSPArix8MztzIv+AQC127ZMxJVnsbSQA=",
-}--]]
-
 
 
 
@@ -329,6 +322,17 @@ end
 
 
 SWEP.AttachmentElements = {
+    ["amp_soviet"] = {
+        Bodygroups = {
+            {0, 1},
+            {8, 1},
+        },
+    },
+    ["xmag_soviet"] = {
+        Bodygroups = {
+            {5, 1},
+        },
+    },
 }
 
 
@@ -400,7 +404,7 @@ SWEP.Attachments = {
         Ang = Angle(90,-90,0),
     } ,
     {
-        PrintName = "Receiver (BLUEPRINT)",
+        PrintName = "Receiver (BLUEPRINT / CONVERSION)",
         DefaultName = "Tempus Default Receiver",
         Category = {"wz2_mtz762_receivers"},
         Bone = "weapon",
@@ -411,32 +415,24 @@ SWEP.Attachments = {
 
 --------------------------- ANIM RELATED
 
-local Translate_XMag = {
-    ["reload"] = "reload_45",
-    ["reload_empty"] = "reload_empty_45",
-    ["inspect"] = "inspect_45",
+
+
+local Translate_XMag_soviet = {
+    ["reload"] = "reload_s_40",
+    ["reload_empty"] = "reload_empty_s_40",
+    ["inspect"] = "inspect_s_40",
 }
 
-local Translate_XMagLarge = {
-    ["reload"] = "reload_60",
-    ["reload_empty"] = "reload_empty_60",
-    ["inspect"] = "inspect_60",
-}
+
+
 
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     -- Check for XMag (45-round mag) and apply reload animations
-    local xmag = wep:HasElement("xmag") or wep:HasElement("xmag_skullbreaker")
-    if xmag then
-        if Translate_XMag[anim] then
-            return Translate_XMag[anim]  -- Return the reload animation for 45-round mag
-        end
-    end
-    
-    local xmaglarge = wep:HasElement("xmaglarge")
-    if xmaglarge then
-        if Translate_XMagLarge[anim] then
-            return Translate_XMagLarge[anim]  -- Return the reload animation for 45-round mag
+    local xmag_soviet = wep:HasElement("xmag_soviet")
+    if xmag_soviet then
+        if Translate_XMag_soviet[anim] then
+            return Translate_XMag_soviet[anim]  -- Return the reload animation for 45-round mag
         end
     end
 end
@@ -508,59 +504,58 @@ SWEP.Animations = {
             {s = "arc9_rmwii/mtz762/inspect_boltfwd.wav", t = 5.15},
         },
         IKTimeLine = { -- t is in fraction of animation
-        {
-            t = 0.0,
-            lhik = 1,
-            rhik = 0
-        },
-        {
-           t = 0.1,
-           lhik = 0,
-           rhik = 0
-       },
-        {
-            t = 0.85,
-            lhik = 0,
-            rhik = 0,
-        },
-        {
-           t = 1,
-           lhik = 1,
-           rhik = 0,
-       },
-    },
-    },
-    ["reload"] = {
-        Source = "reload_20",
-        IKTimeLine = { -- t is in fraction of animation
-             {
-                 t = 0.0,
-                 lhik = 1,
-                 rhik = 0
-             },
-             {
-                t = 0.2,
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
-             {
-                 t = 0.85,
-                 lhik = 0,
-                 rhik = 0,
-             },
-             {
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
                 t = 1,
                 lhik = 1,
                 rhik = 0,
             },
-         },
+        },
+    },
+    ["reload"] = {
+        Source = "reload_20",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
         EventTable = {
             {s = "arc9_rmwii/mtz762/raise_quick.wav", t = 0},
             {s = "arc9_rmwii/mtz762/reload_maggrab.wav", t = 0.78},
             {s = "arc9_rmwii/mtz762/reload_magout.wav", t = 0.8},
             {s = "arc9_rmwii/mtz762/reload_maghit.wav", t = 1.4},
             {s = "arc9_rmwii/mtz762/reload_magin.wav", t = 1.5},
-
         }
     },
     ["reload_empty"] = {
@@ -571,66 +566,155 @@ SWEP.Animations = {
             {s = "arc9_rmwii/mtz762/reload_magin_empty.wav", t = 1.9},
             {s = "arc9_rmwii/mtz762/reload_empty_chargeback.wav", t = 2.6},
             {s = "arc9_rmwii/mtz762/reload_empty_chargefwd.wav", t = 2.68},
-        
         },
         IKTimeLine = { -- t is in fraction of animation
-        {
-            t = 0.0,
-            lhik = 1,
-            rhik = 0
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
         },
-        {
-           t = 0.1,
-           lhik = 0,
-           rhik = 0
-       },
-        {
-            t = 0.85,
-            lhik = 0,
-            rhik = 0,
-        },
-        {
-           t = 1,
-           lhik = 1,
-           rhik = 0,
-       },
     },
+    ["reload_s_40"] = {
+        Source = "reload_amp_40",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_amp_xmagout.wav", t = 0.67},
+            {s = "arc9_rmwii/mtz762/reload_amp_xmaghit.wav", t = 1.3},
+            {s = "arc9_rmwii/mtz762/reload_amp_xmagin.wav", t = 1.50},
+        }
+    },
+    ["reload_empty_s_40"] = {
+        Source = "reload_empty_amp_40",
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/reload_amp_xmagout_empty.wav", t = 0.35},
+            {s = "arc9_rmwii/mtz762/reload_amp_xmaghit_empty2.wav", t = 1.92},
+            {s = "arc9_rmwii/mtz762/reload_amp_xmagin_empty.wav", t = 2.05},
+            {s = "arc9_rmwii/mtz762/reload_empty_chargeback.wav", t = 2.7},
+            {s = "arc9_rmwii/mtz762/reload_empty_chargefwd.wav", t = 2.85},
+        },
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+    },
+    ["inspect_s_40"] = {
+        Source = "inspect_amp_40",
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/inspect_raise.wav", t = 0 },
+            {s = "arc9_rmwii/mtz762/inspect_amp_xmaggrab.wav", t = 1.40},
+            {s = "arc9_rmwii/mtz762/inspect_amp_xmagout.wav", t = 1.48},
+            {s = "arc9_rmwii/mtz762/inspect_magmvmnt2.wav", t = 2.5},
+            {s = "arc9_rmwii/mtz762/inspect_amp_xmaghit.wav", t = 3.35},
+            {s = "arc9_rmwii/mtz762/inspect_amp_xmagin.wav", t = 3.75},
+            {s = "arc9_rmwii/mtz762/inspect_boltback.wav", t = 4.38},
+            {s = "arc9_rmwii/mtz762/inspect_boltfwd.wav", t = 5.15},
+        },
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
     },
     ["ready"] = {
         Source = "ready",
         IKTimeLine = { -- t is in fraction of animation
-        {
-            t = 0.0,
-            lhik = 0,
-            rhik = 0
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
         },
-        {
-            t = 0.75,
-            lhik = 0,
-            rhik = 0,
-        },
-        {
-           t = 0.90,
-           lhik = 1,
-           rhik = 0,
-       },
-    },
         EventTable = {
             {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
             {s = "arc9_rmwii/mtz762/raise_first_boltpull.wav", t = 0.38},
             {s = "arc9_rmwii/mtz762/raise_first_boltfwd.wav", t = 0.65},
             {s = "arc9_rmwii/mtz762/raise_first_end.wav", t = 1.25},
-          
         }
     },
 }
-
-
-
- 
-
-
-
 
  
 

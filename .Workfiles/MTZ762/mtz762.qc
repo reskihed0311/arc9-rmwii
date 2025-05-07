@@ -5,6 +5,7 @@ $maxverts 655553
 $bodygroup "receiver"
 {
     studio "receiver_def.dmx"
+	studio "receiver_amp.dmx"
 }
 
 
@@ -38,6 +39,7 @@ $bodygroup "stock"
 $bodygroup "mag"
 {
     studio "magdef.dmx"
+	studio "xmag_762ru.dmx"
 }
 
 
@@ -57,6 +59,7 @@ $bodygroup "pgrip"
 $bodygroup "ammo"
 {
     studio "ammo.dmx"
+	studio "ammo_762soviet.dmx"
 }
 
 
@@ -202,6 +205,24 @@ $sequence "reload_20" {
 
 
 
+$sequence "reload_empty_amp_40" {
+	"anims\reload_empty_amp_40.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_amp_40" {
+	"anims\reload_amp_40.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+
+
 $sequence "reload_empty_20" {
 	"anims\reload_empty_20.dmx"
 	activity "ACT_VM_RELOAD" 1
@@ -211,8 +232,18 @@ $sequence "reload_empty_20" {
 }
 
 
+
 $sequence "inspect_20" {
 	"anims\inspect_20.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "inspect_amp_40" {
+	"anims\inspect_amp_40.dmx"
 	activity "ACT_VM_RELOAD" 1
 	snap
 	node "reload"
