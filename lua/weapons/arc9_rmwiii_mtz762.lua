@@ -491,6 +491,10 @@ SWEP.Animations = {
         Source = "fire_iron",
         EjectAt = 0,
     },
+    ["fire_iron_empty"] = {
+        Source = "fire_empty",
+        EjectAt = 0,
+    },
     ["inspect"] = {
         Source = "inspect_20",
         EventTable = {
