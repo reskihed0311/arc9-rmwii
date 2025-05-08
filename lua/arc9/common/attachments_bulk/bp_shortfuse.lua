@@ -115,7 +115,7 @@ ATT = {}
 
 ATT.AimDownSightsTimeMult = 0.85 
 ATT.SprintToFireTimeMult = 0.90 
-ATT.RecoilMult = 1.3
+ATT.RecoilMult = 1.15s
 ATT.SpeedMultSights = 1.15
 ATT.SpeedMultShooting = 1.15
 
@@ -148,6 +148,10 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.RecoilMult = 0.95
+ATT.AimDownSightsTimeMult = 1.10
+ATT.SprintToFireTimeMult = 1.05
+
 ATT.PrintName = "Echoline GS-X (Short Fuse)"
 ATT.CompactName = "GS-X (Short Fuse)"
 ATT.Description = [[Short Fuse Blueprint for the M4.]]
@@ -166,9 +170,8 @@ ATT.MuzzleParticleOverride = "muzzleflash_suppressed"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
-ATT.ShootVolumeMult = 0.5
-ATT.AimDownSightsTimeAdd = 0.01
-ATT.SprintToFireTimeAdd = 0.01
+ATT.ShootVolumeMult = 0.65
+
 
 
 ARC9.LoadAttachment(ATT, "wz_bp_echolinegsx_shortfuse")

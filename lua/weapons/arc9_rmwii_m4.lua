@@ -563,10 +563,10 @@ SWEP.Attachments = {
         Ang = Angle(90,-90,0),
     } ,
     {
-    PrintName = ARC9:GetPhrase("mw19_category_camouflage"),
+    PrintName = "Camo",
     Category = {"universal_camo"},
-    Bone = "tag_cosmetic",
-    Pos = Vector(5, 0, 3),
+    Bone = "weapon",
+    Pos = Vector(0, 0, 3),
     CosmeticOnly = true,
 },
 }

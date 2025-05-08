@@ -1,4 +1,4 @@
-
+    
 local ATT = {}
 
 
@@ -93,23 +93,22 @@ ATT = {}
 ATT.Free = true
 
 
-ATT.PrintName = "3X RFL-OPTIC"
-ATT.CompactName = "3RFL"
-ATT.Description = [[An infrared 3-8x rifle optic of Russian origins.]]
+ATT.PrintName = "6.0X Short-Zoom Optic"
+ATT.CompactName = "SHORTZOOM"
+ATT.Description = [[A russian LPVO.]]
 
-ATT.Folder = "Thermals"
-ATT.SpeedMultSights = 0.8
-ATT.SprintToFireTimeAdd = 0.5
-ATT.SpeedMult = 0.90
+ATT.Folder = "Magnified"
+ATT.SpeedMultSights = 0.85
+ATT.SprintToFireTimeAdd = 0.2
+ATT.SpeedMult = 0.95
 
 ATT.CustomPros = {
-    ["Magnification"] = "3-8x",
-    ["Thermal Capabilities"] = ""
+    ["Magnification"] = "3-6x",
 }
 
 
 
-ATT.Model = "models/weapons/r_mwii/att/opt/att_r_mwii_opt_3rfl.mdl"
+ATT.Model = "models/weapons/r_mwii/att/opt/att_r_mwii_opt_6xshortzoom.mdl"
 
 ATT.Sights = {
     {

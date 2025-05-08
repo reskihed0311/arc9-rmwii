@@ -100,7 +100,7 @@ ATT = {}
 
 ATT.AimDownSightsTimeMult = 0.9 
 ATT.SprintToFireTimeMult = 0.8
-ATT.RecoilMult = 1.15
+ATT.RecoilMult = 1.10
 ATT.SpeedMultSights = 1.05
 ATT.SpeedMultShooting = 1.05
 
@@ -172,6 +172,11 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.RecoilMult = 0.85
+ATT.AimDownSightsTimeMult = 1.20
+ATT.SprintToFireTimeMult = 1.15
+
+
 ATT.PrintName = "SILENTFIRE XG6 (Carmine Carbine)"
 ATT.CompactName = "XG6 (C.C)"
 ATT.Description = [[Carmine Carbine Blueprint for the M4.]]
@@ -190,9 +195,8 @@ ATT.MuzzleParticleOverride = "muzzleflash_suppressed"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
-ATT.ShootVolumeMult = 0.8
-ATT.AimDownSightsTimeAdd = 0.01
-ATT.SprintToFireTimeAdd = 0.01
+ATT.ShootVolumeMult = 0.55
+
 
 
 ARC9.LoadAttachment(ATT, "wz_bp_silentfirexg6_cc")

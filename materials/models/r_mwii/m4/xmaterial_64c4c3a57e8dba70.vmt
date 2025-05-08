@@ -5,7 +5,7 @@
     "$phongexponenttexture" "models\r_mwii\m4\xmaterial_64c4c3a57e8dba70_e"
 
     /////////////////
-    "$color2" "[0 0 0]"                                     //do not touch this
+    "$color2" "[1 1 1]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
@@ -26,6 +26,29 @@
     /////////////////
 
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.098 0.098 0.098]"                 
+    "$envmaptint" "[0.098 0.098 0.098]" 
+       "$detailblendmode" "4"
+    "$detailblendfactor" "0.7"
+
+    //remove this if not using MWB
+    "Proxies"
+    {
+        "Arc9EnvMapTint"
+        {
+            "min" "0"
+            "max" "1"
+            //"envmap" "env_cubemap"
+            "color" "[0.463 0.459 0.459]"
+        }
+	   "CustomCamo" 
+        {
+		  "camoTexture" $detail
+	       "camoScale" $detailscale
+            "blend" $detailblendfactor
+            "color" "[0.8 0.8 0.8]"
+	   }
+    }	
+
+
 
 }

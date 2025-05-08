@@ -6,6 +6,13 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.SpreadMultMove = 0.925
+ATT.SpreadMultMidAir = 0.925 
+ATT.SpreadMultHipFire =  0.925  
+
+ATT.RecoilMult = 1.10
+ATT.AimDownSightsTimeMult = 1.10
+
 ATT.PrintName = "Agent Grip"
 ATT.CompactName = "AGENT"
 ATT.Icon = Material("")

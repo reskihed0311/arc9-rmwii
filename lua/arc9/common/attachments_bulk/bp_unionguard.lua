@@ -166,6 +166,10 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.RecoilMult = 0.90
+ATT.AimDownSightsTimeMult = 1.15
+ATT.SprintToFireTimeMult = 1.10
+
 ATT.PrintName = "FSS Convert V (Union Guard)"
 ATT.CompactName = "FSS COV. V (UG)"
 ATT.Description = [[Union Guard Blueprint for the M4.]]
@@ -184,9 +188,8 @@ ATT.MuzzleParticleOverride = "muzzleflash_suppressed"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
-ATT.ShootVolumeMult = 0.8
-ATT.AimDownSightsTimeAdd = 0.01
-ATT.SprintToFireTimeAdd = 0.01
+ATT.ShootVolumeMult = 0.7
+
 
 
 ARC9.LoadAttachment(ATT, "wz_bp_unionguardfsscovertv")

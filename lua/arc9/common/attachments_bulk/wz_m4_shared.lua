@@ -91,6 +91,7 @@ ATT = {}
 ATT.Free = true
 
 ATT.SwayMult = 0.85
+ATT.RecoilMult = 0.95
 
 ATT.PrintName = "Support CT-90 Grip"
 ATT.CompactName = "CT-90"
@@ -241,7 +242,7 @@ ATT.Free = true
 
 ATT.AimDownSightsTimeMult = 0.85 
 ATT.SprintToFireTimeMult = 0.90 
-ATT.RecoilMult = 1.3
+ATT.RecoilMult = 1.15
 ATT.SpeedMultSights = 1.15
 ATT.SpeedMultShooting = 1.15
 
@@ -304,7 +305,7 @@ ATT.Free = true
 
 ATT.AimDownSightsTimeMult = 0.9 
 ATT.SprintToFireTimeMult = 0.8
-ATT.RecoilMult = 1.15
+ATT.RecoilMult = 1.10
 ATT.SpeedMultSights = 1.05
 ATT.SpeedMultShooting = 1.05
 
