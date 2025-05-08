@@ -106,6 +106,8 @@ ARC9.LoadAttachment(ATT, "wz2_bp_trenchprosb")
 ATT = {}
 
 ATT.SwayMult = 0.85
+ATT.RecoilMult = 0.95
+
 ATT.Free = true
 
 ATT.PrintName = "Support CP90 Grip (Skull Breaker)"

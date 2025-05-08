@@ -115,7 +115,7 @@ ATT = {}
 
 ATT.AimDownSightsTimeMult = 0.85 
 ATT.SprintToFireTimeMult = 0.90 
-ATT.RecoilMult = 1.15s
+ATT.RecoilMult = 1.15
 ATT.SpeedMultSights = 1.15
 ATT.SpeedMultShooting = 1.15
 
