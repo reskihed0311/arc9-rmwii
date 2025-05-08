@@ -131,7 +131,7 @@ ATT.RTScope = true
 
 
 
-ATT.RTScopeReticle = Material("vgui/rets/thermal_1.png", "mips smooth")
+ATT.RTScopeReticle = Material("vgui/rets/ret_ru_basic.png", "mips smooth")
 ATT.RTScopeReticleScale = 1.15
 ATT.Category = {"wz2_sh_optics"}
 ATT.MenuCategory = "ARC9 - Warzone 2.0"

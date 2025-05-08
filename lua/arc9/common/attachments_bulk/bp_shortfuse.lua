@@ -88,7 +88,7 @@ ATT = {}
 
 ATT.Free = true
 
-ATT.RecoilMult = 0.95
+ATT.RecoilMult = 0.90
 
 ATT.PrintName = "Sakin ZX Grip (Short Fuse)"
 ATT.CompactName = "ZX (SHORTFUSE)"
