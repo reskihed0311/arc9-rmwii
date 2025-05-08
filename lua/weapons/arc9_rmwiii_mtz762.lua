@@ -96,7 +96,7 @@ SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a r
 SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 2.5 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 1.35 -- Multiplier for vertical recoil
 SWEP.RecoilSide = 1.5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
