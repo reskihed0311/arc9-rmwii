@@ -24,6 +24,12 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.AimDownSightsTimeMult = 1.10
+
+ATT.RecoilMult =  0.85
+ATT.SprintToFireTimeMult = 1.1
+
+
 ATT.PrintName = "RSH-80 Jack"
 ATT.CompactName = "JACK. RSH-80"
 ATT.Description = [[Jack of All Blueprint for the P890.]]
@@ -87,6 +93,12 @@ ARC9.LoadAttachment(ATT, "wz2_p890_jackofallhammer")
 ATT = {}
 
 ATT.Free = true
+
+ATT.RecoilMult = 0.85
+ATT.RangeMaxMult = 1.25
+
+ATT.AimDownSightsTimeMult = 1.3
+ATT.SprintToFireTimeMult = 1.2
 
 ATT.PrintName = "CottonMouth Jack of All"
 ATT.CompactName = "JACK. COTTON."
@@ -222,6 +234,12 @@ ATT = {}
 
 
 ATT.Free = true 
+
+ATT.AimDownSightsTimeMult = 0.90
+ATT.SprintToFireTimeMult = 0.90
+
+ATT.SpeedMult = 0.90    
+
 
 ATT.PrintName = "SERIES 710 Laser JACK."
 ATT.CompactName = "710 JACK."

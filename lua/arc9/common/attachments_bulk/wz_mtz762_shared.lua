@@ -4,6 +4,12 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.RPM = 630
+ATT.DamageMin = 20.5
+ATT.DamageMax = 40.5
+ATT.RecoilMult = 0.90
+ATT.SpreadMult = 1.095
+
 ATT.PrintName = "JAK Heretic Carbine Kit"
 ATT.CompactName = "JAK HERETIC"
 ATT.Description = [[Converts the MTZ-762 into a MTZ-762 , with soviet rounds.]]

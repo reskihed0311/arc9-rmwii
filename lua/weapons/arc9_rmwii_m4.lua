@@ -191,7 +191,7 @@ SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.6,

@@ -5,6 +5,9 @@ ATT = {}
 
 ATT.Free = true
 
+ATT.SpeedMult = 0.975
+ATT.AimDownSightsTimeMult = 1.05
+
 ATT.PrintName = "10 Round Magazine"
 ATT.CompactName = "10 Mag"
 ATT.Description = [[Extra Boulets.]]
@@ -26,6 +29,14 @@ ARC9.LoadAttachment(ATT, "wz2_p890_xmag")
 ATT = {}
 
 ATT.Free = true
+
+ATT.RecoilMult = 1.05
+ATT.RangeMaxMult = 0.90
+
+ATT.AimDownSightsTimeMult = 0.90
+ATT.SprintToFireTimeMult = 0.90
+ATT.SprintToFireTimeMult = 0.85
+
 
 ATT.PrintName = "XRK Tacops Barrel"
 ATT.CompactName = "XRK TAC."

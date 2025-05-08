@@ -201,10 +201,10 @@ SWEP.Spread = 0.00280
 SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
 SWEP.DispersionSpread = 0.2 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
 
-SWEP.SpreadAddMove = nil -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = nil -- Applied when not touching the ground.
-SWEP.SpreadAddHipFire = 0.1 -- Applied when not sighted.
-SWEP.SpreadAddSighted = -0.001 -- Applied when sighted. Can be negative.
+SWEP.SpreadAddMove = 0.025 -- Applied when speed is equal to walking speed.
+SWEP.SpreadAddMidAir = 0.015 -- Applied when not touching the ground.
+SWEP.SpreadAddHipFire = 0.05 -- Applied when not sighted.
+SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
 SWEP.SpreadAddBlindFire = nil -- Applied when blind firing.
 SWEP.SpreadAddCrouch = nil -- Applied when crouching.
 

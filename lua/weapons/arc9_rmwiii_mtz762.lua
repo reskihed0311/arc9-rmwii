@@ -66,7 +66,7 @@ SWEP.ViewModelFOVBase = 70 -- Set to override viewmodel FOV
 
 ////////////////////////////////////////// BALANCE
 
-SWEP.AimDownSightsTime = 0.55 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.65 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.4 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.Sway = 2 -- How much the gun sways.
@@ -78,13 +78,13 @@ SWEP.Ammo = "ar2"
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 20 -- Self-explanatory.
 
-SWEP.SpeedMult = 0.8
-SWEP.SpeedMultSights = 1
-SWEP.SpeedMultShooting = 1
+SWEP.SpeedMult = 0.85
+SWEP.SpeedMultSights = 0.8
+SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultCrouch = 0.5
 
-SWEP.Penetration = 12 -- Units of wood that can be penetrated by this gun.
-SWEP.PenetrationDelta = 0.8 -- The damage multiplier after all penetration distance is spent.
+SWEP.Penetration = 13.5 -- Units of wood that can be penetrated by this gun.
+SWEP.PenetrationDelta = 0.9 -- The damage multiplier after all penetration distance is spent.
 
 SWEP.RicochetAngleMax = 45 -- Maximum angle at which a ricochet can occur. Between 1 and 90. Angle of 0 is impossible but would theoretically always ricochet.
 SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a ricochet can occur?
@@ -93,11 +93,11 @@ SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a r
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.2
+SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 3 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 2.5 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 1.5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -131,7 +131,7 @@ SWEP.VisualRecoilPunchMultSights = 0.1
 -- SWEP.VisualRecoilADSMult = 0.1
 -- SWEP.VisualRecoilPunchADSMult = 0.1
 
-SWEP.VisualRecoil = 1
+SWEP.VisualRecoil = 1.05
 SWEP.VisualRecoilMultSights = 1.5
 SWEP.VisualRecoilPositionBump = 1.5
 SWEP.VisualRecoilPositionBumpUp = 0.08 -- its a mult
@@ -157,8 +157,8 @@ SWEP.VisualRecoilDoingFunc = nil -- wawa, override Up, Side, Roll here
 --     return up, side, roll, punch
 -- end
 
-SWEP.RecoilKick = 0.1 -- Camera recoil
-SWEP.RecoilKickDamping = 70.151 -- Camera recoil damping
+SWEP.RecoilKick = 0.3 -- Camera recoil
+SWEP.RecoilKickDamping = 60.151 -- Camera recoil damping
 SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camera go up (only visually) as recoil increases, SWEP.Recoil * SWEP.RecoilKick = effect of this
 
 -- Additional subtle visual recoil, in case your gun doesn't have animated fire. Acts like a second spring added on top with limited duration
@@ -169,22 +169,22 @@ SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camer
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 30 -- Damage done at point blank range
-SWEP.DamageMin = 20 -- Damage done at maximum range
+SWEP.DamageMax = 50 -- Damage done at point blank range
+SWEP.DamageMin = 30 -- Damage done at maximum range
 
 SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 0 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 5000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
+SWEP.RangeMax = 7000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.Distance = 36000 -- In Hammer units, how far bullets can travel, period.
 
 
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.3,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.6,
@@ -195,17 +195,17 @@ SWEP.BodyDamageMults = {
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.00185
+SWEP.Spread = 0.00210
 
 SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
 SWEP.DispersionSpread = 0.2 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
 
-SWEP.SpreadAddMove = 0.01 -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = 0.02 -- Applied when not touching the ground.
-SWEP.SpreadAddHipFire = 0.1 -- Applied when not sighted.
+SWEP.SpreadAddMove = 0.015 -- Applied when speed is equal to walking speed.
+SWEP.SpreadAddMidAir = 0.025 -- Applied when not touching the ground.
+SWEP.SpreadAddHipFire = 0.15 -- Applied when not sighted.
 SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
 SWEP.SpreadAddBlindFire = nil -- Applied when blind firing.
-SWEP.SpreadAddCrouch = -0.5 -- Applied when crouching.
+SWEP.SpreadAddCrouch = -0.3 -- Applied when crouching.
 
 SWEP.SpreadAddRecoil = nil -- Applied per unit of recoil.
 
