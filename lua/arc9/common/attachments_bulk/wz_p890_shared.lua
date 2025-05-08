@@ -75,3 +75,78 @@ ATT.ActivateElements = {"tacops_hammer"}
 ARC9.LoadAttachment(ATT, "wz2_p890_xrktacopshammer")
 
 
+ATT = {}
+
+ATT.Free = true
+
+ATT.AimDownSightsTimeMult = 1.10
+
+ATT.RecoilMult =  0.85
+ATT.SprintToFireTimeMult = 1.1
+
+
+ATT.PrintName = "RSH-80"
+ATT.CompactName = "RSH-80"
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+
+ATT.Category = "wz2_p890_grip"
+ATT.ActivateElements = {"rsh80"}
+
+ARC9.LoadAttachment(ATT, "wz2_p890_griprsh")
+
+
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.RecoilMult = 0.85
+ATT.RangeMaxMult = 1.25
+
+ATT.AimDownSightsTimeMult = 1.3
+ATT.SprintToFireTimeMult = 1.2
+
+ATT.PrintName = "CottonMouth"
+ATT.CompactName = "COTTON."
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+ATT.Category = "wz2_p890_bar"
+ATT.ActivateElements = {"cottonmouth"}
+
+ARC9.LoadAttachment(ATT, "wz2_p890_cottonmouth")
+
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.RecoilMult = 0.85
+ATT.RangeMaxMult = 1.25
+
+ATT.AimDownSightsTimeMult = 1.3
+ATT.SprintToFireTimeMult = 1.2
+
+ATT.PrintName = "CottonMouth"
+ATT.CompactName = "COTTON."
+ATT.Description = [[]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
+ATT.Category = "wz2_p890_hammer"
+ATT.ActivateElements = {"cottonmouth_hammer"}
+
+ARC9.LoadAttachment(ATT, "wz2_p890_cottonmouth_hammer")

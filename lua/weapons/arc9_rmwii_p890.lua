@@ -330,6 +330,11 @@ SWEP.AttachmentElements = {
             {5, 1},
         },
     },
+    ["rsh80"] = {
+        Bodygroups = {
+            {5, 2},
+        },
+    },
     ["xmag"] = {
         Bodygroups = {
             {3, 1},
@@ -352,6 +357,12 @@ SWEP.AttachmentElements = {
             {1, 3},
         },
     },
+    ["cottonmouth"] = {
+        Bodygroups = {
+            {2, 5},
+            {1, 4},
+        },
+    },
     ["tacops_hammer"] = {
         Bodygroups = {
             {4, 1},
@@ -360,6 +371,11 @@ SWEP.AttachmentElements = {
     ["jackofall_hammer"] = {
         Bodygroups = {
             {4, 2},
+        },
+    },
+    ["cottonmouth_hammer"] = {
+        Bodygroups = {
+            {4, 3},
         },
     },
 }
