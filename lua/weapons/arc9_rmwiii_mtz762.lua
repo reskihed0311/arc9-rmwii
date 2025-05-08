@@ -411,6 +411,13 @@ SWEP.Attachments = {
         Pos = Vector(0,0,0),
         Ang = Angle(90,-90,0),
     } ,
+    {
+        PrintName = "Camo",
+        Category = {"universal_camo"},
+        Bone = "weapon",
+        Pos = Vector(0, 0, 0),
+        CosmeticOnly = true,
+    },
 }
 
 --------------------------- ANIM RELATED

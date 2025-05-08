@@ -25,18 +25,7 @@
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
-    "$envmap" "models\r_mwii\att_shared\specularity_00"
+    "$envmap" "env_cubemap"
     "$envmaptint" "[0.098 0.098 0.098]"                 
 
-    //remove this if not using MWB
-    "Proxies"
-    {
-        "MwEnvMapTint"
-        {
-            "min" "0"
-            "max" "1"
-            "envmap" "models\r_mwii\att_shared\specularity_00"
-            "color" "[0.098 0.098 0.098]"
-        }
-    }
 }
