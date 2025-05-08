@@ -16,7 +16,6 @@ ATT.CustomCons =
 ATT.PrintName = "SZ 1MW PEQ"
 ATT.CompactName = "SZ 1MW PEQ"
 ATT.Description = [[]]
-ATT.Folder = ""
 
 ATT.Model = "models/weapons/r_mwii/att/tac/att_r_mwii_tac_sz1mwpeqbox.mdl"
 ATT.Scale = 1
