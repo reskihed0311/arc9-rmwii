@@ -25,7 +25,6 @@ ATT = {}
 ATT.Free = true
 
 ATT.AimDownSightsTimeMult = 1.10
-
 ATT.RecoilMult =  0.85
 ATT.SprintToFireTimeMult = 1.1
 
