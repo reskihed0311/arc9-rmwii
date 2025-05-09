@@ -271,7 +271,10 @@ SWEP.ReloadHideBoneTables = { -- works only with TPIK
 
 
 -------------------------- POSITIONS
+SWEP.PeekPos = Vector(-1.3, 0, -3.5)
+SWEP.PeekAng = Angle(-0.3, 0, -45)
 
+SWEP.PeekMaxFOV = 64
 
 SWEP.CantPeek = true -- set to true if you dont want peeking on this gnu
 
