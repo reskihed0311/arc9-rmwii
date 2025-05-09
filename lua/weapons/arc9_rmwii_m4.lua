@@ -328,6 +328,11 @@ end
 
 
 SWEP.AttachmentElements = {
+    ["chandle"] = {
+        Bodygroups = {
+            {1, 2},
+        },
+    },
     ["skullbreaker"] = {
         Bodygroups = {
             {0, 2},
@@ -358,6 +363,27 @@ SWEP.AttachmentElements = {
             {5, 5},
             {3, 1},
             {2, 5},
+        },
+        AttPosMods = {
+            [3] = { -- slot index
+            Pos = Vector(0,-1.30,19.9),
+            Ang = Angle(90,-90,0),
+            },
+            [4] = { -- slot index
+            Pos = Vector(0,-0.32,11.5),
+        Ang = Angle(90,-90,0),
+            },
+            [5] = { -- slot index
+            Pos = Vector(-1.1,-1.28,18.4),
+            Ang = Angle(90,0,0),
+            },
+        }
+    },
+    ["hightower"] = {
+        Bodygroups = {
+            {5, 7},
+            {3, 1},
+            {2, 7},
         },
         AttPosMods = {
             [3] = { -- slot index
@@ -491,7 +517,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "Ironsights",
-        Category = {"wz2_sh_optics"},
+        Category = {"wz2_sh_optics", "wz2_m4_chandle"},
         Bone = "weapon",
         Pos = Vector(0,-2.4,1),
         Ang = Angle(90,-90,0),
