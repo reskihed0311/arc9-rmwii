@@ -374,6 +374,18 @@ ATT.Sights = {
 }
 
 
+
+ATT = {}
+
+ATT.PrintName = "Carry Handle"
+ATT.CompactName = "HANDLE"
+ATT.Description = [[Classic.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
+
 ATT.Attachments = {
     {
         PrintName = "Sights",
@@ -385,15 +397,6 @@ ATT.Attachments = {
     }
 }
 
-ATT = {}
-
-ATT.PrintName = "Carry Handle"
-ATT.CompactName = "HANDLE"
-ATT.Description = [[Classic.]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - Warzone 2.0"
 
 ATT.Category = "wz2_m4_chandle"
 ATT.ActivateElements = {"chandle"}
