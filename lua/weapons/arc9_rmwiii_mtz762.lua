@@ -555,9 +555,9 @@ SWEP.Animations = {
         EventTable = {
             {s = "arc9_rmwii/mtz762/inspect_raise.wav", t = 0 },
             {s = "arc9_rmwii/mtz762/inspect_maggrab.wav", t = 1.40},
-            {s = "arc9_rmwii/mtz762/inspect_magout.wav", t = 1.48},
+            {s = "arc9_rmwii/mtz762/inspect_xmagout.wav", t = 1.48},
             {s = "arc9_rmwii/mtz762/inspect_magmvmnt2.wav", t = 2.5},
-            {s = "arc9_rmwii/mtz762/inspect_maghit2.wav", t = 3.35},
+            {s = "arc9_rmwii/mtz762/inspect_xmaghit.wav", t = 3.65},
             {s = "arc9_rmwii/mtz762/inspect_magin.wav", t = 3.75},
             {s = "arc9_rmwii/mtz762/inspect_boltback.wav", t = 4.38},
             {s = "arc9_rmwii/mtz762/inspect_boltfwd.wav", t = 5.15},
