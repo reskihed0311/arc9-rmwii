@@ -19,6 +19,18 @@ ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - Warzone 2.0"
 
+
+ATT.Attachments = {
+    {
+        PrintName = "AMP Magazines",
+        Category = "wz2_mtz762_amp_mags", -- single or {"list", "of", "values"}
+        Bone = "mag",
+        Pos = Vector(-2.6, 0, 0),
+        Ang = Angle(0, 0, 0),
+    }
+}
+
+
 ATT.ClipSizeOverride = 40
 
 ATT.Category = "wz2_mtz762_receivers"
@@ -42,6 +54,7 @@ ATT.Pros = {}
 ATT.Cons = {"Slower Reload Animation"}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - Warzone 2.0"
+
 
 
 ATT.ClipSizeOverride = 40

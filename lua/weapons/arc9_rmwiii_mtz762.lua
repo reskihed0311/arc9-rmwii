@@ -389,6 +389,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultName = "20 Round Magazine",
         Category = {"wz2_mtz762_mags"},
+        ExcludeElements = {"amp_soviet"},
         Bone = "mag",
         Pos = Vector(0,0,0),
         Ang = Angle(90,-90,0),

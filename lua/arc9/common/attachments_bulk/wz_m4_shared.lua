@@ -385,6 +385,7 @@ ATT.Attachments = {
     }
 }
 
+ATT = {}
 
 ATT.PrintName = "Carry Handle"
 ATT.CompactName = "HANDLE"
