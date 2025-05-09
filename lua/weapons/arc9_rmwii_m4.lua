@@ -3,7 +3,10 @@ AddCSLuaFile()
   
 
 SWEP.StandardPresets = {
-   ""
+   "[Carmine Carbine]XQAAAQA4AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6lEsqgOml2wUPwCtSaeebgOIPV50BB6UfQ7Bsmwj4jdvOJwuKffWmLWQUd+s/rum4cx/oidxoqXdTVsJSHOD9WIaTmg5sxCUTrs909xrZsjlGZlFZwzUqjT7wddgTICNLVXyECRfxOKnh5NRG8XBAWfXAFk/5VN2xZy0E8IMN7AwMtS9Vv+wc=",
+   "[Union Guard]XQAAAQAsAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6lEsqgOml6IZ+oHLpWAg8gSGCUTEFTMZ0HO54l/BdR0vunrocjqOM3OYbOzRU1sUqqpcWQkZN8n5O2VGl7xm4CGQ2newftYeEKYhgfCV49YKBIZTcisoxbsMTGIAQznKNa9/jCSJxt3chXplx5LuuZZj1lbZOZ8aiqQA==",
+   "[Short Fuse]XQAAAQBTAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6lEsqgOml5xieEKlITmkMbn3/pliuMReV4LAwT7HCJZfp0cEhTh22J07vPirio1eGGPsgZKuFlb98FMDaW6BulS7slrfMT0gMgx1S9ID1QVVRiIdJeTrOCbQh4w94pqefCHLi09jEIBl559NPIaTbwqDxJz/MdkNM89gDuznAbdgI8ocDTXMRznKM=",
+   "[Skull Breaker]XQAAAQA3AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6lEsqgOml5xigj2lK4N9OZEveYxsHC+v3MqGY+9fkXaG9uskFaq+V7WFaW7ZAYyzKsRoT3h7nmv0u89F+rfJTAYk2WnRMg/KTrTCT6s/dDDEgl3Dxjt/bI/5uOzAyyu9Ihb0WnnwN/s71NbEtPJb8FkEuRW3Dnildl+86mx8pJIKQH9Yxd7Pw=",
 }
 
 
@@ -478,6 +481,11 @@ SWEP.AttachmentElements = {
     ["mag_shortfuse"] = {
         Bodygroups = {
             {4, 3},
+        },
+    },
+    ["mag_cc"] = {
+        Bodygroups = {
+            {4, 6},
         },
     },
     ["mag_unionguard"] = {

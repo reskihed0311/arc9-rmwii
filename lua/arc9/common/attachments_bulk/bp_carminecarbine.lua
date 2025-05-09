@@ -200,3 +200,25 @@ ATT.ShootVolumeMult = 0.55
 
 
 ARC9.LoadAttachment(ATT, "wz_bp_silentfirexg6_cc")
+
+
+
+
+ATT = {}
+
+ATT.Free = true
+
+ATT.PrintName = "Carmine Carbine Magazine"
+ATT.CompactName = "C.C Magazine"
+ATT.Description = [[Carmine Carbine Blueprint for the M4.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - Warzone 2.0 Blueprints"
+
+
+ATT.Folder = "Blueprints"
+ATT.Category = "wz2_m4_mags"
+ATT.ActivateElements = {"mag_cc"}
+
+ARC9.LoadAttachment(ATT, "wz2_m4_magcc")
