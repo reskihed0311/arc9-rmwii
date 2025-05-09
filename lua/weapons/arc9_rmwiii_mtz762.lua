@@ -29,13 +29,11 @@ SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
-    Pos = Vector(-3.5, 3, -8),
-    Ang = Angle(0, 0, 180),
-    TPIKPos = Vector(-4.5, 2, -5),
-    TPIKAng = Angle(-12, -0, 180),
-    Scale = 1,
-
-    TPIKPosSightOffset = Vector(-1, 2, -3),
+    Pos = Vector(-8.5, 5, -4),
+    Ang = Angle(-5, 0, 180),
+    TPIKPos = Vector(-8.5, 5, -4),
+    TPIKAng = Angle(-12.5, -1, 165),
+    Scale = 1
 }
 
 SWEP.Description = [[A fully automatic Battle Rifle designed to send hard-hitting 7.62 rounds downrange at high velocity.]]
@@ -93,7 +91,7 @@ SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a r
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1
+SWEP.Recoil = 0.8
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1.35 -- Multiplier for vertical recoil
@@ -169,8 +167,8 @@ SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camer
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 50 -- Damage done at point blank range
-SWEP.DamageMin = 30 -- Damage done at maximum range
+SWEP.DamageMax = 55 -- Damage done at point blank range
+SWEP.DamageMin = 35 -- Damage done at maximum range
 
 SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 
@@ -184,7 +182,7 @@ SWEP.Distance = 36000 -- In Hammer units, how far bullets can travel, period.
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.3,
+    [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.6,

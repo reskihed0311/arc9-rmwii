@@ -33,14 +33,13 @@ SWEP.WorldModel = "models/weapons/w_pist_p228.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
-    Pos = Vector(-3.5, 3, -8),
-    Ang = Angle(0, 0, 180),
-    TPIKPos = Vector(-4.5, 2, -5),
-    TPIKAng = Angle(-12, -0, 180),
-    Scale = 1,
-
-    TPIKPosSightOffset = Vector(-1, 2, -3),
+    Pos = Vector(-8.5, 5, 0),
+    Ang = Angle(-5, 0, 180),
+    TPIKPos = Vector(-8.5, 5, 0),
+    TPIKAng = Angle(-12.5, -1, 165),
+    Scale = 1
 }
+
 
 SWEP.Description = [[For close-quarters situations, the P890 semi-auto pistol takes advantage of accuracy, reliability, and a hard-hitting .45 Auto round.]]
 
@@ -178,14 +177,14 @@ SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 0 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 800 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMax = 1200 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
 
 
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1.35,
     [HITGROUP_STOMACH] = 1.1,
     [HITGROUP_LEFTARM] = 0.9,

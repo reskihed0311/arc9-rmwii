@@ -16,6 +16,7 @@ $bodygroup "rs"
 {
    studio "rs.dmx"
    blank
+   studio "carryhandle.dmx"
 }
 
 $bodygroup "fs"
@@ -27,6 +28,7 @@ $bodygroup "fs"
    studio "fs_barhvy.dmx"
    studio "fs_barlong.dmx"
    studio "fs_short.dmx"
+   studio "fs_m16.dmx"
 }
 
 
@@ -57,6 +59,7 @@ $bodygroup "muzzle"
 		studio "muzzle_barhvy.dmx"
 		studio "muzzle_barlong.dmx"
 		studio "muzzle_short.dmx"
+		studio "muzzle_m16.dmx"
 }
 
 $bodygroup "stock"

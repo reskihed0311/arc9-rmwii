@@ -36,14 +36,13 @@ SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
-    Pos = Vector(-3.5, 3, -8),
-    Ang = Angle(0, 0, 180),
-    TPIKPos = Vector(-4.5, 2, -5),
-    TPIKAng = Angle(-12, -0, 180),
-    Scale = 1,
-
-    TPIKPosSightOffset = Vector(-1, 2, -3),
+    Pos = Vector(-8.5, 5, -2.5),
+    Ang = Angle(-5, 0, 180),
+    TPIKPos = Vector(-8.5, 5, -2.5),
+    TPIKAng = Angle(-12.5, -1, 165),
+    Scale = 1
 }
+
 
 SWEP.Description = [[The flagship rifle of the M4 Platform. This reliable workhorse is a jack-of-all-trades that performs well in most combat scenarios.]]
 
@@ -100,7 +99,7 @@ SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a r
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 0.95 
+SWEP.Recoil = 0.7 
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
@@ -176,8 +175,8 @@ SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camer
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 30 -- Damage done at point blank range
-SWEP.DamageMin = 20 -- Damage done at maximum range
+SWEP.DamageMax = 35 -- Damage done at point blank range
+SWEP.DamageMin = 25 -- Damage done at maximum range
 
 SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 
@@ -191,7 +190,7 @@ SWEP.Distance = 33000 -- In Hammer units, how far bullets can travel, period.
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_HEAD] = 1.7,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.6,
@@ -329,6 +328,11 @@ end
 
 
 SWEP.AttachmentElements = {
+    ["chandle"] = {
+        Bodygroups = {
+            {1, 2},
+        },
+    },
     ["skullbreaker"] = {
         Bodygroups = {
             {0, 2},
@@ -359,6 +363,27 @@ SWEP.AttachmentElements = {
             {5, 5},
             {3, 1},
             {2, 5},
+        },
+        AttPosMods = {
+            [3] = { -- slot index
+            Pos = Vector(0,-1.30,19.9),
+            Ang = Angle(90,-90,0),
+            },
+            [4] = { -- slot index
+            Pos = Vector(0,-0.32,11.5),
+        Ang = Angle(90,-90,0),
+            },
+            [5] = { -- slot index
+            Pos = Vector(-1.1,-1.28,18.4),
+            Ang = Angle(90,0,0),
+            },
+        }
+    },
+    ["hightower"] = {
+        Bodygroups = {
+            {5, 7},
+            {3, 1},
+            {2, 7},
         },
         AttPosMods = {
             [3] = { -- slot index
@@ -492,7 +517,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "Ironsights",
-        Category = {"wz2_sh_optics"},
+        Category = {"wz2_sh_optics", "wz2_m4_chandle"},
         Bone = "weapon",
         Pos = Vector(0,-2.4,1),
         Ang = Angle(90,-90,0),
