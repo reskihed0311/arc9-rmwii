@@ -334,6 +334,11 @@ SWEP.AttachmentElements = {
             {5, 1},
         },
     },
+    ["xmag"] = {
+        Bodygroups = {
+            {5, 2},
+        },
+    },
 }
 
 
@@ -431,6 +436,11 @@ local Translate_XMag_soviet = {
     ["inspect"] = "inspect_s_40",
 }
 
+local Translate_XMag = {
+    ["reload"] = "reload_40",
+    ["reload_empty"] = "reload_empty_40",
+    ["inspect"] = "inspect_40",
+}
 
 
 
@@ -443,6 +453,12 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
             return Translate_XMag_soviet[anim]  -- Return the reload animation for 45-round mag
         end
     end
+local xmag = wep:HasElement("xmag")
+if xmag then  -- Changed from xmag_soviet to xmag
+    if Translate_XMag[anim] then
+        return Translate_XMag[anim]
+    end
+end
 end
 
 
@@ -534,6 +550,41 @@ SWEP.Animations = {
             },
         },
     },
+     ["inspect_40"] = {
+        Source = "inspect_amp_40",
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/inspect_raise.wav", t = 0 },
+            {s = "arc9_rmwii/mtz762/inspect_maggrab.wav", t = 1.40},
+            {s = "arc9_rmwii/mtz762/inspect_magout.wav", t = 1.48},
+            {s = "arc9_rmwii/mtz762/inspect_magmvmnt2.wav", t = 2.5},
+            {s = "arc9_rmwii/mtz762/inspect_maghit2.wav", t = 3.35},
+            {s = "arc9_rmwii/mtz762/inspect_magin.wav", t = 3.75},
+            {s = "arc9_rmwii/mtz762/inspect_boltback.wav", t = 4.38},
+            {s = "arc9_rmwii/mtz762/inspect_boltfwd.wav", t = 5.15},
+        },
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+    },
     ["reload"] = {
         Source = "reload_20",
         IKTimeLine = { -- t is in fraction of animation
@@ -574,6 +625,70 @@ SWEP.Animations = {
             {s = "arc9_rmwii/mtz762/reload_magin_empty.wav", t = 1.9},
             {s = "arc9_rmwii/mtz762/reload_empty_chargeback.wav", t = 2.6},
             {s = "arc9_rmwii/mtz762/reload_empty_chargefwd.wav", t = 2.68},
+        },
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+    },
+      ["reload_40"] = {
+        Source = "reload_40",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_xmaggrab.wav", t = 0.8},
+            {s = "arc9_rmwii/mtz762/reload_xmagout.wav", t = 0.85},
+            {s = "arc9_rmwii/mtz762/reload_xmaghit.wav", t = 1.45},
+            {s = "arc9_rmwii/mtz762/reload_xmagin.wav", t = 1.6},
+        }
+    },
+    ["reload_empty_40"] = {
+        Source = "reload_empty_40",
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/reload_empty_xmagout.wav", t = 0.4},
+            {s = "arc9_rmwii/mtz762/reload_empty_xmaghit.wav", t = 1.95},
+            {s = "arc9_rmwii/mtz762/reload_empty_xmagin.wav", t = 2.1},
+            {s = "arc9_rmwii/mtz762/reload_empty_chargeback.wav", t = 2.8},
+            {s = "arc9_rmwii/mtz762/reload_empty_chargefwd.wav", t = 2.94},
         },
         IKTimeLine = { -- t is in fraction of animation
             {

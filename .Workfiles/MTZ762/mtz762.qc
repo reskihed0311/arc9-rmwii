@@ -40,6 +40,7 @@ $bodygroup "mag"
 {
     studio "magdef.dmx"
 	studio "xmag_762ru.dmx"
+	studio "xmag.dmx"
 }
 
 
@@ -203,7 +204,13 @@ $sequence "reload_20" {
 	fps 30
 }
 
-
+$sequence "reload_40" {
+	"anims\reload_40.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
 
 $sequence "reload_empty_amp_40" {
 	"anims\reload_empty_amp_40.dmx"
@@ -221,6 +228,13 @@ $sequence "reload_amp_40" {
 	fps 30
 }
 
+$sequence "reload_empty_40" {
+	"anims\reload_empty_40.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
 
 
 $sequence "reload_empty_20" {
