@@ -843,6 +843,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty_30",
+         MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
         EventTable = {
             {s = "arc9_rmwii/m4/m4_magout_empty.wav", t = 0.08},
             {s = "arc9_rmwii/m4/m4_magout_mvmnt1.wav", t = 1},
@@ -876,6 +877,7 @@ SWEP.Animations = {
     },
     ["reload_45"] = {
         Source = "reload_45",
+        MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
         IKTimeLine = { -- t is in fraction of animation
              {
                  t = 0.0,
@@ -909,6 +911,7 @@ SWEP.Animations = {
     },
     ["reload_empty_45"] = {
         Source = "reload_empty_45",
+        MagSwapTime = 1.7,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
         EventTable = {
             {s = "arc9_rmwii/m4/m4_xmagout_empty.wav", t = 0.28},
             {s = "arc9_rmwii/m4/m4_magout_mvmnt1.wav", t = 1},
@@ -942,6 +945,7 @@ SWEP.Animations = {
     },
     ["reload_60"] = {
         Source = "reload_60",
+        MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
         IKTimeLine = { -- t is in fraction of animation
              {
                  t = 0.0,
@@ -975,6 +979,7 @@ SWEP.Animations = {
     },
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
+        MagSwapTime = 1.8,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
         EventTable = {
             {s = "arc9_rmwii/m4/m4_magout_mvmnt1.wav", t = 0},
             {s = "arc9_rmwii/m4/m4_xmaglrgout_empty.wav", t = 0.62},
