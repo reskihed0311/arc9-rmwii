@@ -9,6 +9,7 @@ ATT.DamageMin = 20.5
 ATT.DamageMax = 40.5
 ATT.RecoilMult = 0.90
 ATT.SpreadMult = 1.095
+ATT.SpeedMult = 1.1
 
 ATT.PrintName = "JAK Heretic Carbine Kit"
 ATT.CompactName = "JAK HERETIC"
