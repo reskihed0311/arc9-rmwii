@@ -3,10 +3,7 @@ AddCSLuaFile()
   
 
 SWEP.StandardPresets = {
-    "[Short Fuse]XQAAAQBDAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq8o8ELwtsmXwlWTZcOLNrzafP/c3TzOMUhN9l6B9tN+Ry8YbmfZeTQh2trX4xP0o/NhNCr/EZwcx3oWTUPpO3pZSBfBWf5t3Ufsb/iV44N5feFB2FKvp2wydTJa+AJ0gcmGD4FxiFhqXGUT3r+9oa3Ar8FvC0HadwUOXvOzKCCDKIJA==",
-    "[Carmine Carbine]XQAAAQALAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliS/4w0qI1lvQGl7I3iNfd1Du0vp9Bj+9/rkj5zTTzR32cDNi5pdHhZaVZQVVJzE9QCRJSeFa5le40NPRIldLnDhF4qi4rngdTeD7dJF4HrbK4FiDykf9yG5YuLhghY3pDh4K9eCjJHR+lCBLR/6q9Cmj3yfXawAFBWLY=",
-    "[Union Guard]XQAAAQBGAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTATgD+bdzr30LuTqFaHmcpirBM5FIxFiTbEsU8R0Zmabp2L95iT3GjpK+y1UQgWfOLmf+BC185kaxWpIzuKF9yvh0o5+0S2ghNZTC8Zr1C7sXmDAFQv+R/2i9m0FAK7kwZWG+iruIXcL0ZAirPDoNM/ttxqGk6bSFK/52k4A",
-    "[Skull Breaker]XQAAAQAnAQAAAAAAAAA9iIIiM7tuo1AtUDA7pgliTAQq87tvxhGhyF4BAwEU0dBAV3q/MkFoMy/6FbCUKhDOsoo9+1QRNvJJiEqD+5VhTq8hHKQMZZnIwde6mnEiuD+FtWLWAZetAsrMiutPkhHnun6edjnFfMEWoks3HKv0ZkesZCppo+q8A3blSPArix8MztzIv+AQC127ZMxJVnsbSQA=",
+   ""
 }
 
 
@@ -317,12 +314,21 @@ SWEP.CrouchAng = Angle(0, 0, 0)
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local eles = data.elements
     local mdl = data.model
+    
+    -- Check if wz2_m4_chandle is enabled
+    if eles["wz2_m4_chandle"] then
+        -- Skip all bodygroup changes if wz2_m4_chandle is enabled
+        return
+    end
+    
+    -- Apply normal bodygroup changes only if wz2_m4_chandle is not enabled
     if eles["wz2_sh_optics"] then
         mdl:SetBodygroup(2, 1)
         mdl:SetBodygroup(1, 1)
     end
-        if eles["muzzle_remover"] then
-            mdl:SetBodygroup(5, 1) -- Change the bodygroup index and value as needed
+    
+    if eles["muzzle_remover"] then
+        mdl:SetBodygroup(5, 1)
     end
 end
 
@@ -365,15 +371,15 @@ SWEP.AttachmentElements = {
             {2, 5},
         },
         AttPosMods = {
-            [3] = { -- slot index
+            [4] = { -- slot index
             Pos = Vector(0,-1.30,19.9),
             Ang = Angle(90,-90,0),
             },
-            [4] = { -- slot index
+            [5] = { -- slot index
             Pos = Vector(0,-0.32,11.5),
         Ang = Angle(90,-90,0),
             },
-            [5] = { -- slot index
+            [6] = { -- slot index
             Pos = Vector(-1.1,-1.28,18.4),
             Ang = Angle(90,0,0),
             },
@@ -386,16 +392,16 @@ SWEP.AttachmentElements = {
             {2, 7},
         },
         AttPosMods = {
-            [3] = { -- slot index
-            Pos = Vector(0,-1.30,19.9),
+            [4] = { -- slot index
+            Pos = Vector(0,-1.30,23.5),
             Ang = Angle(90,-90,0),
             },
-            [4] = { -- slot index
-            Pos = Vector(0,-0.32,11.5),
+            [5] = { -- slot index
+            Pos = Vector(0,-0.50,11.5),
         Ang = Angle(90,-90,0),
             },
-            [5] = { -- slot index
-            Pos = Vector(-1.1,-1.28,18.4),
+            [6] = { -- slot index
+            Pos = Vector(-1.1,-1.28,13),
             Ang = Angle(90,0,0),
             },
         }
@@ -428,11 +434,11 @@ SWEP.AttachmentElements = {
             {2, 4},
         },
         AttPosMods = {
-            [3] = { -- slot index
+            [4] = { -- slot index
             Pos = Vector(0,-1.30,17),
             Ang = Angle(90,-90,0),
             },
-            [4] = { -- slot index
+            [5] = { -- slot index
            Pos = Vector(0,0.05,8),
         Ang = Angle(90,-90,0),
             },
@@ -445,22 +451,18 @@ SWEP.AttachmentElements = {
             {2, 6},
         },
         AttPosMods = {
-            [3] = { -- slot index
+            [4] = { -- slot index
             Pos = Vector(0,-1.30,11),
             Ang = Angle(90,-90,0),
             },
-            [4] = { -- slot index
-           Pos = Vector(0,-0.2,8),
+            [5] = { -- slot index
+           Pos = Vector(0,-0.2,7),
         Ang = Angle(90,-90,0),
             },
-            [5] = { -- slot index
+            [6] = { -- slot index
             Pos = Vector(-1.1,-1.28,9.5),
             Ang = Angle(90,0,0),
              },
-             [5] = { -- slot index
-             Pos = Vector(-1.1,-1.28,9.5),
-             Ang = Angle(90,0,0),
-              },
         }
     },
     ["xmag"] = {
@@ -495,15 +497,15 @@ SWEP.AttachmentElements = {
             {2, 2},
         },
         AttPosMods = {
-            [3] = { -- slot index
+            [4] = { -- slot index
             Pos = Vector(0,-1.30,14.5),
             Ang = Angle(90,-90,0),
             },
-            [4] = { -- slot index
+            [5] = { -- slot index
             Pos = Vector(0,-0.61,9.5),
             Ang = Angle(90,-90,0),
             },
-            [5] = { -- slot index
+            [6] = { -- slot index
               Pos = Vector(-1.1,-1.28,11.5),
         Ang = Angle(90,0,0),
             }
@@ -515,9 +517,19 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
+        PrintName = "Ironsights",
+        DefaultName = "Ironsights",
+        Category = {"wz2_m4_chandle"},
+        ExcludeElements = {""},
+        Bone = "weapon",
+        Pos = Vector(0,-3.5,2),
+        Ang = Angle(90,-90,0),
+    } ,
+    {
         PrintName = "Optic",
         DefaultName = "Ironsights",
-        Category = {"wz2_sh_optics", "wz2_m4_chandle"},
+        Category = {"wz2_sh_optics"},
+        ExcludeElements = {"chandle"},
         Bone = "weapon",
         Pos = Vector(0,-2.4,1),
         Ang = Angle(90,-90,0),

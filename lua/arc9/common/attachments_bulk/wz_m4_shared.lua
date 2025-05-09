@@ -360,15 +360,28 @@ ARC9.LoadAttachment(ATT, "wz2_hg_hightower20")
 
 
 ATT = {}
--- Stats Shared For all 419 EXF Barrel-- 
+-- Stats Shared For all M16 Barrel
 ATT.Free = true
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 10, -1.7),
+        Pos = Vector(0, 10, -0.65),
         Ang = Angle(0, -0.5, 0),
         Magnification = 1.15,
         ViewModelFOV = 60,
+        IsIronSight = true, -- disable if another sight is installed
+    }
+}
+
+
+ATT.Attachments = {
+    {
+        PrintName = "Sights",
+        Category = "wz2_sh_optics", -- single or {"list", "of", "values"}
+        Bone = "",
+        Pos = Vector(1, 0, -0.2),
+        Ang = Angle(0, 0, 0),
+        KeepBaseIrons = false,
     }
 }
 
