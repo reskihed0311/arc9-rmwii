@@ -131,11 +131,7 @@ ATT = {}
 
 ATT.Free = true
 
-ATT.RecoilMult = 0.85
-ATT.RangeMaxMult = 1.25
 
-ATT.AimDownSightsTimeMult = 1.3
-ATT.SprintToFireTimeMult = 1.2
 
 ATT.PrintName = "CottonMouth"
 ATT.CompactName = "COTTON."
