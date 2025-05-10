@@ -380,8 +380,6 @@ SWEP.AttachmentElements = {
             {4, 3},
         },
     },
-        ["soh"] = {
-    },
 }
 
 
@@ -443,14 +441,6 @@ SWEP.Attachments = {
         Pos = Vector(0,-1,0),
         Ang = Angle(90,-90,0),
     } ,
-        {
-        PrintName = "Perk (WIP)",
-        DefaultName = "None",
-        Category = {"wz2_sh_perks"},
-        Bone = "weapon",
-        Pos = Vector(0,5,0),
-        Ang = Angle(90,-90,0),
-    } ,
     {
         PrintName = "Camo",
         Category = {"universal_camo"},
@@ -461,7 +451,7 @@ SWEP.Attachments = {
 }
 --------------------------- ANIM RELATED
 
---[[local Translate_XMag = {
+local Translate_XMag = {
     ["reload"] = "reload_10",
     ["reload_empty"] = "reload_empty_10",
 }
@@ -488,61 +478,6 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         end
     end
 
-end--]]
-
-
-local Translate_XMag = {
-    ["reload"] = "reload_10",
-    ["reload_empty"] = "reload_empty_10",
-}
-
-local Translate_XMagLarge = {
-    ["reload"] = "reload_12",
-    ["reload_empty"] = "reload_empty_12",
-    ["inspect"] = "inspect_12",
-}
-
--- New tables for SOH animations
-local Translate_SOH = {
-    ["reload"] = "reload_soh_8",
-    ["reload_empty"] = "reload_soh_empty_8",
-    -- Add more SOH animations as needed
-}
-
-local Translate_XMag_SOH = {
-    ["reload"] = "reload_soh_10",
-    ["reload_empty"] = "reload_soh_empty_10",
-    -- Add more SOH animations for XMag as needed
-}
-
-
-SWEP.Hook_TranslateAnimation = function(wep, anim)
-    -- Check if SOH attachment is active
-    local has_soh = wep:HasElement("soh")
-    
-    -- Check for XMag (45-round mag) and apply reload animations
-    local has_xmag = wep:HasElement("xmag") or wep:HasElement("xmag_jack")
-    local has_xmaglarge = wep:HasElement("xmaglarge")
-    
-    -- Priority order: SOH + specific mag type > specific mag type > SOH > default
-    
-    -- Check for SOH + XMag combination
-    if has_soh and has_xmag and Translate_XMag_SOH[anim] then
-        return Translate_XMag_SOH[anim]
-    end
-    
-    
-    -- Check for SOH alone
-    if has_soh and Translate_SOH[anim] then
-        return Translate_SOH[anim]
-    end
-    
-    -- Check for XMag alone
-    if has_xmag and Translate_XMag[anim] then
-        return Translate_XMag[anim]
-    end
-    
-    -- Return nil (default animation) if no translation is found
 end
 
 
@@ -795,136 +730,6 @@ SWEP.Animations = {
             {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
             {s = "arc9_rmwii/p890/p890_pull.wav", t= 0.41},
             {s = "arc9_rmwii/p890/p890_release.wav", t=0.70},
-        }
-    },
-        ["reload_soh_8"] = {
-        Source = "reload_soh_8",
-        MagSwapTime = 1.1,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
-        IKTimeLine = { -- t is in fraction of animation
-             {
-                 t = 0.0,
-                 lhik = 1,
-                 rhik = 0
-             },
-             {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-             {
-                 t = 0.85,
-                 lhik = 0,
-                 rhik = 0,
-             },
-             {
-                t = 1,
-                lhik = 1,
-                rhik = 0,
-            },
-         },
-        EventTable = {
-            {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
-            {s = "arc9_rmwii/p890/p890_fast_magout.wav", t=  0.25},
-            {s = "arc9_rmwii/p890/p890_fast_maghit.wav", t = 1.1},
-            {s = "arc9_rmwii/p890/p890_fast_magin.wav", t = 1.15},
-        }
-    },
-       ["reload_soh_empty_8"] = {
-        Source = "reload_soh_empty_8",
-         MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
-        IKTimeLine = { -- t is in fraction of animation
-             {
-                 t = 0.0,
-                 lhik = 1,
-                 rhik = 0
-             },
-             {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-             {
-                 t = 0.85,
-                 lhik = 0,
-                 rhik = 0,
-             },
-             {
-                t = 1,
-                lhik = 1,
-                rhik = 0,
-            },
-         },
-        EventTable = {
-            {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
-            {s = "arc9_rmwii/p890/p890_fast_magout.wav", t=  0.25},
-            {s = "arc9_rmwii/p890/p890_fast_maghit.wav", t = 1.1},
-            {s = "arc9_rmwii/p890/p890_fast_magin.wav", t = 1.15},
-            {s = "arc9_rmwii/p890/p890_fast_charge.wav", t = 1.48},
-        }
-    },
-            ["reload_soh_10"] = {
-        Source = "reload_soh_10",
-        MagSwapTime = 1.1,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
-        IKTimeLine = { -- t is in fraction of animation
-             {
-                 t = 0.0,
-                 lhik = 1,
-                 rhik = 0
-             },
-             {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-             {
-                 t = 0.85,
-                 lhik = 0,
-                 rhik = 0,
-             },
-             {
-                t = 1,
-                lhik = 1,
-                rhik = 0,
-            },
-         },
-        EventTable = {
-            {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
-            {s = "arc9_rmwii/p890/p890_fast_xmagout.wav", t=  0.25},
-            {s = "arc9_rmwii/p890/p890_fast_xmaghit.wav", t=  1.2},
-            {s = "arc9_rmwii/p890/p890_fast_xmagin.wav", t = 1.28},
-        }
-    },
-       ["reload_soh_empty_10"] = {
-        Source = "reload_soh_empty_10",
-         MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
-        IKTimeLine = { -- t is in fraction of animation
-             {
-                 t = 0.0,
-                 lhik = 1,
-                 rhik = 0
-             },
-             {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-             {
-                 t = 0.85,
-                 lhik = 0,
-                 rhik = 0,
-             },
-             {
-                t = 1,
-                lhik = 1,
-                rhik = 0,
-            },
-         },
-        EventTable = {
-            {s = "arc9_rmwii/p890/p890_raise.wav", t = 0},
-            {s = "arc9_rmwii/p890/p890_fast_xmagout.wav", t=  0.25},
-            {s = "arc9_rmwii/p890/p890_fast_xmaghit.wav", t=  1.2},
-            {s = "arc9_rmwii/p890/p890_fast_xmagin.wav", t = 1.28},
-            {s = "arc9_rmwii/p890/p890_fast_charge.wav", t = 1.668},
         }
     },
 }

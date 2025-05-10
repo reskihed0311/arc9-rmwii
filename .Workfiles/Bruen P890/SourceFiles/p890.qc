@@ -236,33 +236,4 @@ $sequence "inspect_8" {
 	fps 30
 }
 
-$sequence "reload_soh_8" {
-	"anims\reload_sof_8.dmx"
-	activity "ACT_VM_IDLE" 1
-	snap
-	fps 30
-}
-
-
-$sequence "reload_soh_empty_8" {
-	"anims\reload_sof_empty_8.dmx"
-	activity "ACT_VM_IDLE" 1
-	snap
-	fps 30
-}
-
-$sequence "reload_soh_10" {
-	"anims\reload_sof_10.dmx"
-	activity "ACT_VM_IDLE" 1
-	snap
-	fps 30
-}
-
-
-$sequence "reload_soh_empty_10" {
-	"anims\reload_sof_empty_10.dmx"
-	activity "ACT_VM_IDLE" 1
-	snap
-	fps 30
-}
 
