@@ -331,9 +331,17 @@ ARC9.LoadAttachment(ATT, "wz2_m4_ravage8")
 
 
 ATT = {}
--- Stats Shared For all 419 EXF Barrel-- 
 ATT.Free = true
 
+ATT.RecoilMult = 0.75
+ATT.SpreadMult = 0.70
+ATT.MovementSpeedMult = 0.70
+ATT.RangeMaxMult = 1.85
+
+ATT.SpreadMultMove = 1.8
+ATT.SpreadMultMidAir = 1.6 
+ATT.SpeedMultSights = 0.65
+ATT.SpeedMult = 0.78
 
 
 ATT.PrintName = "HIGHTOWER 20' BARREL"
