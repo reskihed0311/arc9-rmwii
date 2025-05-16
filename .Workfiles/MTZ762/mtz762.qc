@@ -245,6 +245,54 @@ $sequence "reload_empty_20" {
 	fps 30
 }
 
+$sequence "reload_soh_20" {
+	"anims\reload_20_sof_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_empty_soh_20" {
+	"anims\reload_20_empty_sof_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_soh_40" {
+	"anims\reload_40_sof_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_empty_soh_40" {
+	"anims\reload_40_empty_sof_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_amp_soh_40" {
+	"anims\reload_40amp_sof_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "reload_empty_amp_soh_40" {
+	"anims\reload_40amp_empty_sof_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	snap
+	node "reload"
+	fps 30
+}
 
 
 $sequence "inspect_20" {

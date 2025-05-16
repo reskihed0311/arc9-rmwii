@@ -418,6 +418,14 @@ SWEP.Attachments = {
         Pos = Vector(0,0,0),
         Ang = Angle(90,-90,0),
     } ,
+                {
+        PrintName = "Perk (WIP)",
+        DefaultName = "None",
+        Category = {"wz2_sh_perks"},
+        Bone = "weapon",
+        Pos = Vector(0,5,0),
+        Ang = Angle(90,-90,0),
+    } ,
     {
         PrintName = "Camo",
         Category = {"universal_camo"},
@@ -431,7 +439,7 @@ SWEP.Attachments = {
 
 
 
-local Translate_XMag_soviet = {
+--[[local Translate_XMag_soviet = {
     ["reload"] = "reload_s_40",
     ["reload_empty"] = "reload_empty_s_40",
     ["inspect"] = "inspect_s_40",
@@ -460,6 +468,85 @@ if xmag then  -- Changed from xmag_soviet to xmag
         return Translate_XMag[anim]
     end
 end
+end--]]
+
+
+--------------------------- ANIM RELATED
+
+local Translate_XMag = {
+    ["reload"] = "reload_40",
+    ["reload_empty"] = "reload_empty_40",
+    ["inspect"] = "inspect_40",
+}
+
+
+local Translate_XMag_soviet = {
+    ["reload"] = "reload_s_40",
+    ["reload_empty"] = "reload_empty_s_40",
+    ["inspect"] = "inspect_s_40",
+}
+
+-- New tables for SOH animations
+local Translate_SOH = {
+    ["reload"] = "reload_soh_20",
+    ["reload_empty"] = "reload_soh_empty_20",
+    -- Add more SOH animations as needed
+}
+
+
+
+
+local Translate_XMag_SOH = {
+    ["reload"] = "reload_soh_40",
+    ["reload_empty"] = "reload_soh_empty_40",
+    -- Add more SOH animations for XMag as needed
+}
+
+
+
+-- Create new table for SOH + XMag Soviet combination
+local Translate_XMag_Soviet_SOH = {
+    ["reload"] = "reload_soh_s_40",
+    ["reload_empty"] = "reload_soh_empty_s_40",
+    -- Add more SOH animations for XMag Soviet as needed
+}
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    -- Check if SOH attachment is active
+    local has_soh = wep:HasElement("soh")
+    
+    -- Check for XMag (45-round mag) and Soviet variant
+    local has_xmag = wep:HasElement("xmag") or wep:HasElement("xmag_jack")
+    local has_xmag_soviet = wep:HasElement("xmag_soviet")
+    
+    -- Priority order: SOH + specific mag type > specific mag type > SOH > default
+    
+    -- Check for SOH + XMag Soviet combination
+    if has_soh and has_xmag_soviet and Translate_XMag_Soviet_SOH[anim] then
+        return Translate_XMag_Soviet_SOH[anim]
+    end
+    
+    -- Check for SOH + XMag combination
+    if has_soh and has_xmag and Translate_XMag_SOH[anim] then
+        return Translate_XMag_SOH[anim]
+    end
+    
+    -- Check for XMag Soviet alone
+    if has_xmag_soviet and Translate_XMag_soviet[anim] then
+        return Translate_XMag_soviet[anim]
+    end
+    
+    -- Check for XMag alone
+    if has_xmag and Translate_XMag[anim] then
+        return Translate_XMag[anim]
+    end
+    
+    -- Check for SOH alone
+    if has_soh and Translate_SOH[anim] then
+        return Translate_SOH[anim]
+    end
+    
+    -- Return nil (default animation) if no translation is found
 end
 
 
@@ -836,6 +923,165 @@ SWEP.Animations = {
             {s = "arc9_rmwii/mtz762/raise_first_boltpull.wav", t = 0.38},
             {s = "arc9_rmwii/mtz762/raise_first_boltfwd.wav", t = 0.65},
             {s = "arc9_rmwii/mtz762/raise_first_end.wav", t = 1.25},
+        }
+    },
+    ["reload_soh_20"] = {
+        Source = "reload_soh_20",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_fast_smagout.wav", t = 0.15},
+            {s = "arc9_rmwii/mtz762/reload_fast_smaghit.wav", t = 1.1},
+            {s = "arc9_rmwii/mtz762/reload_fast_smagin.wav", t = 1.2},
+        }
+    },
+     ["reload_soh_empty_20"] = {
+        Source = "reload_empty_soh_20",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_fast_smagout.wav", t = 0.15},
+            {s = "arc9_rmwii/mtz762/reload_fast_smaghit.wav", t = 1.1},
+            {s = "arc9_rmwii/mtz762/reload_fast_smagin.wav", t = 1.2},
+            {s = "arc9_rmwii/mtz762/reload_fast_charge.wav", t = 1.5},
+        }
+    },
+       ["reload_soh_40"] = {
+        Source = "reload_soh_40",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagout.wav", t = 0.15},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmaghit.wav", t = 1.2},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagin.wav", t = 1.3},
+        }
+    },
+     ["reload_soh_empty_40"] = {
+        Source = "reload_empty_soh_40",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+              {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagout.wav", t = 0.15},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmaghit.wav", t = 1.2},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagin.wav", t = 1.3},
+            {s = "arc9_rmwii/mtz762/reload_fast_charge.wav", t = 1.65},
+        }
+    },
+       ["reload_soh_s_40"] = {
+        Source = "reload_amp_soh_40",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagout.wav", t = 0.15},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmaghit.wav", t = 1.2},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagin.wav", t = 1.3},
+        }
+    },
+     ["reload_soh_empty_s_40"] = {
+        Source = "reload_empty_amp_soh_40",
+        IKTimeLine = { -- t is in fraction of animation
+            {
+                t = 0.0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.90,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+              {s = "arc9_rmwii/mtz762/raise_first.wav", t = 0},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagout.wav", t = 0.15},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmaghit.wav", t = 1.2},
+            {s = "arc9_rmwii/mtz762/reload_fast_xmagin.wav", t = 1.3},
+            {s = "arc9_rmwii/mtz762/reload_fast_charge.wav", t = 1.65},
         }
     },
 }
