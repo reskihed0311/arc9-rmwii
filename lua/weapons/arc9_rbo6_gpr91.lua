@@ -497,8 +497,8 @@ SWEP.HoldTypeCustomize = "slam"
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
      [1] = "bullet_1",
-     [3] = "bullet_2",
-     [4] = "bullet_3",
+     [2] = "bullet_2",
+     [3] = "bullet_3",
 }
 
 SWEP.Animations = {
