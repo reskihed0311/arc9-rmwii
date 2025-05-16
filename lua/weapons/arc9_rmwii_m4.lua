@@ -612,6 +612,14 @@ SWEP.Attachments = {
         Pos = Vector(0,0,0),
         Ang = Angle(90,-90,0),
     } ,
+            {
+        PrintName = "Perk (WIP)",
+        DefaultName = "None",
+        Category = {"wz2_sh_perks"},
+        Bone = "weapon",
+        Pos = Vector(0,5,0),
+        Ang = Angle(90,-90,0),
+    } ,
     {
     PrintName = "Camo",
     Category = {"universal_camo"},
@@ -636,23 +644,67 @@ local Translate_XMagLarge = {
 }
 
 
+-- New tables for SOH animations
+local Translate_SOH = {
+    ["reload"] = "reload_soh_30",
+    ["reload_empty"] = "reload_soh_empty_30",
+    -- Add more SOH animations as needed
+}
+
+
+
+
+local Translate_XMag_SOH = {
+    ["reload"] = "reload_soh_45",
+    ["reload_empty"] = "reload_soh_empty_45",
+    -- Add more SOH animations for XMag as needed
+}
+
+local Translate_XMagLarge_SOH = {
+    ["reload"] = "reload_soh_60",
+    ["reload_empty"] = "reload_soh_empty_60",
+    -- Add more SOH animations for XMag as needed
+}
+
 SWEP.Hook_TranslateAnimation = function(wep, anim)
+    -- Check if SOH attachment is active
+    local has_soh = wep:HasElement("soh")
+    
     -- Check for XMag (45-round mag) and apply reload animations
-    local xmag = wep:HasElement("xmag") or wep:HasElement("xmag_skullbreaker")
-    if xmag then
-        if Translate_XMag[anim] then
-            return Translate_XMag[anim]  -- Return the reload animation for 45-round mag
-        end
+    local has_xmag = wep:HasElement("xmag") or wep:HasElement("xmag_jack")
+    local has_xmaglarge = wep:HasElement("xmaglarge")
+    
+    -- Priority order: SOH + specific mag type > specific mag type > SOH > default
+    
+    -- Check for SOH + XMag combination
+    if has_soh and has_xmag and Translate_XMag_SOH[anim] then
+        return Translate_XMag_SOH[anim]
+    end
+
+        -- Check for SOH + XMag combination
+    if has_soh and has_xmaglarge and Translate_XMagLarge_SOH[anim] then
+        return Translate_XMagLarge_SOH[anim]
     end
     
-    local xmaglarge = wep:HasElement("xmaglarge")
-    if xmaglarge then
-        if Translate_XMagLarge[anim] then
-            return Translate_XMagLarge[anim]  -- Return the reload animation for 45-round mag
-        end
+    
+    
+    -- Check for SOH alone
+    if has_soh and Translate_SOH[anim] then
+        return Translate_SOH[anim]
     end
-end
+    
+    -- Check for XMag alone
+    if has_xmag and Translate_XMag[anim] then
+        return Translate_XMag[anim]
+    end
 
+        -- Check for XMag alone
+    if has_xmaglarge and Translate_XMagLarge[anim] then
+        return Translate_XMagLarge[anim]
+    end
+    
+    -- Return nil (default animation) if no translation is found
+end
 
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "passive"
@@ -1036,6 +1088,201 @@ SWEP.Animations = {
             {s = "arc9_rmwii/m4/m4_raise_first_boltfwd.wav", t = 0.80},
             {s = "arc9_rmwii/m4/m4_shoulder.wav", t = 1.35},
         }
+    },
+      ["reload_soh_30"] = {
+        Source = "reload_30_soh",
+        IKTimeLine = { -- t is in fraction of animation
+             {
+                 t = 0.0,
+                 lhik = 1,
+                 rhik = 0
+             },
+             {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+             {
+                 t = 0.85,
+                 lhik = 0,
+                 rhik = 0,
+             },
+             {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+         },
+        EventTable = {
+            {s = "arc9_rmwii/m4/m4_raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/m4/m4_fast_magout.wav", t = 0.2},
+            {s = "arc9_rmwii/m4/m4_fast_maghit.wav", t = 0.8},
+            {s = "arc9_rmwii/m4/m4_fast_magin.wav", t=  0.75},
+        }
+    },
+    ["reload_soh_empty_30"] = {
+        Source = "reload_empty_soh_30",
+         MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
+        EventTable = {
+           {s = "arc9_rmwii/m4/m4_raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/m4/m4_fast_magout.wav", t = 0.2},
+            {s = "arc9_rmwii/m4/m4_fast_maghit.wav", t = 0.8},
+            {s = "arc9_rmwii/m4/m4_fast_magin.wav", t=  0.75},
+            {s = "arc9_rmwii/m4/m4_fast_bolt.wav", t = 1.28},
+            
+        },
+        IKTimeLine = { -- t is in fraction of animation
+        {
+            t = 0.0,
+            lhik = 1,
+            rhik = 0
+        },
+        {
+           t = 0.1,
+           lhik = 0,
+           rhik = 0
+       },
+        {
+            t = 0.85,
+            lhik = 0,
+            rhik = 0,
+        },
+        {
+           t = 1,
+           lhik = 1,
+           rhik = 0,
+       },
+    },
+    },
+          ["reload_soh_45"] = {
+        Source = "reload_soh_45",
+        IKTimeLine = { -- t is in fraction of animation
+             {
+                 t = 0.0,
+                 lhik = 1,
+                 rhik = 0
+             },
+             {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+             {
+                 t = 0.85,
+                 lhik = 0,
+                 rhik = 0,
+             },
+             {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+         },
+        EventTable = {
+            {s = "arc9_rmwii/m4/m4_raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/m4/m4_fast_xmagout.wav", t = 0.25},
+            {s = "arc9_rmwii/m4/m4_fast_xmaghit.wav", t = 0.7},
+            {s = "arc9_rmwii/m4/m4_fast_xmagin.wav", t = 1},
+        }
+    },
+    ["reload_soh_empty_45"] = {
+        Source = "reload_empty_soh_45",
+         MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
+        EventTable = {
+             {s = "arc9_rmwii/m4/m4_raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/m4/m4_fast_xmagout.wav", t = 0.25},
+            {s = "arc9_rmwii/m4/m4_fast_xmaghit.wav", t = 0.7},
+            {s = "arc9_rmwii/m4/m4_fast_xmagin.wav", t = 1},
+             {s = "arc9_rmwii/m4/m4_fast_bolt.wav", t = 1.42}
+            
+        },
+        IKTimeLine = { -- t is in fraction of animation
+        {
+            t = 0.0,
+            lhik = 1,
+            rhik = 0
+        },
+        {
+           t = 0.1,
+           lhik = 0,
+           rhik = 0
+       },
+        {
+            t = 0.85,
+            lhik = 0,
+            rhik = 0,
+        },
+        {
+           t = 1,
+           lhik = 1,
+           rhik = 0,
+       },
+    },
+    },
+           ["reload_soh_60"] = {
+        Source = "reload_soh_60",
+        IKTimeLine = { -- t is in fraction of animation
+             {
+                 t = 0.0,
+                 lhik = 1,
+                 rhik = 0
+             },
+             {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+             {
+                 t = 0.85,
+                 lhik = 0,
+                 rhik = 0,
+             },
+             {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+         },
+        EventTable = {
+            {s = "arc9_rmwii/m4/m4_raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/m4/m4_fast_xmaglrgout.wav", t= 0.3},
+            {s = "arc9_rmwii/m4/m4_fast_xmaglrghit.wav", t = 1.15},
+            {s = "arc9_rmwii/m4/m4_fast_xmaglrgin.wav", t = 1.25},
+        }
+    },
+    ["reload_soh_empty_60"] = {
+        Source = "reload_empty_soh_60",
+         MagSwapTime = 1.5,  -- in seconds, how long before the new magazine replaces the old one. For SWEP.BulletBones
+        EventTable = {
+             {s = "arc9_rmwii/m4/m4_raise_quick.wav", t = 0},
+            {s = "arc9_rmwii/m4/m4_fast_xmaglrgout.wav", t= 0.3},
+            {s = "arc9_rmwii/m4/m4_fast_xmaglrghit.wav", t = 1.15},
+            {s = "arc9_rmwii/m4/m4_fast_xmaglrgin.wav", t = 1.25},
+            {s = "arc9_rmwii/m4/m4_fast_bolt.wav", t = 1.73},
+            
+        },
+        IKTimeLine = { -- t is in fraction of animation
+        {
+            t = 0.0,
+            lhik = 1,
+            rhik = 0
+        },
+        {
+           t = 0.1,
+           lhik = 0,
+           rhik = 0
+       },
+        {
+            t = 0.85,
+            lhik = 0,
+            rhik = 0,
+        },
+        {
+           t = 1,
+           lhik = 1,
+           rhik = 0,
+       },
+    },
     },
 }
 

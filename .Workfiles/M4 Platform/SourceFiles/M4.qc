@@ -264,6 +264,53 @@ $sequence "reload_empty_60" {
 	fps 30
 }
 
+
+$sequence "reload_30_soh" {
+	"anims\reload_30_sof.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+
+$sequence "reload_empty_soh_30" {
+	"anims\reload_30_empty_sof.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "reload_soh_45" {
+	"anims\reload_45_sof.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+
+$sequence "reload_empty_soh_45" {
+	"anims\reload_45_empty_sof.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "reload_soh_60" {
+	"anims\reload_60_sof.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+
+$sequence "reload_empty_soh_60" {
+	"anims\reload_60_empty_sof.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+
 $sequence "inspect_30" {
 	"anims\inspect_30.dmx"
 	activity "ACT_VM_IDLE" 1
