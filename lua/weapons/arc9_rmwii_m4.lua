@@ -219,6 +219,7 @@ SWEP.SpreadAddRecoil = nil -- Applied per unit of recoil.
 -- Because the per shot modifier used to be broken and effectively had a limit of 1, it is set to 1 by default. You should probably set it higher.
 SWEP.RecoilModifierCap = 1
 
+
 ---------------------- FX
 
 
