@@ -38,6 +38,7 @@ $bodygroup "barrel"
 $bodygroup "mag"
 {
     studio "magdef.dmx"
+	studio "xmag.dmx"
 }
 
 
@@ -182,9 +183,32 @@ $sequence "reload_empty_30" {
 }
 
 
+$sequence "reload_45" {
+	"anims\reload_45.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+
+$sequence "reload_empty_45" {
+	"anims\reload_empty_45.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+
 
 $sequence "inspect_30" {
 	"anims\inspect_30.dmx"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 30
+}
+
+$sequence "inspect_45" {
+	"anims\inspect_45.dmx"
 	activity "ACT_VM_IDLE" 1
 	snap
 	fps 30

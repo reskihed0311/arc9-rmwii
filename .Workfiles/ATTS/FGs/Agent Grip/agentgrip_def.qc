@@ -1,4 +1,4 @@
-$modelname "att_r_mwii_fg_agent.mdl"
+$modelname "att_mwii_fg_agent.mdl"
 
 $maxverts 655553
 

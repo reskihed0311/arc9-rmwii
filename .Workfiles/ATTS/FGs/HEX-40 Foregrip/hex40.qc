@@ -1,4 +1,4 @@
-$modelname "att_r_mwii_fg_hex40.mdl"
+$modelname "att_mwii_fg_hex40.mdl"
 
 $maxverts 655553
 

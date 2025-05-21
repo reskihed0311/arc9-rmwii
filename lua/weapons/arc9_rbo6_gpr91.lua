@@ -338,6 +338,11 @@ end
 
 
 SWEP.AttachmentElements = {
+        ["xmag"] = {
+        Bodygroups = {
+            {5, 1},
+        },
+    },
 }
 
 
@@ -412,7 +417,7 @@ SWEP.Attachments = {
 
 --------------------------- ANIM RELATED
 
---[[local Translate_XMag = {
+local Translate_XMag = {
     ["reload"] = "reload_45",
     ["reload_empty"] = "reload_empty_45",
     ["inspect"] = "inspect_45",
@@ -485,7 +490,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
     
     -- Return nil (default animation) if no translation is found
-end--]]
+end
 
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "passive"
@@ -541,7 +546,48 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.3,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.45,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+    },
+    ["inspect_45"] = {
+        Source = "inspect_45",
+        EventTable = {
+            {s = "arc9_rmwii/gpr91/raise.wav", t = 0},
+            {s = "arc9_rmwii/gpr91/reload_magout.wav", t = 1.5},
+            {s = "arc9_rmwii/gpr91/reload_maghit.wav", t = 2.75},
+            {s = "arc9_rmwii/gpr91/reload_magin.wav", t = 2.9},
+        },
+           IKTimeLine = {
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.3,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.45,
                 lhik = 0,
                 rhik = 0
             },
@@ -598,6 +644,71 @@ SWEP.Animations = {
             {s = "arc9_rmwii/gpr91/reload_magin.wav", t = 1.6},
             {s = "arc9_rmwii/gpr91/reload_chargeback.wav", t = 2.2},
             {s = "arc9_rmwii/gpr91/reload_chargefwd.wav", t = 2.40},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.55,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+    },
+    ["reload_45"] = {
+        Source = "reload_45",
+        IKTimeLine = {
+            {
+                t = 0.0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0,
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "arc9_rmwii/gpr91/raise.wav", t = 0},
+            {s = "arc9_rmwii/gpr91/reload_magout.wav", t=  0.3},
+            {s = "arc9_rmwii/gpr91/reload_maghit.wav", t = 1.48},
+            {s = "arc9_rmwii/gpr91/reload_magin.wav", t = 1.6},
+        },
+    },
+    ["reload_empty_45"] = {
+        Source = "reload_empty_45",
+        MagSwapTime = 1.5,
+        EventTable = {
+           {s = "arc9_rmwii/gpr91/raise.wav", t = 0},
+            {s = "arc9_rmwii/gpr91/reload_magout.wav", t=  0.3},
+            {s = "arc9_rmwii/gpr91/reload_maghit.wav", t = 1.48},
+            {s = "arc9_rmwii/gpr91/reload_magin.wav", t = 1.6},
+            {s = "arc9_rmwii/gpr91/reload_chargeback.wav", t = 2.4},
+            {s = "arc9_rmwii/gpr91/reload_chargefwd.wav", t = 2.6},
         },
         IKTimeLine = {
             {

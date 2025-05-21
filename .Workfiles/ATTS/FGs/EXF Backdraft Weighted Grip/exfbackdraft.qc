@@ -1,4 +1,4 @@
-$modelname "att_r_mwii_fg_EXFBackdraft.mdl"
+$modelname "att_mwii_fg_EXFBackdraft.mdl"
 
 $maxverts 655553
 

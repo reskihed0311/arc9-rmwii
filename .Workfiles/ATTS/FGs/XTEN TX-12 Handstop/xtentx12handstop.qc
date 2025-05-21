@@ -1,4 +1,4 @@
-$modelname "att_r_mwii_fg_xtentx12hs.mdl"
+$modelname "att_mwiii_fg_xtentx12hs.mdl"
 
 $maxverts 655553
 
