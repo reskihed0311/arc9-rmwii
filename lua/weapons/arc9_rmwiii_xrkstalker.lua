@@ -64,25 +64,25 @@ SWEP.ViewModelFOVBase = 70 -- Set to override viewmodel FOV
 
 ////////////////////////////////////////// BALANCE
 
-SWEP.AimDownSightsTime = 0.65 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.4 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.6 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.7 -- How long it takes to go from sprinting to being able to fire.
 
-SWEP.Sway = 2 -- How much the gun sways.
+SWEP.Sway = 2.5 -- How much the gun sways.
 
 SWEP.RPM = 540
 
-SWEP.Ammo = "ar2"
+SWEP.Ammo = "SniperPenetratedRounds"
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 20 -- Self-explanatory.
+SWEP.ClipSize = 5 -- Self-explanatory.
 
-SWEP.SpeedMult = 0.85
-SWEP.SpeedMultSights = 0.8
-SWEP.SpeedMultShooting = 0.8
-SWEP.SpeedMultCrouch = 0.5
+SWEP.SpeedMult = 0.8
+SWEP.SpeedMultSights = 0.5
+SWEP.SpeedMultShooting = 0.2
+SWEP.SpeedMultCrouch = 0.3
 
-SWEP.Penetration = 13.5 -- Units of wood that can be penetrated by this gun.
-SWEP.PenetrationDelta = 0.9 -- The damage multiplier after all penetration distance is spent.
+SWEP.Penetration = 36 -- Units of wood that can be penetrated by this gun.
+SWEP.PenetrationDelta = 1 -- The damage multiplier after all penetration distance is spent.
 
 SWEP.RicochetAngleMax = 45 -- Maximum angle at which a ricochet can occur. Between 1 and 90. Angle of 0 is impossible but would theoretically always ricochet.
 SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a ricochet can occur?
@@ -91,11 +91,11 @@ SWEP.RicochetChance = 0.15 -- If the angle is right, what is the chance that a r
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 0.8
+SWEP.Recoil = 10.5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1.35 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 1.5 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 8.5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -116,20 +116,20 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true -- Visual recoil actually affects your aim point.
 
-SWEP.VisualRecoilUp = 0.01 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 0.2 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.05 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 0.23 -- Roll tilt for visual recoil.
+SWEP.VisualRecoilRoll = 0.73 -- Roll tilt for visual recoil.
 
 SWEP.VisualRecoilCenter = Vector(2, 4, 2) -- The "axis" of visual recoil. Where your hand is.
 
-SWEP.VisualRecoilPunch = 1.5 -- How far back visual recoil moves the gun.
+SWEP.VisualRecoilPunch = 10 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = 0.1
 
 -- SWEP.VisualRecoilMult = 1
 -- SWEP.VisualRecoilADSMult = 0.1
 -- SWEP.VisualRecoilPunchADSMult = 0.1
 
-SWEP.VisualRecoil = 1.05
+SWEP.VisualRecoil = 2.05
 SWEP.VisualRecoilMultSights = 1.5
 SWEP.VisualRecoilPositionBump = 1.5
 SWEP.VisualRecoilPositionBumpUp = 0.08 -- its a mult
@@ -155,8 +155,8 @@ SWEP.VisualRecoilDoingFunc = nil -- wawa, override Up, Side, Roll here
 --     return up, side, roll, punch
 -- end
 
-SWEP.RecoilKick = 0.3 -- Camera recoil
-SWEP.RecoilKickDamping = 60.151 -- Camera recoil damping
+SWEP.RecoilKick = 0.55 -- Camera recoil
+SWEP.RecoilKickDamping = 70 -- Camera recoil damping
 SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camera go up (only visually) as recoil increases, SWEP.Recoil * SWEP.RecoilKick = effect of this
 
 -- Additional subtle visual recoil, in case your gun doesn't have animated fire. Acts like a second spring added on top with limited duration
@@ -167,22 +167,22 @@ SWEP.RecoilKickAffectPitch = 0.7 -- thing for eft, set to true if you want camer
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 55 -- Damage done at point blank range
-SWEP.DamageMin = 35 -- Damage done at maximum range
+SWEP.DamageMax = 50 -- Damage done at point blank range
+SWEP.DamageMin = 100 -- Damage done at maximum range
 
 SWEP.ImpactForce = 0 -- Force that bullets apply on hit
 
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 0 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 7000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 50 / ARC9.HUToM -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 100 / ARC9.HUToM -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 36000 -- In Hammer units, how far bullets can travel, period.
 
 
 
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.6,
@@ -193,18 +193,17 @@ SWEP.BodyDamageMults = {
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.00210
+SWEP.Spread = 0.00022
 
 SWEP.UseDispersion = false -- Use this for shotguns - Additional random angle to spread, same for each pellet
 SWEP.DispersionSpread = 0.2 -- SWEP.Spread will be clump spread, and this will be dispersion of clump
 
 SWEP.SpreadAddMove = 0.015 -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = 0.025 -- Applied when not touching the ground.
-SWEP.SpreadAddHipFire = 0.15 -- Applied when not sighted.
+SWEP.SpreadAddMidAir = 0.5 -- Applied when not touching the ground.
+SWEP.SpreadAddHipFire = 0 -- Applied when not sighted.
 SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
 SWEP.SpreadAddBlindFire = nil -- Applied when blind firing.
 SWEP.SpreadAddCrouch = -0.3 -- Applied when crouching.
-
 SWEP.SpreadAddRecoil = nil -- Applied per unit of recoil.
 
 -- Limit the effect of recoil on modifiers to this much.
@@ -213,7 +212,8 @@ SWEP.RecoilModifierCap = 1
 
 
 ---------------------- FX
-
+SWEP.HoldBreathTime = 15 -- time that you can hold breath for, set to 0 to disable holding breath
+SWEP.RestoreBreathTime = 7.5
 
 
 SWEP.DropMagazineModel = nil -- Set to a string or table to drop this magazine when reloading.
@@ -231,11 +231,11 @@ SWEP.TracerColor = Color(255, 255, 190) -- Color of tracers. Only works if trace
 
 
 
-SWEP.ShootSound = "arc9_rmwii/mtz762/fire_fp.wav"
-SWEP.ShootSoundSilenced = "arc9_rmwii/mtz762/fire_sup.wav"  
+SWEP.ShootSound = "arc9_rmwii/xrkstalker/fire_fp_v2.wav"
+SWEP.ShootSoundSilenced = "arc9_rmwii/xrkstalker/fire_sil.wav"  
 
 
-SWEP.MuzzleParticle = "muzzleflash_FAMAS" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_M82" -- Used for some muzzle effects.
 
 
 
@@ -278,7 +278,7 @@ SWEP.PeekMaxFOV = 64
 SWEP.CantPeek = true -- set to true if you dont want peeking on this gnu
 
 SWEP.IronSights = {
-    Pos = Vector(-2.441, -3, -0.16),
+    Pos = Vector(-2.507, -5, -0.32),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -333,7 +333,7 @@ SWEP.Attachments = {
         DefaultName = "Ironsights",
         Category = {"wz2_sh_optics"},
         Bone = "weapon",
-        Pos = Vector(0,-2.85,0.5),
+        Pos = Vector(0,-3.2,0.5),
         Ang = Angle(90,-90,0),
     } ,
    {
@@ -349,7 +349,7 @@ SWEP.Attachments = {
         DefaultName = "Default Flashhider",
         Category = {"wz2_sh_sn_muzzle"},
         Bone = "weapon",
-        Pos = Vector(0,-1.30,20),
+        Pos = Vector(0,-1.95,34),
         Ang = Angle(90,-90,0),
     } ,
     {
@@ -357,7 +357,7 @@ SWEP.Attachments = {
         DefaultName = "None",
         Category = {"wz2_sh_bp"},
         Bone = "weapon",
-        Pos = Vector(0,-0.52,11),
+        Pos = Vector(0,0,15),
         Ang = Angle(90,-90,0),
     },
     {
@@ -365,7 +365,7 @@ SWEP.Attachments = {
         DefaultName = "None",
         Category = {"wz2_sh_ar_tac"},
         Bone = "weapon",
-        Pos = Vector(-1,-1.30,13),
+        Pos = Vector(-1.1,-1.85,13),
         Ang = Angle(90,0,0),
     },
     {
@@ -381,7 +381,7 @@ SWEP.Attachments = {
         DefaultName = "DEMO Factory Stock",
         Category = {"wz2_xrkstalker_stocks"},
         Bone = "weapon",
-        Pos = Vector(0,-1.5,-5),
+        Pos = Vector(0,-0,-10),
         Ang = Angle(90,-90,0),
     } ,
     {
@@ -425,6 +425,7 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
 SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
+SWEP.NoShellEject = true -- Don't eject shell on fire
 
 SWEP.Animations = {
     ["idle"] = {
@@ -438,6 +439,9 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "ready",
+        EventTable = {
+            {s = "arc9_rmwii/xrkstalker/boltfwd.wav", t = 0.3},
+        }
     },
     ["draw"] = {
         Source = "draw",
@@ -453,19 +457,38 @@ SWEP.Animations = {
     },
     ["cycle"] = {
         Source = "cycle",
-        ShellEjectAt = 0.5,
+        EjectAt = 0.5,
+        EventTable = {
+            {s = "arc9_rmwii/xrkstalker/boltback.wav", t = 0.22},
+            {s = "arc9_rmwii/xrkstalker/boltfwd.wav", t = 0.65},
+        }
     },
     ["cycle_iron"] = {
         Source = "cycle_iron",
-        ShellEjectAt = 0.5,
+    EjectAt = 0.5,
+     EventTable = {
+            {s = "arc9_rmwii/xrkstalker/boltback.wav", t = 0.22},
+            {s = "arc9_rmwii/xrkstalker/boltfwd.wav", t = 0.65},
+        }
     },
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        EventTable = {
+            {s = "arc9_rmwii/xrkstalker/reload_magout.wav", t = 0.3},
+            {s = "arc9_rmwii/xrkstalker/reload_maghit.wav", t = 1.85},
+            {s = "arc9_rmwii/xrkstalker/reload_magin.wav", t = 2.1},
+        }
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        ShellEjectAt = 0.5,
+        EjectAt = 0.5,
+        EventTable = {
+            {s = "arc9_rmwii/xrkstalker/boltback.wav", t = 0.22},
+            {s = "arc9_rmwii/xrkstalker/reload_magout.wav", t = 1.3},
+            {s = "arc9_rmwii/xrkstalker/reload_maghit.wav", t = 2.8},
+            {s = "arc9_rmwii/xrkstalker/reload_magin.wav", t = 3},
+            {s = "arc9_rmwii/xrkstalker/boltfwd.wav", t = 3.9},
+        }
     },
 }
 

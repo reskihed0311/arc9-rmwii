@@ -231,7 +231,7 @@ SWEP.TracerColor = Color(255, 255, 190) -- Color of tracers. Only works if trace
 
 
 
-SWEP.ShootSound = "arc9_rmwii/mtz762/fire_fp.wav"
+SWEP.ShootSound = "arc9_rmwii/mtz762/fire_fp_v2.wav"
 SWEP.ShootSoundSilenced = "arc9_rmwii/mtz762/fire_sup.wav"  
 
 
