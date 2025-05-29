@@ -40,6 +40,7 @@ $bodygroup "stock"
 $bodygroup "mag"
 {
     studio "magdef.dmx"
+	studio "xmag.dmx"
 }
 
 
@@ -178,6 +179,19 @@ $sequence "reload_30" {
 	fps 30
 }
 
+$sequence "reload_xmag" {
+	"anims\reload_xmag.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 7 "r_mwii_lmsub.BoltBack" }
+	{ event 5004 38 "r_mwii_lmsub.45MagOut" }
+	{ event 5004 55 "r_mwii_lmsub.45MagHit" }
+	{ event 5004 61 "r_mwii_lmsub.45MagIn" }
+	{ event 5004 80 "r_mwii_lmsub.BoltRel" }
+	snap
+	node "reload"
+	fps 30
+}
+
 
 
 $sequence "reload_empty_30" {
@@ -193,3 +207,65 @@ $sequence "reload_empty_30" {
 	fps 30
 }
 
+$sequence "reload_empty_xmag" {
+	"anims\reload_empty_xmag.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 7 "r_mwii_lmsub.BoltBack" }
+	{ event 5004 28 "r_mwii_lmsub.45MagOutEmpty" }
+	{ event 5004 78 "r_mwii_lmsub.45MagHitEmpty" }
+	{ event 5004 82 "r_mwii_lmsub.45MagInEmpty" }
+	{ event 5004 93 "r_mwii_lmsub.BoltRel" }
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_soh_30" {
+	"anims\reload_soh_30.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 8 "r_mwii_lmsub.30MagOutFast" }
+	{ event 5004 41 "r_mwii_lmsub.30MagHitFast" }
+	{ event 5004 43 "r_mwii_lmsub.30MagInFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_soh_xmag" {
+	"anims\reload_soh_xmag.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 9 "r_mwii_lmsub.45MagOutFast" }
+	{ event 5004 43 "r_mwii_lmsub.45MagHitFast" }
+	{ event 5004 48 "r_mwii_lmsub.45MagInFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+
+$sequence "reload_empty_soh_xmag" {
+	"anims\reload_soh_xmag_empty.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 9 "r_mwii_lmsub.45MagOutFast" }
+	{ event 5004 43 "r_mwii_lmsub.45MagHitFast" }
+	{ event 5004 48 "r_mwii_lmsub.45MagInFast" }
+	{ event 5004 60 "r_mwii_lmsub.ChargeBackFast" }
+	{ event 5004 65 "r_mwii_lmsub.ChargeFwdFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_soh_empty_30" {
+	"anims\reload_soh_empty_30.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 8 "r_mwii_lmsub.30MagOutFast" }
+	{ event 5004 41 "r_mwii_lmsub.30MagHitFast" }
+	{ event 5004 43 "r_mwii_lmsub.30MagInFast" }
+	{ event 5004 55 "r_mwii_lmsub.ChargeBackFast" }
+	{ event 5004 60 "r_mwii_lmsub.ChargeFwdFast" }
+	snap
+	node "reload"
+	fps 30
+}
