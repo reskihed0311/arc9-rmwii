@@ -219,6 +219,22 @@ SWEP.Animations = {
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
         LHIKOut = 0.25, -- (not actually inverse kinematics)
     },
+ ["reload_soh"] = {
+        Source = "reload_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+         LastClip1OutTime = 1.2,
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+ ["reload_empty_soh"] = {
+        Source = "reload_soh_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+         LastClip1OutTime = 1.2,
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
 }
 
 
@@ -290,7 +306,40 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 
-
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+    local magAnimations = {
+    }
+    
+    local hasSOH = false
+    local magSuffix = ""
+    
+    if wep.Attachments then
+        -- First check for magazine attachments
+        for _, att in pairs(wep.Attachments) do
+            if att.Installed and magAnimations[att.Installed] then
+                magSuffix = magAnimations[att.Installed]
+                break
+            end
+        end
+        
+        -- Then check for SOH perk
+        for _, att in pairs(wep.Attachments) do
+            if att.Installed and att.Installed == "att_perk_soh" then
+                hasSOH = true
+                break
+            end
+        end
+        
+        -- Combine both modifications if necessary
+        if hasSOH then
+            return anim .. magSuffix .. "_soh"
+        elseif magSuffix ~= "" then
+            return anim .. magSuffix
+        end
+    end
+    
+    return anim
+end
 
 
 SWEP.RejectAttachments = {
@@ -332,6 +381,11 @@ SWEP.Attachments = {
         vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
         vang = Angle(90, 00, -90),
          }
+    },
+    {
+        PrintName = "Perks",
+        DefaultAttName = "No Perk Package",
+        Slot = "wz_perks",
     },
     {
         PrintName = "Training Package",
