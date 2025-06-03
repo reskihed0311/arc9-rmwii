@@ -101,11 +101,11 @@ SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.65
 SWEP.RecoilRise = 0.5
 SWEP.MaxRecoilBlowback = -1
-SWEP.VisualRecoilMult = 1.5
-SWEP.RecoilPunch = 1.5
-SWEP.RecoilPunchBackMax = 1
+SWEP.VisualRecoilMult = 0
+SWEP.RecoilPunch = 0.25
+SWEP.RecoilPunchBackMax = 0
 SWEP.RecoilPunchBackMaxSights = nil -- may clip with scopes
-SWEP.RecoilVMShake = 1 -- random viewmodel offset when shooty
+SWEP.RecoilVMShake = 0.5 -- random viewmodel offset when shooty
 
 
 
