@@ -193,4 +193,28 @@ $sequence "reload_empty" {
 }
 
 
+$sequence "reload_soh" {
+	"anims\reload_soh.dmx"
+	activity "ACT_VM_IDLE" 1
+	{ event 5004 3 "r_mwii_grekhova.20MagRel" }
+	{ event 5004 5 "r_mwii_grekhova.20MagOut" }
+	{ event 5004 30 "r_mwii_grekhova.20MagHit" }
+	{ event 5004 35 "r_mwii_grekhova.20MagIn" }
+	snap
+	fps 30
+}
+
+
+$sequence "reload_soh_empty" {
+	"anims\reload_soh_empty2.dmx"
+	activity "ACT_VM_IDLE" 1
+	{ event 5004 3 "r_mwii_grekhova.20MagRel" }
+	{ event 5004 5 "r_mwii_grekhova.20MagOut" }
+	{ event 5004 30 "r_mwii_grekhova.20MagHit" }
+	{ event 5004 35 "r_mwii_grekhova.20MagIn" }
+	{ event 5004 45 "r_mwii_grekhova.SlideBack" }
+	{ event 5004 48 "r_mwii_grekhova.BoltRel" }
+	snap
+	fps 30
+}
 

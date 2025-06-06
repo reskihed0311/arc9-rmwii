@@ -37,6 +37,7 @@ $bodygroup "muzzle"
 $bodygroup "mag"
 {
     studio "mag3.dmx"
+	studio "xmag.dmx"
 }
 
 
@@ -199,6 +200,31 @@ $sequence "reload_empty" {
 	{ event 5004 49 "r_mwii_m13.MagHitEmpty" }
 	{ event 5004 50 "r_mwii_m13.MagInEmpty" }
 	{ event 5004 60 "r_mwii_m13.BoltCatch" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "reload_xmag" {
+	"anims\reload_xmag.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 22 "r_mwii_m13.XMagOut" }
+	{ event 5004 45 "r_mwii_m13.XMagHit" }
+	{ event 5004 49 "r_mwii_m13.XMagIn" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "reload_empty_xmag" {
+	"anims\reload_empty_xmag.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 28 "r_mwii_m13.XMagOutEmpty" }
+	{ event 5004 55 "r_mwii_m13.XMagHitEmpty" }
+	{ event 5004 58 "r_mwii_m13.XMagInEmpty" }
+	{ event 5004 73 "r_mwii_m13.BoltCatch" }
 	snap
 	node "reload"
 	fps 30

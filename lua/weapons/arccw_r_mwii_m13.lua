@@ -101,11 +101,11 @@ SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.65
 SWEP.RecoilRise = 0.5
 SWEP.MaxRecoilBlowback = -1
-SWEP.VisualRecoilMult = 1.5
-SWEP.RecoilPunch = 1.5
-SWEP.RecoilPunchBackMax = 1
+SWEP.VisualRecoilMult = 0
+SWEP.RecoilPunch = 0.25
+SWEP.RecoilPunchBackMax = 0
 SWEP.RecoilPunchBackMaxSights = nil -- may clip with scopes
-SWEP.RecoilVMShake = 1 -- random viewmodel offset when shooty
+SWEP.RecoilVMShake = 0.5 -- random viewmodel offset when shooty
 
 
 
@@ -157,10 +157,9 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 
 
---[[SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local magAnimations = {
-        ["att_m4_xmag"] = "_45",
-        ["att_m4_xmaglrg"] = "_60",
+        ["att_m13_xmag"] = "_xmag",
     }
     
     local hasSOH = false
@@ -192,12 +191,15 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     end
     
     return anim
-end--]]
+end
 
 
 SWEP.AttachmentElements = {
             ["nomuz"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
+    },
+            ["xmag"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
 }
 
@@ -255,6 +257,20 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+["reload_xmag"] = {
+        Source = "reload_xmag",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_xmag"] = {
+        Source = "reload_empty_xmag",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
         LHIK = true,
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
@@ -325,6 +341,64 @@ sound.Add( {
 	sound = "weapons/mwii/m13/reload_boltcatch.wav"
 } )
 
+
+
+sound.Add( {
+	name = "r_mwii_m13.XMagOut",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmagout.wav"
+} )
+
+
+sound.Add( {
+	name = "r_mwii_m13.XMagHit",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmaghit.wav"
+} )
+
+sound.Add( {
+	name = "r_mwii_m13.XMagIn",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmagin.wav"
+} )
+
+
+sound.Add( {
+	name = "r_mwii_m13.XMagOutEmpty",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmagout_empty.wav"
+} )
+
+
+sound.Add( {
+	name = "r_mwii_m13.XMagHitEmpty",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmaghit_empty.wav"
+} )
+
+sound.Add( {
+	name = "r_mwii_m13.XMagInEmpty",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmagin_empty.wav"
+} )
 
 
 ------------------ATTS

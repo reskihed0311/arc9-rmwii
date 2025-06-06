@@ -157,10 +157,9 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 
 
---[[SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-    local magAnimations = {
-        ["att_m4_xmag"] = "_45",
-        ["att_m4_xmaglrg"] = "_60",
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+
+      local magAnimations = {
     }
     
     local hasSOH = false
@@ -192,7 +191,7 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     end
     
     return anim
-end--]]
+end
 
 
 SWEP.AttachmentElements = {
@@ -257,6 +256,20 @@ SWEP.Animations = {
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
         LHIKOut = 0.25, -- (not actually inverse kinematics)
     },
+    ["reload_soh"] = {
+        Source = "reload_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_soh"] = {
+        Source = "reload_soh_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
 }
 
 
@@ -310,6 +323,18 @@ sound.Add( {
 
 
 
+sound.Add( {
+	name = "r_mwii_grekhova.SlideBack",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/bo6/grekhova/slideback.wav"
+} )
+
+
+
+
 
 
 
@@ -356,6 +381,11 @@ SWEP.Attachments = {
         vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
         vang = Angle(90, 00, -90),
          }
+    },
+       {
+        PrintName = "Perks",
+        DefaultAttName = "No Perk Package",
+        Slot = "wz_perks",
     },
     {
         PrintName = "Training Package",

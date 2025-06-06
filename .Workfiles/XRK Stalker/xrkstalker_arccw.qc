@@ -213,3 +213,28 @@ $sequence "reload_empty" {
 	fps 30
 }
 
+
+$sequence "reload_soh" {
+	"anims\reload_sof.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 12 "r_mwiii_XRKStalker.MagOut" }
+	{ event 5004 48 "r_mwiii_XRKStalker.MagHit" }
+	{ event 5004 55 "r_mwiii_XRKStalker.MagIn" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "reload_soh_empty" {
+	"anims\reload_sof_empty_v2.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 12 "r_mwiii_XRKStalker.MagOut" }
+	{ event 5004 48 "r_mwiii_XRKStalker.MagHit" }
+	{ event 5004 55 "r_mwiii_XRKStalker.MagIn" 
+	{ event 5004 78 "r_mwiii_XRKStalker.BoltBack" }
+	{ event 5004 87 "r_mwiii_XRKStalker.BoltFwd" }
+	snap
+	node "reload"
+	fps 30
+}
