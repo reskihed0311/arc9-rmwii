@@ -160,17 +160,37 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local magAnimations = {
         ["att_gpr91_xmag"] = "_45",
     }
-
+    
+    local hasSOH = false
+    local magSuffix = ""
+    
     if wep.Attachments then
+        -- First check for magazine attachments
         for _, att in pairs(wep.Attachments) do
             if att.Installed and magAnimations[att.Installed] then
-                return anim .. magAnimations[att.Installed]
+                magSuffix = magAnimations[att.Installed]
+                break
             end
         end
+        
+        -- Then check for SOH perk
+        for _, att in pairs(wep.Attachments) do
+            if att.Installed and att.Installed == "att_perk_soh" then
+                hasSOH = true
+                break
+            end
+        end
+        
+        -- Combine both modifications if necessary
+        if hasSOH then
+            return anim .. magSuffix .. "_soh"
+        elseif magSuffix ~= "" then
+            return anim .. magSuffix
+        end
     end
+    
+    return anim
 end
-
-
 
 SWEP.AttachmentElements = {
         ["xmag"] = {
@@ -212,6 +232,34 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload_30",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.15, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_soh"] = {
+        Source = "reload_30_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.15, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_45_soh"] = {
+        Source = "reload_45_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.15, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_45_soh"] = {
+        Source = "reload_empty_soh_45",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.15, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_soh"] = {
+        Source = "reload_empty_30_soh",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
         LHIK = true,
         LHIKIn = 0.15, -- In/Out controls how long it takes to switch to regular animation.
@@ -377,6 +425,11 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultAttName = "30 Round Magazine",
         Slot = "wz_gpr91_mags",
+    },
+       {
+        PrintName = "Perks",
+        DefaultAttName = "No Perk Package",
+        Slot = "wz_perks",
     },
     {
         PrintName = "Training Package",

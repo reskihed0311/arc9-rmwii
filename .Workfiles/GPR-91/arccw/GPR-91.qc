@@ -180,6 +180,18 @@ $sequence "reload_30" {
 }
 
 
+$sequence "reload_30_soh" {
+	"anims\reload_30_soh.dmx"
+	activity "ACT_VM_IDLE" 1
+	{ event 5004 5 "r_bo6_gpr91.Clipout" }
+	{ event 5004 33 "r_bo6_gpr91.Cliphit" }
+	{ event 5004 39 "r_bo6_gpr91.Clipin" }
+	snap
+	fps 30
+}
+
+
+
 $sequence "reload_empty_30" {
 	"anims\reload_empty_30.dmx"
 	activity "ACT_VM_IDLE" 1
@@ -193,12 +205,36 @@ $sequence "reload_empty_30" {
 }
 
 
+$sequence "reload_empty_30_soh" {
+	"anims\reload_empty_30_soh.dmx"
+	activity "ACT_VM_IDLE" 1
+	{ event 5004 5 "r_bo6_gpr91.Clipout" }
+	{ event 5004 33 "r_bo6_gpr91.Cliphit" }
+	{ event 5004 39 "r_bo6_gpr91.Clipin" }
+    { event 5004 57 "r_bo6_gpr91.BoltBack" }
+    { event 5004 60 "r_bo6_gpr91.BoltFwd" }
+	snap
+	fps 30
+}
+
+
+
 $sequence "reload_45" {
 	"anims\reload_45.dmx"
 	activity "ACT_VM_IDLE" 1
 	{ event 5004 10 "r_bo6_gpr91.Clipout" }
 	{ event 5004 48 "r_bo6_gpr91.Cliphit" }
 	{ event 5004 53 "r_bo6_gpr91.Clipin" }
+	snap
+	fps 30
+}
+
+$sequence "reload_45_soh" {
+	"anims\reload_45_soh.dmx"
+	activity "ACT_VM_IDLE" 1
+	{ event 5004 4 "r_bo6_gpr91.Clipout" }
+	{ event 5004 35 "r_bo6_gpr91.Cliphit" }
+	{ event 5004 38 "r_bo6_gpr91.Clipin" }
 	snap
 	fps 30
 }
@@ -212,6 +248,20 @@ $sequence "reload_empty_45" {
 	{ event 5004 53 "r_bo6_gpr91.Clipin" }
     { event 5004 75 "r_bo6_gpr91.BoltBack" }
 	{ event 5004 78 "r_bo6_gpr91.BoltFwd" }
+	snap
+	fps 30
+}
+
+
+
+$sequence "reload_empty_soh_45" {
+	"anims\reload_empty_45_soh.dmx"
+	activity "ACT_VM_IDLE" 1
+	{ event 5004 4 "r_bo6_gpr91.Clipout" }
+	{ event 5004 35 "r_bo6_gpr91.Cliphit" }
+	{ event 5004 38 "r_bo6_gpr91.Clipin" }
+    { event 5004 59 "r_bo6_gpr91.BoltBack" }
+    { event 5004 62 "r_bo6_gpr91.BoltFwd" }
 	snap
 	fps 30
 }
