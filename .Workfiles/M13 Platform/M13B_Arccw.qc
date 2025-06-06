@@ -210,8 +210,8 @@ $sequence "reload_xmag" {
 	"anims\reload_xmag.dmx"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 22 "r_mwii_m13.XMagOut" }
-	{ event 5004 45 "r_mwii_m13.XMagHit" }
-	{ event 5004 49 "r_mwii_m13.XMagIn" }
+	{ event 5004 42 "r_mwii_m13.XMagHit" }
+	{ event 5004 48 "r_mwii_m13.XMagIn" }
 	snap
 	node "reload"
 	fps 30
