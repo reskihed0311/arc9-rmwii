@@ -382,14 +382,9 @@ SWEP.Attachments = {
         vang = Angle(90, 00, -90),
          }
     },
-    {
+       {
         PrintName = "Perks",
         DefaultAttName = "No Perk Package",
-        Slot = "wz_perks",
+        Slot = {"uc_tp","wz_perks"}
     },
-    {
-        PrintName = "Training Package",
-        DefaultAttName = "None",
-        Slot = "uc_tp",
-    }
 }

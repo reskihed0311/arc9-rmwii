@@ -644,14 +644,10 @@ SWEP.Attachments = {
         DefaultAttName = "30 Round Magazine",
         Slot = "wz_lachmannsub_mags",
     },
-        {
+       {
         PrintName = "Perks",
         DefaultAttName = "No Perk Package",
-        Slot = "wz_perks",
+        Slot = {"uc_tp","wz_perks"}
     },
-    {
-        PrintName = "Training Package",
-        DefaultAttName = "None",
-        Slot = "uc_tp",
-    }
+
 }

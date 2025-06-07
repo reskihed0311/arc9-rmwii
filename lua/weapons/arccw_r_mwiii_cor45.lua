@@ -17,12 +17,12 @@ SWEP.Trivia_Calibre = ".45 AUTO" -- "9x21mm Jager"
 
 SWEP.ViewModel = "models/weapons/mwiii/arccw_r_mwiii_cor45.mdl" -- I mean, you probably have to edit these too
 SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
-SWEP.MirrorWorldModel = "models/weapons/bo6/wm/arccw_r_bo6_grekhova_wm.mdl" -- Use this to set the mirrored viewmodel to a different model, without any floating speedloaders or cartridges you may have. Needs MirrorVMWM
+SWEP.MirrorWorldModel = "models/weapons/mwiii/arccw_r_mwiii_cor45_wm.mdl" -- Use this to set the mirrored viewmodel to a different model, without any floating speedloaders or cartridges you may have. Needs MirrorVMWM
 
 
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-8, 3, -4.5),
+    pos = Vector(-6.9, 3.8, -4.1),
     ang = Angle(180, 180, 0),
     bone = "ValveBiped.Bip01_R_Hand",
     scale = 1
@@ -154,10 +154,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 
 
---[[SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local magAnimations = {
-        ["att_m4_xmag"] = "_45",
-        ["att_m4_xmaglrg"] = "_60",
     }
     
     local hasSOH = false
@@ -189,9 +187,7 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     end
     
     return anim
-end--]]
-
-
+end
 SWEP.AttachmentElements = {
 }
 
@@ -245,8 +241,22 @@ SWEP.Animations = {
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
         LHIKOut = 0.25, -- (not actually inverse kinematics)
     },
+    ["reload_soh"] = {
+        Source = "reload_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
     ["reload_empty"] = {
         Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_soh"] = {
+        Source = "reload_soh_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
         LHIK = true,
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
@@ -266,6 +276,16 @@ sound.Add( {
 	pitch = {95, 110},
 	sound = "weapons/mwiii/cor45/reload_magout.wav"
 } )
+
+sound.Add( {
+	name = "r_mwiii_cor45.ChargeFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwiii/cor45/reload_empty_charge_fast.wav"
+} )
+
 
 
 sound.Add( {
@@ -353,9 +373,10 @@ SWEP.RejectAttachments = {
 
 
 SWEP.Attachments = {
-        {
-        PrintName = "Training Package",
-        DefaultAttName = "None",
-        Slot = "uc_tp",
-    }
+       {
+        PrintName = "Perks",
+        DefaultAttName = "No Perk Package",
+        Slot = {"uc_tp","wz_perks"}
+    },
+
 }

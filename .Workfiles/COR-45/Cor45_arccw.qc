@@ -178,3 +178,27 @@ $sequence "reload_empty" {
 	fps 30
 }
 
+$sequence "reload_soh_empty" {
+	"anims\reload_empty_soh"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 7 "r_mwiii_cor45.MagOutEmpty" }
+	{ event 5004 20 "r_mwiii_cor45.MagHitEmpty" }
+	{ event 5004 22 "r_mwiii_cor45.MagInEmpty" }
+	{ event 5004 33 "r_mwiii_cor45.ChargeFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "reload_soh" {
+	"anims\reload_soh"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 7 "r_mwiii_cor45.MagOutEmpty" }
+	{ event 5004 20 "r_mwiii_cor45.MagHitEmpty" }
+	{ event 5004 22 "r_mwiii_cor45.MagInEmpty" }
+	snap
+	node "reload"
+	fps 30
+}
+

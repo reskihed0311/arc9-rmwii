@@ -17,12 +17,12 @@ SWEP.Trivia_Calibre = "4.6x30MM" -- "9x21mm Jager"
 
 SWEP.ViewModel = "models/weapons/mwii/arccw_r_mwii_vel46.mdl" -- I mean, you probably have to edit these too
 SWEP.WorldModel = "models/weapons/w_smg_ump45.mdl"
-SWEP.MirrorWorldModel = "models/weapons/bo6/wm/arccw_r_bo6_grekhova_wm.mdl" -- Use this to set the mirrored viewmodel to a different model, without any floating speedloaders or cartridges you may have. Needs MirrorVMWM
+SWEP.MirrorWorldModel = "models/weapons/mwii/arccw_r_mwii_vel46_wm.mdl" -- Use this to set the mirrored viewmodel to a different model, without any floating speedloaders or cartridges you may have. Needs MirrorVMWM
 
 
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-8, 3, -4.5),
+    pos = Vector(-8, 3, -6.4),
     ang = Angle(180, 180, 0),
     bone = "ValveBiped.Bip01_R_Hand",
     scale = 1
@@ -218,9 +218,9 @@ SWEP.AttachmentElements = {
 
 
 
-SWEP.HoldtypeHolstered = "normal"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "revolver"
+SWEP.HoldtypeHolstered = "passive"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "rpg"
 SWEP.HoldtypeCustomize = "slam"
 
 SWEP.Animations = {
@@ -521,7 +521,7 @@ SWEP.Attachments = {
         Slot = "wz_vel46_mags",
     },
     {
-        PrintName = "Training Package",
+        PrintName = "Perks",
         DefaultAttName = "None",
         Slot = "uc_tp",
     }

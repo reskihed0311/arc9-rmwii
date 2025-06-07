@@ -80,7 +80,7 @@ SWEP.SightedSpeedMult = 0.62
 SWEP.ShootSpeedMult = 1
 
 
-SWEP.SightTime = 0.38
+SWEP.SightTime = 0.42
 
 SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
@@ -89,15 +89,15 @@ SWEP.SightsDispersion = 1 -- dispersion that remains even in sights
 SWEP.JumpDispersion = 300 -- dispersion penalty when in the air
 
 
-SWEP.Damage = 37
-SWEP.DamageMin = 21 -- damage done at maximum range
-SWEP.Range = 200 -- in METRES
+SWEP.Damage = 42
+SWEP.DamageMin = 29 -- damage done at maximum range
+SWEP.Range = 350 -- in METRES
 
 
 
 
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 1
 SWEP.RecoilRise = 1
 SWEP.MaxRecoilBlowback = -1
@@ -680,14 +680,10 @@ SWEP.Attachments = {
         DefaultAttName = "None",
         Slot = "wz_mtz762_amp",
     },
-        {
+       {
         PrintName = "Perks",
         DefaultAttName = "No Perk Package",
-        Slot = "wz_perks",
+        Slot = {"uc_tp","wz_perks"}
     },
-        {
-        PrintName = "Training Package",
-        DefaultAttName = "None",
-        Slot = "uc_tp",
-    }
+
 }

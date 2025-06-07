@@ -17,12 +17,12 @@ SWEP.Trivia_Calibre = "5.56 NATO" -- "9x21mm Jager"
 
 SWEP.ViewModel = "models/weapons/mwii/arccw_r_mwii_m13.mdl" -- I mean, you probably have to edit these too
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
-SWEP.MirrorWorldModel = "models/weapons/mwii/wm/arccw_r_mwii_m4_wm.mdl" -- Use this to set the mirrored viewmodel to a different model, without any floating speedloaders or cartridges you may have. Needs MirrorVMWM
+SWEP.MirrorWorldModel = "models/weapons/mwii/arccw_r_mwii_m13_wm.mdl" -- Use this to set the mirrored viewmodel to a different model, without any floating speedloaders or cartridges you may have. Needs MirrorVMWM
 
 
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-4.2, 3, -6.5),
+    pos = Vector(-6, 3.5, -6.5),
     ang = Angle(180, 180, 0),
     bone = "ValveBiped.Bip01_R_Hand",
     scale = 1
