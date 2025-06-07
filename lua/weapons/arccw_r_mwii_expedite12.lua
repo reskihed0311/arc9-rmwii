@@ -158,25 +158,11 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 
 
-
-
-SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-
-    local magAnimations = {}
-    
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
     local hasSOH = false
-    local magSuffix = ""
     
     if wep.Attachments then
-        -- First check for magazine attachments
-        for _, att in pairs(wep.Attachments) do
-            if att.Installed and magAnimations[att.Installed] then
-                magSuffix = magAnimations[att.Installed]
-                break
-            end
-        end
-        
-        -- Then check for SOH perk
+        -- Check for SOH perk
         for _, att in pairs(wep.Attachments) do
             if att.Installed and att.Installed == "att_perk_soh" then
                 hasSOH = true
@@ -184,17 +170,44 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
             end
         end
         
-        -- Combine both modifications if necessary
+        if hasSOH and data.anim then
+            -- Modify the animation name in the data table
+            data.anim = data.anim .. "_soh"
+            return data
+        end
+    end
+    
+    return data
+end
+
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+    local hasSOH = false
+    
+    if wep.Attachments then
+        -- Check for SOH perk
+        for _, att in pairs(wep.Attachments) do
+            if att.Installed and att.Installed == "att_perk_soh" then
+                hasSOH = true
+                break
+            end
+        end
+        
         if hasSOH then
-            return anim .. magSuffix .. "_soh"
-        elseif magSuffix ~= "" then
-            return anim .. magSuffix
+            -- Handle both table and string cases
+            if type(anim) == "table" then
+                local newAnim = table.Copy(anim)
+                if newAnim[1] then
+                    newAnim[1] = newAnim[1] .. "_soh"
+                end
+                return newAnim
+            else
+                return anim .. "_soh"
+            end
         end
     end
     
     return anim
 end
---]]
 
 
 SWEP.AttachmentElements = {
@@ -257,13 +270,25 @@ SWEP.Animations = {
     ["sgreload_start"] = {
         Source = "reload_start",
     },
+    ["sgreload_start_soh"] = {
+        Source = "reload_start",
+    },
     ["sgreload_start_empty"] = {
         Source = "reload_start_empty",
+    },
+    ["sgreload_start_empty_soh"] = {
+        Source = "reload_start_empty_soh",
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
     },
+    ["sgreload_insert_soh"] = {
+        Source = "reload_loop_soh",
+    },
     ["sgreload_finish"] = {
+        Source = "reload_end",
+    },
+    ["sgreload_finish_soh"] = {
         Source = "reload_end",
     },
 }
@@ -302,6 +327,21 @@ sound.Add( {
         "weapons/mwii/expedite12/shellin_3.wav",
         "weapons/mwii/expedite12/shellin_4.wav",
         "weapons/mwii/expedite12/shellin_5.wav",
+    }
+} )
+
+sound.Add( {
+	name = "r_mwii_EXPD12.ShellinFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = {
+        "weapons/mwii/expedite12/shellin_fast1.wav",
+        "weapons/mwii/expedite12/shellin_fast2.wav",
+        "weapons/mwii/expedite12/shellin_fast3.wav",
+        "weapons/mwii/expedite12/shellin_fast4.wav",
+        "weapons/mwii/expedite12/shellin_fast5.wav",
     }
 } )
 
@@ -396,7 +436,7 @@ SWEP.Attachments = {
        {
         PrintName = "Perks",
         DefaultAttName = "No Perk Package",
-        Slot = {"uc_tp"}
+        Slot = {"uc_tp","wz_perks"}
     },
 
 }

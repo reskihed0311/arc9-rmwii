@@ -89,8 +89,8 @@ SWEP.SightsDispersion = 1 -- dispersion that remains even in sights
 SWEP.JumpDispersion = 300 -- dispersion penalty when in the air
 
 
-SWEP.Damage = 29
-SWEP.DamageMin = 19 -- damage done at maximum range
+SWEP.Damage = 38
+SWEP.DamageMin = 22 -- damage done at maximum range
 SWEP.Range = 250 -- in METRES
 
 

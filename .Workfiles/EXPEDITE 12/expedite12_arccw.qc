@@ -203,10 +203,32 @@ $sequence "reload_start_empty" {
 }
 
 
+$sequence "reload_start_empty_soh" {
+	"anims\reload_start_empty_soh.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 15 "r_mwii_EXPD12.ShellinEmpty" }
+	{ event 5004 23 "r_mwii_EXPD12.BoltCatch" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+
 $sequence "reload_loop" {
 	"anims\reload_loop.dmx"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 9 "r_mwii_EXPD12.Shellin" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
+$sequence "reload_loop_soh" {
+	"anims\reload_loop_soh.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 4 "r_mwii_EXPD12.ShellinFast" }
 	snap
 	node "reload"
 	fps 30
