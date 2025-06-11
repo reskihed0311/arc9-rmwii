@@ -255,6 +255,20 @@ SWEP.Animations = {
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
         LHIKOut = 0.25, -- (not actually inverse kinematics)
     },
+    ["reload_soh"] = {
+        Source = "reload_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_soh"] = {
+        Source = "reload_empty_soh",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
@@ -269,8 +283,22 @@ SWEP.Animations = {
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
         LHIKOut = 0.25, -- (not actually inverse kinematics)
     },
+["reload_xmag_soh"] = {
+        Source = "reload_soh_xmag",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
     ["reload_empty_xmag"] = {
         Source = "reload_empty_xmag",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
+        LHIK = true,
+        LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
+        LHIKOut = 0.25, -- (not actually inverse kinematics)
+    },
+    ["reload_empty_xmag_soh"] = {
+        Source = "reload_empty_soh_xmag",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
         LHIK = true,
         LHIKIn = 0.25, -- In/Out controls how long it takes to switch to regular animation.
@@ -400,6 +428,51 @@ sound.Add( {
 	sound = "weapons/mwii/m13/reload_xmagin_empty.wav"
 } )
 
+sound.Add( {
+	name = "r_mwii_m13.MagOutFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_magout_fast.wav"
+} )
+
+sound.Add( {
+	name = "r_mwii_m13.MagInFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_fast_magin.wav"
+} )
+
+
+sound.Add( {
+	name = "r_mwii_m13.BoltFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_boltcatch_fast.wav"
+} )
+
+sound.Add( {
+	name = "r_mwii_m13.XMagOutFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmagout_fast.wav"
+} )
+
+sound.Add( {
+	name = "r_mwii_m13.XMagInFast",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 80,
+	pitch = {95, 110},
+	sound = "weapons/mwii/m13/reload_xmagin_fast.wav"
+} )
 
 ------------------ATTS
 
@@ -512,9 +585,9 @@ SWEP.Attachments = {
         vang = Angle(90, 00, -90),
          }
     },
-    {
-        PrintName = "Training Package",
-        DefaultAttName = "None",
-        Slot = "uc_tp",
-    }
+       {
+        PrintName = "Perks",
+        DefaultAttName = "No Perk Package",
+        Slot = {"uc_tp","wz_perks"}
+    },
 }

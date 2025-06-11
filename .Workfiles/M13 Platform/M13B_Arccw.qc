@@ -217,6 +217,49 @@ $sequence "reload_xmag" {
 	fps 30
 }
 
+$sequence "reload_soh" {
+	"anims\reload_soh.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 8 "r_mwii_m13.MagOutFast" }
+	{ event 5004 20 "r_mwii_m13.MagInFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_empty_soh" {
+	"anims\reload_empty_soh.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 8 "r_mwii_m13.MagOutFast" }
+	{ event 5004 20 "r_mwii_m13.MagInFast" }
+	{ event 5004 30 "r_mwii_m13.BoltFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_soh_xmag" {
+	"anims\reload_xmag_soh.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 10 "r_mwii_m13.XMagOutFast" }
+	{ event 5004 22 "r_mwii_m13.XMagInFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+$sequence "reload_empty_soh_xmag" {
+	"anims\reload_empty_xmag_soh.dmx"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 10 "r_mwii_m13.XMagOutFast" }
+	{ event 5004 23 "r_mwii_m13.XMagInFast" }
+	{ event 5004 34 "r_mwii_m13.BoltFast" }
+	snap
+	node "reload"
+	fps 30
+}
+
+
 
 $sequence "reload_empty_xmag" {
 	"anims\reload_empty_xmag.dmx"
